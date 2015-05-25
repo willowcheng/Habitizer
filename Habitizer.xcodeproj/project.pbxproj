@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		774CE14F1B13D96F00EB08B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774CE14E1B13D96F00EB08B9 /* AppDelegate.swift */; };
 		774CE1521B13D96F00EB08B9 /* Habitizer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 774CE1501B13D96F00EB08B9 /* Habitizer.xcdatamodeld */; };
-		774CE1541B13D96F00EB08B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774CE1531B13D96F00EB08B9 /* ViewController.swift */; };
+		774CE1541B13D96F00EB08B9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774CE1531B13D96F00EB08B9 /* MainViewController.swift */; };
 		774CE1571B13D96F00EB08B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 774CE1551B13D96F00EB08B9 /* Main.storyboard */; };
 		774CE1591B13D96F00EB08B9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 774CE1581B13D96F00EB08B9 /* Images.xcassets */; };
 		774CE15C1B13D96F00EB08B9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 774CE15A1B13D96F00EB08B9 /* LaunchScreen.xib */; };
 		774CE1681B13D96F00EB08B9 /* HabitizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774CE1671B13D96F00EB08B9 /* HabitizerTests.swift */; };
+		774CE1721B13EB0800EB08B9 /* NewHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774CE1711B13EB0800EB08B9 /* NewHabitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +32,14 @@
 		774CE14D1B13D96F00EB08B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		774CE14E1B13D96F00EB08B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		774CE1511B13D96F00EB08B9 /* Habitizer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Habitizer.xcdatamodel; sourceTree = "<group>"; };
-		774CE1531B13D96F00EB08B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		774CE1531B13D96F00EB08B9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		774CE1561B13D96F00EB08B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		774CE1581B13D96F00EB08B9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		774CE15B1B13D96F00EB08B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		774CE1611B13D96F00EB08B9 /* HabitizerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HabitizerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		774CE1661B13D96F00EB08B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		774CE1671B13D96F00EB08B9 /* HabitizerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitizerTests.swift; sourceTree = "<group>"; };
+		774CE1711B13EB0800EB08B9 /* NewHabitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewHabitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				774CE14E1B13D96F00EB08B9 /* AppDelegate.swift */,
-				774CE1531B13D96F00EB08B9 /* ViewController.swift */,
+				774CE1531B13D96F00EB08B9 /* MainViewController.swift */,
+				774CE1711B13EB0800EB08B9 /* NewHabitViewController.swift */,
 				774CE1551B13D96F00EB08B9 /* Main.storyboard */,
 				774CE1581B13D96F00EB08B9 /* Images.xcassets */,
 				774CE15A1B13D96F00EB08B9 /* LaunchScreen.xib */,
@@ -215,7 +218,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				774CE1541B13D96F00EB08B9 /* ViewController.swift in Sources */,
+				774CE1721B13EB0800EB08B9 /* NewHabitViewController.swift in Sources */,
+				774CE1541B13D96F00EB08B9 /* MainViewController.swift in Sources */,
 				774CE1521B13D96F00EB08B9 /* Habitizer.xcdatamodeld in Sources */,
 				774CE14F1B13D96F00EB08B9 /* AppDelegate.swift in Sources */,
 			);
@@ -415,6 +419,7 @@
 				774CE16D1B13D96F00EB08B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		774CE16E1B13D96F00EB08B9 /* Build configuration list for PBXNativeTarget "HabitizerTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +428,7 @@
 				774CE1701B13D96F00EB08B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

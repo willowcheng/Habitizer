@@ -5,10 +5,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Habitizer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Habitizer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -24,7 +24,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="还剩" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67l-yw-xuT">
-                                <rect key="frame" x="166" y="294.5" width="100" height="57.5"/>
+                                <rect key="frame" x="166" y="294" width="100" height="57.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -32,6 +32,12 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="天" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwO-i8-AeV">
                                 <rect key="frame" x="400" y="294" width="50" height="57.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="每天读书一小时ing" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Sy-C7-812">
+                                <rect key="frame" x="309" y="441.5" width="141" height="20.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -45,9 +51,11 @@
                             <constraint firstItem="3e5-G5-ArR" firstAttribute="bottom" secondItem="67l-yw-xuT" secondAttribute="bottom" constant="19" id="JeV-za-Gr9"/>
                             <constraint firstItem="wwO-i8-AeV" firstAttribute="leading" secondItem="3e5-G5-ArR" secondAttribute="trailing" constant="-8" id="K9Z-vk-AwI"/>
                             <constraint firstAttribute="centerY" secondItem="3e5-G5-ArR" secondAttribute="centerY" id="M1M-vV-ARt"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7Sy-C7-812" secondAttribute="bottom" constant="138" id="S8q-ht-RY9"/>
                             <constraint firstItem="3e5-G5-ArR" firstAttribute="bottom" secondItem="wwO-i8-AeV" secondAttribute="bottom" constant="19" id="VWT-RK-PNx"/>
                             <constraint firstItem="3e5-G5-ArR" firstAttribute="leading" secondItem="67l-yw-xuT" secondAttribute="trailing" constant="8" id="h0a-jH-wgD"/>
                             <constraint firstAttribute="centerX" secondItem="wwO-i8-AeV" secondAttribute="centerX" constant="-131.5" id="j8B-Uy-hfc"/>
+                            <constraint firstItem="wwO-i8-AeV" firstAttribute="trailing" secondItem="7Sy-C7-812" secondAttribute="trailing" id="kfm-QO-qgC"/>
                             <constraint firstAttribute="centerX" secondItem="3e5-G5-ArR" secondAttribute="centerX" constant="-41" id="oRT-sS-Ieo"/>
                             <constraint firstAttribute="centerX" secondItem="3e5-G5-ArR" secondAttribute="centerX" constant="-42" id="peS-Gp-MQz"/>
                             <constraint firstItem="3e5-G5-ArR" firstAttribute="leading" secondItem="67l-yw-xuT" secondAttribute="trailing" constant="8" id="x6X-GA-buU"/>
@@ -67,12 +75,85 @@
                     <navigationItem key="navigationItem" id="1uN-wI-qqX">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ean-Mc-uP5">
                             <color key="tintColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="W23-d3-KNG" kind="presentation" id="MSq-ge-7hA"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1026" y="-368"/>
+            <point key="canvasLocation" x="578" y="-354"/>
+        </scene>
+        <!--New Habit View Controller-->
+        <scene sceneID="Gkk-If-NRV">
+            <objects>
+                <viewController id="W23-d3-KNG" customClass="NewHabitViewController" customModule="Habitizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hug-VQ-XOl"/>
+                        <viewControllerLayoutGuide type="bottom" id="fsd-KT-ZUE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7MH-Qg-ovG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="center" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="我要养成的习惯" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fKT-Ay-Tip">
+                                <rect key="frame" x="180" y="263" width="240" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="db7-0l-OoO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1iS-qE-UkI">
+                                <rect key="frame" x="180" y="331" width="30" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="取消">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButtonPressed" destination="W23-d3-KNG" eventType="touchUpInside" id="GcN-Xl-2oP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eb7-jC-Ef7">
+                                <rect key="frame" x="390" y="331" width="30" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="确认">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirmNewHabitButtonPressed:" destination="W23-d3-KNG" eventType="touchUpInside" id="ZdU-wV-L9F"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1iS-qE-UkI" firstAttribute="leading" secondItem="fKT-Ay-Tip" secondAttribute="leading" id="2jO-jq-CUX"/>
+                            <constraint firstAttribute="centerX" secondItem="fKT-Ay-Tip" secondAttribute="centerX" constant="-0.5" id="HcJ-oR-XEi"/>
+                            <constraint firstItem="Eb7-jC-Ef7" firstAttribute="trailing" secondItem="fKT-Ay-Tip" secondAttribute="trailing" id="IXW-9Q-elD"/>
+                            <constraint firstItem="fsd-KT-ZUE" firstAttribute="top" secondItem="Eb7-jC-Ef7" secondAttribute="bottom" constant="239" id="RWY-zg-mgk"/>
+                            <constraint firstItem="1iS-qE-UkI" firstAttribute="leading" secondItem="fKT-Ay-Tip" secondAttribute="leading" id="Wt7-Ab-4O7"/>
+                            <constraint firstItem="fKT-Ay-Tip" firstAttribute="top" secondItem="hug-VQ-XOl" secondAttribute="bottom" constant="243" id="jBJ-Vf-B6f"/>
+                            <constraint firstItem="Eb7-jC-Ef7" firstAttribute="trailing" secondItem="fKT-Ay-Tip" secondAttribute="trailing" id="toY-Uz-fy6"/>
+                            <constraint firstItem="fsd-KT-ZUE" firstAttribute="top" secondItem="1iS-qE-UkI" secondAttribute="bottom" constant="239" id="wxh-Cq-uxL"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2jO-jq-CUX"/>
+                                <exclude reference="IXW-9Q-elD"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="Oux-9e-1nc"/>
+                    <connections>
+                        <outlet property="habitTextField" destination="fKT-Ay-Tip" id="LhM-nC-871"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0nS-YT-sj3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1330" y="-354"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7AZ-Hb-Rfn">
@@ -90,7 +171,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r6h-Aa-DHb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="258" y="-368"/>
+            <point key="canvasLocation" x="-190" y="-354"/>
         </scene>
     </scenes>
 </document>
