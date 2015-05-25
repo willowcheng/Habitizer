@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gdX-fe-MAg">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Habitizer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,81 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3e5-G5-ArR">
+                                <rect key="frame" x="274" y="229" width="133.5" height="142"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="120"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="还剩" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67l-yw-xuT">
+                                <rect key="frame" x="166" y="294.5" width="100" height="57.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="天" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwO-i8-AeV">
+                                <rect key="frame" x="400" y="294" width="50" height="57.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="67l-yw-xuT" secondAttribute="centerX" constant="93" id="9DE-Wr-LJg"/>
+                            <constraint firstItem="wwO-i8-AeV" firstAttribute="leading" secondItem="3e5-G5-ArR" secondAttribute="trailing" constant="-8" id="AJe-0p-duN"/>
+                            <constraint firstItem="3e5-G5-ArR" firstAttribute="bottom" secondItem="67l-yw-xuT" secondAttribute="bottom" constant="13" id="EDh-hM-M9P"/>
+                            <constraint firstItem="67l-yw-xuT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="HeP-j8-ccI"/>
+                            <constraint firstItem="3e5-G5-ArR" firstAttribute="bottom" secondItem="67l-yw-xuT" secondAttribute="bottom" constant="19" id="JeV-za-Gr9"/>
+                            <constraint firstItem="wwO-i8-AeV" firstAttribute="leading" secondItem="3e5-G5-ArR" secondAttribute="trailing" constant="-8" id="K9Z-vk-AwI"/>
+                            <constraint firstAttribute="centerY" secondItem="3e5-G5-ArR" secondAttribute="centerY" id="M1M-vV-ARt"/>
+                            <constraint firstItem="3e5-G5-ArR" firstAttribute="bottom" secondItem="wwO-i8-AeV" secondAttribute="bottom" constant="19" id="VWT-RK-PNx"/>
+                            <constraint firstItem="3e5-G5-ArR" firstAttribute="leading" secondItem="67l-yw-xuT" secondAttribute="trailing" constant="8" id="h0a-jH-wgD"/>
+                            <constraint firstAttribute="centerX" secondItem="wwO-i8-AeV" secondAttribute="centerX" constant="-131.5" id="j8B-Uy-hfc"/>
+                            <constraint firstAttribute="centerX" secondItem="3e5-G5-ArR" secondAttribute="centerX" constant="-41" id="oRT-sS-Ieo"/>
+                            <constraint firstAttribute="centerX" secondItem="3e5-G5-ArR" secondAttribute="centerX" constant="-42" id="peS-Gp-MQz"/>
+                            <constraint firstItem="3e5-G5-ArR" firstAttribute="leading" secondItem="67l-yw-xuT" secondAttribute="trailing" constant="8" id="x6X-GA-buU"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="9DE-Wr-LJg"/>
+                                <exclude reference="HeP-j8-ccI"/>
+                                <exclude reference="EDh-hM-M9P"/>
+                                <exclude reference="h0a-jH-wgD"/>
+                                <exclude reference="peS-Gp-MQz"/>
+                                <exclude reference="K9Z-vk-AwI"/>
+                                <exclude reference="j8B-Uy-hfc"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="1uN-wI-qqX">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ean-Mc-uP5">
+                            <color key="tintColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1026" y="-368"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7AZ-Hb-Rfn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gdX-fe-MAg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0wv-hq-gVB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="lly-dl-EgH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r6h-Aa-DHb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="258" y="-368"/>
         </scene>
     </scenes>
 </document>
