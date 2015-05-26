@@ -10,9 +10,20 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    @IBOutlet weak var habitTargetLabel: UILabel!
+    
+    var data = [SQLRow]()
+    let db = SQLiteDB.sharedInstance()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+//        data = db.query("SELECT * FROM habit ORDER BY id ASC")
+//        let row = data[0]
+//        let task = row["content"]
+//        habitTargetLabel.text = task?.asString()
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
