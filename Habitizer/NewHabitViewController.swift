@@ -25,8 +25,8 @@ class NewHabitViewController: UIViewController {
     
     @IBAction func confirmNewHabitButtonPressed(sender: AnyObject) {
         if habitTextField.text.isEmpty {
-            var alert = UIAlertController(title: nil, message: "输入你想养成的习惯吧", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "好的", style: UIAlertActionStyle.Default, handler: nil))
+            var alert = UIAlertController(title: nil, message: NSLocalizedString("TYPE_YOUR_NEW_HABIT", comment: "Type your new habit"), preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "OK"), style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
         } else {
             dismissViewControllerAnimated(true, completion: nil)
