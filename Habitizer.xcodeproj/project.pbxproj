@@ -16,6 +16,10 @@
 		774CE15C1B13D96F00EB08B9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 774CE15A1B13D96F00EB08B9 /* LaunchScreen.xib */; };
 		774CE1681B13D96F00EB08B9 /* HabitizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774CE1671B13D96F00EB08B9 /* HabitizerTests.swift */; };
 		774CE1721B13EB0800EB08B9 /* NewHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774CE1711B13EB0800EB08B9 /* NewHabitViewController.swift */; };
+		81A2EA7B1B1514C00079F734 /* SQLiteDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A2EA791B1514C00079F734 /* SQLiteDB.swift */; };
+		81A2EA7C1B1514C00079F734 /* String-Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A2EA7A1B1514C00079F734 /* String-Extras.swift */; };
+		81A2EA7F1B15155F0079F734 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A2EA7E1B15155F0079F734 /* libsqlite3.0.dylib */; };
+		81A2EA821B1517370079F734 /* data.db in Resources */ = {isa = PBXBuildFile; fileRef = 81A2EA811B1517370079F734 /* data.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,11 @@
 		774CE1661B13D96F00EB08B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		774CE1671B13D96F00EB08B9 /* HabitizerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitizerTests.swift; sourceTree = "<group>"; };
 		774CE1711B13EB0800EB08B9 /* NewHabitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewHabitViewController.swift; sourceTree = "<group>"; };
+		81A2EA781B1514C00079F734 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		81A2EA791B1514C00079F734 /* SQLiteDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteDB.swift; sourceTree = "<group>"; };
+		81A2EA7A1B1514C00079F734 /* String-Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String-Extras.swift"; sourceTree = "<group>"; };
+		81A2EA7E1B15155F0079F734 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		81A2EA811B1517370079F734 /* data.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = data.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81A2EA7F1B15155F0079F734 /* libsqlite3.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +95,7 @@
 		774CE14B1B13D96F00EB08B9 /* Habitizer */ = {
 			isa = PBXGroup;
 			children = (
+				81A2EA811B1517370079F734 /* data.db */,
 				774CE14E1B13D96F00EB08B9 /* AppDelegate.swift */,
 				774CE1531B13D96F00EB08B9 /* MainViewController.swift */,
 				774CE1711B13EB0800EB08B9 /* NewHabitViewController.swift */,
@@ -92,6 +103,7 @@
 				774CE1581B13D96F00EB08B9 /* Images.xcassets */,
 				774CE15A1B13D96F00EB08B9 /* LaunchScreen.xib */,
 				774CE1501B13D96F00EB08B9 /* Habitizer.xcdatamodeld */,
+				81A2EA7D1B1514C60079F734 /* SQLite */,
 				774CE14C1B13D96F00EB08B9 /* Supporting Files */,
 				7745BEEF1B14C042009BF10B /* Localizable.strings */,
 			);
@@ -121,6 +133,17 @@
 				774CE1661B13D96F00EB08B9 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		81A2EA7D1B1514C60079F734 /* SQLite */ = {
+			isa = PBXGroup;
+			children = (
+				81A2EA7E1B15155F0079F734 /* libsqlite3.0.dylib */,
+				81A2EA781B1514C00079F734 /* Bridging-Header.h */,
+				81A2EA791B1514C00079F734 /* SQLiteDB.swift */,
+				81A2EA7A1B1514C00079F734 /* String-Extras.swift */,
+			);
+			name = SQLite;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +229,7 @@
 			files = (
 				774CE1571B13D96F00EB08B9 /* Main.storyboard in Resources */,
 				7745BEED1B14C042009BF10B /* Localizable.strings in Resources */,
+				81A2EA821B1517370079F734 /* data.db in Resources */,
 				774CE15C1B13D96F00EB08B9 /* LaunchScreen.xib in Resources */,
 				774CE1591B13D96F00EB08B9 /* Images.xcassets in Resources */,
 			);
@@ -226,7 +250,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				774CE1721B13EB0800EB08B9 /* NewHabitViewController.swift in Sources */,
+				81A2EA7C1B1514C00079F734 /* String-Extras.swift in Sources */,
 				774CE1541B13D96F00EB08B9 /* MainViewController.swift in Sources */,
+				81A2EA7B1B1514C00079F734 /* SQLiteDB.swift in Sources */,
 				774CE1521B13D96F00EB08B9 /* Habitizer.xcdatamodeld in Sources */,
 				774CE14F1B13D96F00EB08B9 /* AppDelegate.swift in Sources */,
 			);
@@ -370,6 +396,7 @@
 				INFOPLIST_FILE = Habitizer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Habitizer/Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -380,6 +407,7 @@
 				INFOPLIST_FILE = Habitizer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Habitizer/Bridging-Header.h";
 			};
 			name = Release;
 		};
