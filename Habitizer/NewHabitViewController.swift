@@ -14,7 +14,7 @@ class NewHabitViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
 
@@ -29,6 +29,13 @@ class NewHabitViewController: UIViewController {
             alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "OK"), style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
         } else {
+            let db = SQLiteDB.sharedInstance()
+            let sql = "INSERT INTO habit(id, content, startDate, achieved) VALUES (1, '\(habitTextField.text)', 'May 28, 2015', 0)"
+            let rc = db.execute(sql)
+            if rc != 0 {
+                let alert = UIAlertView(title:"Success", message:"New habit added!", delegate:nil, cancelButtonTitle: "OK")
+                alert.show()
+            }
             dismissViewControllerAnimated(true, completion: nil)
         }
     }

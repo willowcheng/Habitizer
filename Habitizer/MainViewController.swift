@@ -12,16 +12,15 @@ class MainViewController: UIViewController {
 
     @IBOutlet weak var habitTargetLabel: UILabel!
     
-    var data = [SQLRow]()
-    let db = SQLiteDB.sharedInstance()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        data = db.query("SELECT * FROM habit ORDER BY id ASC")
-//        let row = data[0]
-//        let task = row["content"]
-//        habitTargetLabel.text = task?.asString()
+        var data = [SQLRow]()
+        let db = SQLiteDB.sharedInstance()
+        data = db.query("SELECT * FROM habit ORDER BY id ASC")
+        let row = data[data.count - 1]
+        let task = row["content"]
+        habitTargetLabel.text = task?.asString()
         
         
     }
