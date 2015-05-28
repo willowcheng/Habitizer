@@ -16,7 +16,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // Actions
+        var newHabitAction: UIMutableUserNotificationAction = UIMutableUserNotificationAction()
+        newHabitAction.identifier = "NEW_HABIT"
+        newHabitAction.title = "New habit added"
+        
+        newHabitAction.activationMode = UIUserNotificationActivationMode.Background
+        newHabitAction.destructive = true
+        newHabitAction.authenticationRequired = false
+        
+        // Category
+        var category: UIMutableUserNotificationCategory = UIMutableUserNotificationCategory()
+        category.identifier = "CATEGORY"
+        
+        let defaultActions: NSArray = [newHabitAction]
+        
+        category.setActions(defaultActions as [AnyObject], forContext: UIUserNotificationActionContext.Default)
+        
+        // NSSet of all our categories
+        
+        let categories: NSSet = NSSet(objects: category)
+        
+        // Define notification types used in the application
+        let types: UIUserNotificationType = UIUserNotificationType.Alert | UIUserNotificationType.Badge
+        
+        let mySettings: UIUserNotificationSettings = UIUserNotificationSettings(forTypes: types, categories: categories as Set<NSObject>)
+        
+        UIApplication.sharedApplication().registerUserNotificationSettings(mySettings)
+        
+        
         return true
     }
 

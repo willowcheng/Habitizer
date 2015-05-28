@@ -14,22 +14,25 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        var data = [SQLRow]()
-        let db = SQLiteDB.sharedInstance()
-        data = db.query("SELECT * FROM habit ORDER BY id ASC")
-        let row = data[data.count - 1]
-        let task = row["content"]
-        habitTargetLabel.text = task?.asString()
-        
-        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        loadDatabase()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    func loadDatabase() {
+        var data = [SQLRow]()
+        let db = SQLiteDB.sharedInstance()
+        data = db.query("SELECT * FROM habit ORDER BY id ASC")
+        let row = data[data.count - 1]
+        let task = row["content"]
+        habitTargetLabel.text = task?.asString()
+    }
 
 }
 

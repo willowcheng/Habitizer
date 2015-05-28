@@ -30,11 +30,16 @@ class NewHabitViewController: UIViewController {
             self.presentViewController(alert, animated: true, completion: nil)
         } else {
             let db = SQLiteDB.sharedInstance()
-            let sql = "INSERT INTO habit(id, content, startDate, achieved) VALUES (1, '\(habitTextField.text)', 'May 28, 2015', 0)"
+            let sql = "INSERT INTO habit(id, content, startDate, achieved) VALUES (1, '\(habitTextField.text)', 'May 28, 2015', 21)"
             let rc = db.execute(sql)
             if rc != 0 {
-                let alert = UIAlertView(title:"Success", message:"New habit added!", delegate:nil, cancelButtonTitle: "OK")
-                alert.show()
+                var newHabitNotification: UILocalNotification = UILocalNotification()
+                newHabitNotification.category = "NEW_HABIT_CATEGORY"
+                var notificationHead: String = NSLocalizedString("NEW_HABIT_ADD", comment: "New habit add") as String
+                newHabitNotification.alertBody = "\(notificationHead)\(habitTextField.text.lowercaseString)"
+                newHabitNotification.fireDate = NSDate(timeIntervalSinceNow: 5)
+                
+                UIApplication.sharedApplication().scheduleLocalNotification(newHabitNotification)
             }
             dismissViewControllerAnimated(true, completion: nil)
         }

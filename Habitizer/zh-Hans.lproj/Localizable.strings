@@ -8,3 +8,4 @@
 
 TYPE_YOUR_NEW_HABIT = "输入你想养成的习惯吧";
 OK = "好的";
+NEW_HABIT_ADD = "开始你新习惯的21天吧， ";
