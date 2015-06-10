@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import CoreData
 
 class MainViewController: UIViewController {
-
+    
+    var habits : [Habits] = [Habits]()
+    let managedObjectContext =
+    (UIApplication.sharedApplication().delegate
+        as! AppDelegate).managedObjectContext
     @IBOutlet weak var habitTargetLabel: UILabel!
     
     override func viewDidLoad() {
@@ -26,12 +31,16 @@ class MainViewController: UIViewController {
     }
     
     func loadDatabase() {
-        var data = [SQLRow]()
-        let db = SQLiteDB.sharedInstance()
-        data = db.query("SELECT * FROM habit ORDER BY id ASC")
-        let row = data[data.count - 1]
-        let task = row["content"]
-        habitTargetLabel.text = task?.asString()
+        let fetchRequest : NSFetchRequest = NSFetchRequest(entityName: "Habits")
+        
+        var error: NSError? = nil
+        habits = managedObjectContext?.executeFetchRequest(fetchRequest, error: &error) as! [Habits]
+        for habit in habits {
+            println("Content: \(habit.content), createdAt: \(habit.createdAt), achieved: \(habit.achieved)")
+        }
+        if error != nil {
+            println("An error occurred loading the data")
+        }
     }
 
 }
