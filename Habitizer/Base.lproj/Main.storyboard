@@ -76,6 +76,12 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="1uN-wI-qqX">
+                        <barButtonItem key="leftBarButtonItem" title="Show Table" id="O7f-yB-hz3">
+                            <color key="tintColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="5vM-Mu-6F3" kind="show" id="AuZ-9U-uv8"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ean-Mc-uP5">
                             <color key="tintColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -90,6 +96,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="578" y="-354"/>
+        </scene>
+        <!--Show Table View Controller-->
+        <scene sceneID="ePt-3k-nIj">
+            <objects>
+                <viewController id="5vM-Mu-6F3" customClass="showTableViewController" customModule="Habitizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YF8-rL-muc"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ehw-dp-3FM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MOt-L9-n8K">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="wxi-JW-ESK">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="64" width="400" height="736"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="5vM-Mu-6F3" id="IwT-Ib-xnc"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="wxi-JW-ESK"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="wxi-JW-ESK"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="cg5-5q-DvK"/>
+                    <connections>
+                        <outlet property="habitsTableView" destination="wxi-JW-ESK" id="jeY-k3-AxF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8HY-8B-kqW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="577.5" y="348.75"/>
         </scene>
         <!--New Habit View Controller-->
         <scene sceneID="Gkk-If-NRV">

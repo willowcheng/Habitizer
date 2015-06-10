@@ -17,6 +17,7 @@
 		774CE1721B13EB0800EB08B9 /* NewHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774CE1711B13EB0800EB08B9 /* NewHabitViewController.swift */; };
 		779089C81B27E75900C5ED19 /* Habitizer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 779089C61B27E75900C5ED19 /* Habitizer.xcdatamodeld */; };
 		779089CC1B27EC4700C5ED19 /* Habits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779089CB1B27EC4700C5ED19 /* Habits.swift */; };
+		77A94F2A1B28CA14001AD3CA /* showTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A94F291B28CA14001AD3CA /* showTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		774CE1711B13EB0800EB08B9 /* NewHabitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewHabitViewController.swift; sourceTree = "<group>"; };
 		779089C71B27E75900C5ED19 /* Habitizer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Habitizer.xcdatamodel; sourceTree = "<group>"; };
 		779089CB1B27EC4700C5ED19 /* Habits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Habits.swift; sourceTree = "<group>"; };
+		77A94F291B28CA14001AD3CA /* showTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = showTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +89,6 @@
 		774CE14B1B13D96F00EB08B9 /* Habitizer */ = {
 			isa = PBXGroup;
 			children = (
-				779089CB1B27EC4700C5ED19 /* Habits.swift */,
-				779089C61B27E75900C5ED19 /* Habitizer.xcdatamodeld */,
 				774CE14E1B13D96F00EB08B9 /* AppDelegate.swift */,
 				774CE1531B13D96F00EB08B9 /* MainViewController.swift */,
 				774CE1711B13EB0800EB08B9 /* NewHabitViewController.swift */,
@@ -96,7 +96,9 @@
 				774CE1581B13D96F00EB08B9 /* Images.xcassets */,
 				774CE15A1B13D96F00EB08B9 /* LaunchScreen.xib */,
 				774CE14C1B13D96F00EB08B9 /* Supporting Files */,
+				77A94F281B28C64A001AD3CA /* Model */,
 				7745BEEF1B14C042009BF10B /* Localizable.strings */,
+				77A94F291B28CA14001AD3CA /* showTableViewController.swift */,
 			);
 			path = Habitizer;
 			sourceTree = "<group>";
@@ -124,6 +126,15 @@
 				774CE1661B13D96F00EB08B9 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		77A94F281B28C64A001AD3CA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				779089CB1B27EC4700C5ED19 /* Habits.swift */,
+				779089C61B27E75900C5ED19 /* Habitizer.xcdatamodeld */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77A94F2A1B28CA14001AD3CA /* showTableViewController.swift in Sources */,
 				774CE1721B13EB0800EB08B9 /* NewHabitViewController.swift in Sources */,
 				779089C81B27E75900C5ED19 /* Habitizer.xcdatamodeld in Sources */,
 				779089CC1B27EC4700C5ED19 /* Habits.swift in Sources */,

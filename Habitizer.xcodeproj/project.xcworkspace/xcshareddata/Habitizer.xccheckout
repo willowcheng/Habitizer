@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>62A02CEB-EED0-4EA1-B76B-9FBE12B35083</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Habitizer</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>33B6971035F3FF8CAA54329312EEC4FD2166094D</key>
 		<string>https://github.com/willowcheng/Habitizer.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Habitizer.xcodeproj</string>
+	<string>Habitizer.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>33B6971035F3FF8CAA54329312EEC4FD2166094D</key>
