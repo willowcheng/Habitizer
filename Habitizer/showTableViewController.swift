@@ -64,6 +64,25 @@ class showTableViewController: UIViewController, UITableViewDataSource {
         return cell
     }
     
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            managedObjectContext?.deleteObject(items[indexPath.row] as! Habits)
+            
+            var error: NSError? = nil
+            if !managedObjectContext!.save(&error) {
+                println("Failed to delete the item \(error), \(error?.userInfo)")
+            } else {
+                items.removeAtIndex(indexPath.row)
+                tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
+            }
+        }
+    }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+
+    
     // MARK: - Refactor functions
     
     func fetchData() {
@@ -84,5 +103,6 @@ class showTableViewController: UIViewController, UITableViewDataSource {
         self.habitsTableView.reloadData()
         
     }
+
 
 }

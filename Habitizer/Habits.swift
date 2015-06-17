@@ -14,4 +14,5 @@ class Habits: NSManagedObject {
     @NSManaged var content: String
     @NSManaged var achieved: NSNumber
     @NSManaged var createdAt: NSDate
+    @NSManaged var remainDays: Int16
 }

@@ -56,6 +56,7 @@ class NewHabitViewController: UIViewController {
         habit.content = content
         habit.createdAt = NSDate()
         habit.achieved = false
+        habit.remainDays = 20
         
         var error: NSError?
         

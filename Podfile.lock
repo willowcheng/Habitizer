@@ -1,0 +1,10 @@
+PODS:
+  - KYCircularProgress (0.1.1)
+
+DEPENDENCIES:
+  - KYCircularProgress
+
+SPEC CHECKSUMS:
+  KYCircularProgress: 9ed89ab9c404ba98f77625d6266f15e0a55e05e4
+
+COCOAPODS: 0.37.2
