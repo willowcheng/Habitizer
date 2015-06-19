@@ -18,12 +18,18 @@ class NewHabitViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        
-//        var todaysDate:NSDate = NSDate()
-//        var dateFormatter:NSDateFormatter = NSDateFormatter()
-//        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
-//        var DateInFormat:String = dateFormatter.stringFromDate(todaysDate)
-//        println(DateInFormat)
+        
+        var todaysDate: NSDate = NSDate()
+        var dateFormatter: NSDateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
+        dateFormatter.timeStyle = .NoStyle
+        var dateInFormat: String = dateFormatter.stringFromDate(todaysDate)
+        println(dateInFormat)
+        var timeFormatter: NSDateFormatter = NSDateFormatter()
+        timeFormatter.dateStyle = NSDateFormatterStyle.NoStyle
+        timeFormatter.timeStyle = .ShortStyle
+        var timeInFormat: String = timeFormatter.stringFromDate(todaysDate)
+        println(timeInFormat)
     }
 
     override func didReceiveMemoryWarning() {
