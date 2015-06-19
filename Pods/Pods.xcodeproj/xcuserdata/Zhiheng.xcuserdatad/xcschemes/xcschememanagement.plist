@@ -4,22 +4,22 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-Habitizer-BubbleTransition.xcscheme</key>
+		<key>Pods-BubbleTransition.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-Habitizer-KYCircularProgress.xcscheme</key>
+		<key>Pods-KYCircularProgress.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-Habitizer-TextFieldEffects.xcscheme</key>
+		<key>Pods-TextFieldEffects.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-Habitizer.xcscheme</key>
+		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -27,22 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2925F63E165733EA3FE9375F</key>
+		<key>0A4EA8C56D772C95C76F30B1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7D45E80460FBE1089C0F4B27</key>
+		<key>1AC5A4D694EB6A37609CFDE2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>84715AADC79DFFA510B15617</key>
+		<key>C91B564AED702681746391ED</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>898693BC314628D87111F9A0</key>
+		<key>EC03AAD144D003CCE5F0C4C5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		001CDE2752BA6A2BC8E91FC5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1167AFAE9F085D91CE96238 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		7745BEED1B14C042009BF10B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7745BEEF1B14C042009BF10B /* Localizable.strings */; };
 		774CE14F1B13D96F00EB08B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774CE14E1B13D96F00EB08B9 /* AppDelegate.swift */; };
 		774CE1541B13D96F00EB08B9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774CE1531B13D96F00EB08B9 /* MainViewController.swift */; };
@@ -19,8 +18,9 @@
 		779089C81B27E75900C5ED19 /* Habitizer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 779089C61B27E75900C5ED19 /* Habitizer.xcdatamodeld */; };
 		779089CC1B27EC4700C5ED19 /* Habits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779089CB1B27EC4700C5ED19 /* Habits.swift */; };
 		77A94F2A1B28CA14001AD3CA /* showTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A94F291B28CA14001AD3CA /* showTableViewController.swift */; };
+		811D96831B34E04D001BDE18 /* KYCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811D96821B34E04D001BDE18 /* KYCircularProgress.swift */; };
 		81B766EF1B34D202009DA4A3 /* BubbleTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B766EE1B34D202009DA4A3 /* BubbleTransition.swift */; };
-		F08555BBCE9D24A31440B039 /* Pods_Habitizer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55055DB0F8B69BB3B737A56D /* Pods_Habitizer.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		FBDD0B6881827987BB3970DC /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1167AFAE9F085D91CE96238 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +53,7 @@
 		779089C71B27E75900C5ED19 /* Habitizer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Habitizer.xcdatamodel; sourceTree = "<group>"; };
 		779089CB1B27EC4700C5ED19 /* Habits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Habits.swift; sourceTree = "<group>"; };
 		77A94F291B28CA14001AD3CA /* showTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = showTableViewController.swift; sourceTree = "<group>"; };
+		811D96821B34E04D001BDE18 /* KYCircularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCircularProgress.swift; sourceTree = "<group>"; };
 		81B766EE1B34D202009DA4A3 /* BubbleTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleTransition.swift; sourceTree = "<group>"; };
 		A6459E6D87727CD826CC8428 /* Pods-Habitizer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Habitizer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Habitizer/Pods-Habitizer.debug.xcconfig"; sourceTree = "<group>"; };
 		E1167AFAE9F085D91CE96238 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,8 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F08555BBCE9D24A31440B039 /* Pods_Habitizer.framework in Frameworks */,
-				001CDE2752BA6A2BC8E91FC5 /* Pods.framework in Frameworks */,
+				FBDD0B6881827987BB3970DC /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +110,7 @@
 		774CE14B1B13D96F00EB08B9 /* Habitizer */ = {
 			isa = PBXGroup;
 			children = (
+				811D96821B34E04D001BDE18 /* KYCircularProgress.swift */,
 				774CE14E1B13D96F00EB08B9 /* AppDelegate.swift */,
 				81B766EE1B34D202009DA4A3 /* BubbleTransition.swift */,
 				774CE1531B13D96F00EB08B9 /* MainViewController.swift */,
@@ -272,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77A94F2A1B28CA14001AD3CA /* showTableViewController.swift in Sources */,
+				811D96831B34E04D001BDE18 /* KYCircularProgress.swift in Sources */,
 				774CE1721B13EB0800EB08B9 /* NewHabitViewController.swift in Sources */,
 				779089C81B27E75900C5ED19 /* Habitizer.xcdatamodeld in Sources */,
 				779089CC1B27EC4700C5ED19 /* Habits.swift in Sources */,

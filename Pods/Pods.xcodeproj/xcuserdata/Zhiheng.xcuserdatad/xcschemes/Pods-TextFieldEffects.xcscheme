@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7D45E80460FBE1089C0F4B27"
-               BuildableName = "KYCircularProgress.framework"
-               BlueprintName = "Pods-Habitizer-KYCircularProgress"
+               BlueprintIdentifier = "0A4EA8C56D772C95C76F30B1"
+               BuildableName = "TextFieldEffects.framework"
+               BlueprintName = "Pods-TextFieldEffects"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
