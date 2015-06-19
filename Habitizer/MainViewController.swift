@@ -8,14 +8,19 @@
 
 import UIKit
 import CoreData
-import KYCircularProgress
+//import KYCircularProgress
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, UIViewControllerTransitioningDelegate {
+    
+    let transition = BubbleTransition()
     
     var habits : [Habits] = [Habits]()
     let managedObjectContext =
     (UIApplication.sharedApplication().delegate
         as! AppDelegate).managedObjectContext
+    
+    
+    @IBOutlet weak var transitionButton: UIButton!
     @IBOutlet weak var habitTargetLabel: UILabel!
     @IBOutlet weak var remainDaysLabel: UILabel!
     var remainDays = 0
@@ -26,7 +31,14 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.translucent = true
+        self.navigationController?.view.backgroundColor = UIColor.clearColor()
+        self.navigationController?.navigationBar.backgroundColor = UIColor.clearColor()
 
+        
         let circularProgressFrame = CGRectMake(0, 0, CGRectGetWidth(view.frame), CGRectGetHeight(view.frame)/2)
         circularProgress = KYCircularProgress(frame: circularProgressFrame, showProgressGuide: true)
         
@@ -48,11 +60,34 @@ class MainViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         loadDatabase()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .Present
+        transition.startingPoint = transitionButton.center
+        transition.bubbleColor = transitionButton.backgroundColor!
+        return transition
+    }
+    
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .Dismiss
+        transition.startingPoint = transitionButton.center
+        transition.bubbleColor = transitionButton.backgroundColor!
+        return transition
+    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let controller = segue.destinationViewController as? UIViewController {
+            controller.transitioningDelegate = self
+            controller.modalPresentationStyle = .Custom
+        }
+    }
+
     
     func loadDatabase() {
         let fetchRequest : NSFetchRequest = NSFetchRequest(entityName: "Habits")
@@ -62,8 +97,8 @@ class MainViewController: UIViewController {
         for habit in habits {
             println("Content: \(habit.content), createdAt: \(habit.createdAt), achieved: \(habit.achieved), remain days: \(habit.remainDays)")
             habitTargetLabel.text = habit.content
-//            remainDays = Int(habit.remainDays)
-            remainDays = 2
+            remainDays = Int(habit.remainDays)
+//            remainDays = 5
                 circularDaysAnimation()
         }
         if error != nil {

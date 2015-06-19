@@ -48,8 +48,12 @@ code_sign() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework 'BubbleTransition.framework'
   install_framework 'KYCircularProgress.framework'
+  install_framework 'TextFieldEffects.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework 'BubbleTransition.framework'
   install_framework 'KYCircularProgress.framework'
+  install_framework 'TextFieldEffects.framework'
 fi

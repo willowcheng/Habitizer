@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		001CDE2752BA6A2BC8E91FC5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1167AFAE9F085D91CE96238 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		7745BEED1B14C042009BF10B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7745BEEF1B14C042009BF10B /* Localizable.strings */; };
 		774CE14F1B13D96F00EB08B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774CE14E1B13D96F00EB08B9 /* AppDelegate.swift */; };
 		774CE1541B13D96F00EB08B9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774CE1531B13D96F00EB08B9 /* MainViewController.swift */; };
@@ -18,8 +19,7 @@
 		779089C81B27E75900C5ED19 /* Habitizer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 779089C61B27E75900C5ED19 /* Habitizer.xcdatamodeld */; };
 		779089CC1B27EC4700C5ED19 /* Habits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779089CB1B27EC4700C5ED19 /* Habits.swift */; };
 		77A94F2A1B28CA14001AD3CA /* showTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A94F291B28CA14001AD3CA /* showTableViewController.swift */; };
-		77ADD4CF1B34D2C200371D79 /* JGTransitionCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77ADD4CD1B34D2C200371D79 /* JGTransitionCollectionView.swift */; };
-		77ADD4D01B34D2C200371D79 /* JGTransitionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77ADD4CE1B34D2C200371D79 /* JGTransitionLayout.swift */; };
+		81B766EF1B34D202009DA4A3 /* BubbleTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B766EE1B34D202009DA4A3 /* BubbleTransition.swift */; };
 		F08555BBCE9D24A31440B039 /* Pods_Habitizer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55055DB0F8B69BB3B737A56D /* Pods_Habitizer.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -53,9 +53,9 @@
 		779089C71B27E75900C5ED19 /* Habitizer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Habitizer.xcdatamodel; sourceTree = "<group>"; };
 		779089CB1B27EC4700C5ED19 /* Habits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Habits.swift; sourceTree = "<group>"; };
 		77A94F291B28CA14001AD3CA /* showTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = showTableViewController.swift; sourceTree = "<group>"; };
-		77ADD4CD1B34D2C200371D79 /* JGTransitionCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JGTransitionCollectionView.swift; path = "../../../../Desktop/JGTransitionCollectionView-master/JGTransitionCollectionView/classes/JGTransitionCollectionView.swift"; sourceTree = "<group>"; };
-		77ADD4CE1B34D2C200371D79 /* JGTransitionLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JGTransitionLayout.swift; path = "../../../../Desktop/JGTransitionCollectionView-master/JGTransitionCollectionView/classes/JGTransitionLayout.swift"; sourceTree = "<group>"; };
+		81B766EE1B34D202009DA4A3 /* BubbleTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleTransition.swift; sourceTree = "<group>"; };
 		A6459E6D87727CD826CC8428 /* Pods-Habitizer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Habitizer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Habitizer/Pods-Habitizer.debug.xcconfig"; sourceTree = "<group>"; };
+		E1167AFAE9F085D91CE96238 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +64,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F08555BBCE9D24A31440B039 /* Pods_Habitizer.framework in Frameworks */,
+				001CDE2752BA6A2BC8E91FC5 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,17 +110,17 @@
 		774CE14B1B13D96F00EB08B9 /* Habitizer */ = {
 			isa = PBXGroup;
 			children = (
-				77ADD4CC1B34D2A700371D79 /* JGTransitionCollectionView */,
 				774CE14E1B13D96F00EB08B9 /* AppDelegate.swift */,
+				81B766EE1B34D202009DA4A3 /* BubbleTransition.swift */,
 				774CE1531B13D96F00EB08B9 /* MainViewController.swift */,
 				774CE1711B13EB0800EB08B9 /* NewHabitViewController.swift */,
-				77A94F291B28CA14001AD3CA /* showTableViewController.swift */,
 				774CE1551B13D96F00EB08B9 /* Main.storyboard */,
 				774CE1581B13D96F00EB08B9 /* Images.xcassets */,
 				774CE15A1B13D96F00EB08B9 /* LaunchScreen.xib */,
 				774CE14C1B13D96F00EB08B9 /* Supporting Files */,
 				77A94F281B28C64A001AD3CA /* Model */,
 				7745BEEF1B14C042009BF10B /* Localizable.strings */,
+				77A94F291B28CA14001AD3CA /* showTableViewController.swift */,
 			);
 			path = Habitizer;
 			sourceTree = "<group>";
@@ -158,19 +159,11 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		77ADD4CC1B34D2A700371D79 /* JGTransitionCollectionView */ = {
-			isa = PBXGroup;
-			children = (
-				77ADD4CD1B34D2C200371D79 /* JGTransitionCollectionView.swift */,
-				77ADD4CE1B34D2C200371D79 /* JGTransitionLayout.swift */,
-			);
-			name = JGTransitionCollectionView;
-			sourceTree = "<group>";
-		};
 		88F99DEC46E0D5559B668A83 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				55055DB0F8B69BB3B737A56D /* Pods_Habitizer.framework */,
+				E1167AFAE9F085D91CE96238 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -182,12 +175,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 774CE16B1B13D96F00EB08B9 /* Build configuration list for PBXNativeTarget "Habitizer" */;
 			buildPhases = (
-				BB5E4774D6DD743B7716336E /* Check Pods Manifest.lock */,
 				774CE1451B13D96F00EB08B9 /* Sources */,
 				774CE1461B13D96F00EB08B9 /* Frameworks */,
 				774CE1471B13D96F00EB08B9 /* Resources */,
-				855FB28D219E707F8E0B86E6 /* Embed Pods Frameworks */,
-				D42E7865A1AEB9F5153CD0D7 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -222,6 +212,7 @@
 		774CE1411B13D96F00EB08B9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Zhiheng Yi & Liu Cheng";
 				TargetAttributes = {
@@ -275,54 +266,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		855FB28D219E707F8E0B86E6 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Habitizer/Pods-Habitizer-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BB5E4774D6DD743B7716336E /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		D42E7865A1AEB9F5153CD0D7 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Habitizer/Pods-Habitizer-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		774CE1451B13D96F00EB08B9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -330,10 +273,9 @@
 			files = (
 				77A94F2A1B28CA14001AD3CA /* showTableViewController.swift in Sources */,
 				774CE1721B13EB0800EB08B9 /* NewHabitViewController.swift in Sources */,
-				77ADD4CF1B34D2C200371D79 /* JGTransitionCollectionView.swift in Sources */,
 				779089C81B27E75900C5ED19 /* Habitizer.xcdatamodeld in Sources */,
 				779089CC1B27EC4700C5ED19 /* Habits.swift in Sources */,
-				77ADD4D01B34D2C200371D79 /* JGTransitionLayout.swift in Sources */,
+				81B766EF1B34D202009DA4A3 /* BubbleTransition.swift in Sources */,
 				774CE1541B13D96F00EB08B9 /* MainViewController.swift in Sources */,
 				774CE14F1B13D96F00EB08B9 /* AppDelegate.swift in Sources */,
 			);
