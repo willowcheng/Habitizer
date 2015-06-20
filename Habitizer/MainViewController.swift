@@ -45,8 +45,9 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         
         let center = CGPoint(x: view.frame.width/2, y: view.frame.height/2)
         circularProgress.path = UIBezierPath(arcCenter: center, radius: CGFloat(CGRectGetWidth(circularProgress.frame)/3), startAngle: CGFloat(M_PI), endAngle: CGFloat(0.0), clockwise: true)
-        circularProgress.colors = [UIColor.whiteColor(), UIColor.orangeColor()]
-        circularProgress.lineWidth = 10.0
+        println("\(UIColor.orangeColor())")
+        circularProgress.colors = [UIColor.whiteColor(), UIColorFromRGB(0x2DF79F)]
+        circularProgress.lineWidth = 5.0
         circularProgress.showProgressGuide = true
         circularProgress.progressGuideColor = UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 0.2)
         
@@ -117,5 +118,14 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         NSTimer.scheduledTimerWithTimeInterval(0.005, target: self, selector: Selector("updateProgress"), userInfo: nil, repeats: true)
     }
 
+}
+
+func UIColorFromRGB(rgbValue: UInt) -> UIColor {
+    return UIColor(
+        red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+        green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+        blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+        alpha: CGFloat(1.0)
+    )
 }
 
