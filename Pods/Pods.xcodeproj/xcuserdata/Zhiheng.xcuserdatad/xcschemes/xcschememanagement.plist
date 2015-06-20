@@ -8,21 +8,49 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Pods-HabitizerTests-BubbleTransition.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>Pods-HabitizerTests-KYCircularProgress.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>Pods-HabitizerTests-TextFieldEffects.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
+		<key>Pods-HabitizerTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
 		</dict>
 		<key>Pods-KYCircularProgress.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>6</integer>
 		</dict>
 		<key>Pods-TextFieldEffects.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>7</integer>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -32,7 +60,37 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>17DC9A1D7F17964AF2A8D050</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>1AC5A4D694EB6A37609CFDE2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>441D2ABE74F8048AAD9C3A07</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4C5E89724CDBE822109DF5C5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>58E3B7F4E0EB13F77D3A61D2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8CFA98675B86C018C72F5EF3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C81F66E219C0FD81CE03297C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -43,6 +101,16 @@
 			<true/>
 		</dict>
 		<key>EC03AAD144D003CCE5F0C4C5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EEB25A8D8BB63B4163462A19</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FC39A5BDC9987D604C5D72C4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
