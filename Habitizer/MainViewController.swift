@@ -97,8 +97,8 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         for habit in habits {
             println("Content: \(habit.content), createdAt: \(habit.createdAt), achieved: \(habit.achieved), remain days: \(habit.remainDays)")
             habitTargetLabel.text = habit.content
-            remainDays = Int(habit.remainDays)
-//            remainDays = 5
+//            remainDays = Int(habit.remainDays)
+            remainDays = 5
                 circularDaysAnimation()
         }
         if error != nil {
