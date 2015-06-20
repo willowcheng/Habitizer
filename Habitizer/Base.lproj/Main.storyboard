@@ -18,29 +18,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remain" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67l-yw-xuT">
-                                <rect key="frame" x="129" y="306" width="120.5" height="46"/>
+                                <rect key="frame" x="147" y="304" width="120.5" height="46"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="days" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwO-i8-AeV">
-                                <rect key="frame" x="388" y="306" width="76" height="46"/>
+                                <rect key="frame" x="377.5" y="304" width="76" height="46"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Read books every day" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Sy-C7-812">
-                                <rect key="frame" x="300" y="441" width="163.5" height="20.5"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3e5-G5-ArR" customClass="SpringLabel" customModule="Spring">
-                                <rect key="frame" x="254" y="229" width="134" height="142"/>
+                                <rect key="frame" x="262.5" y="250" width="115" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="133.5" id="J3x-Un-Dbh"/>
+                                    <constraint firstAttribute="width" constant="115" id="J3x-Un-Dbh"/>
+                                    <constraint firstAttribute="height" constant="100" id="pN2-zx-OVd"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="120"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="100"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
@@ -69,6 +64,12 @@
                                     <segue destination="W23-d3-KNG" kind="presentation" id="7hf-SD-cI6"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Read books every day" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Sy-C7-812">
+                                <rect key="frame" x="16" y="407" width="568" height="20.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.21568629149999999" green="0.83921575550000005" blue="0.92549026010000002" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
@@ -85,34 +86,57 @@
                             <constraint firstItem="wwO-i8-AeV" firstAttribute="leading" secondItem="3e5-G5-ArR" secondAttribute="trailing" id="AJe-0p-duN"/>
                             <constraint firstAttribute="bottom" secondItem="P9c-aP-YvW" secondAttribute="bottom" constant="20" symbolic="YES" id="Bay-x5-4bd"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="P9c-aP-YvW" secondAttribute="bottom" constant="20" id="DwF-zr-Ejj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7Sy-C7-812" secondAttribute="trailing" id="EBF-b7-Nu0"/>
                             <constraint firstItem="3e5-G5-ArR" firstAttribute="bottom" secondItem="67l-yw-xuT" secondAttribute="bottom" constant="13" id="EDh-hM-M9P"/>
+                            <constraint firstItem="7Sy-C7-812" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Ebo-S5-XDD"/>
+                            <constraint firstItem="7Sy-C7-812" firstAttribute="top" secondItem="3e5-G5-ArR" secondAttribute="bottom" constant="100" id="Fh7-Ib-62h"/>
                             <constraint firstItem="67l-yw-xuT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="HeP-j8-ccI"/>
-                            <constraint firstItem="3e5-G5-ArR" firstAttribute="bottom" secondItem="67l-yw-xuT" secondAttribute="bottom" constant="19" id="JeV-za-Gr9"/>
+                            <constraint firstItem="3e5-G5-ArR" firstAttribute="bottom" secondItem="67l-yw-xuT" secondAttribute="bottom" id="JeV-za-Gr9"/>
                             <constraint firstItem="wwO-i8-AeV" firstAttribute="leading" secondItem="3e5-G5-ArR" secondAttribute="trailing" constant="-8" id="K9Z-vk-AwI"/>
                             <constraint firstAttribute="centerY" secondItem="3e5-G5-ArR" secondAttribute="centerY" id="M1M-vV-ARt"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7Sy-C7-812" secondAttribute="bottom" constant="138" id="S8q-ht-RY9"/>
-                            <constraint firstItem="3e5-G5-ArR" firstAttribute="bottom" secondItem="wwO-i8-AeV" secondAttribute="bottom" constant="19" id="VWT-RK-PNx"/>
+                            <constraint firstItem="3e5-G5-ArR" firstAttribute="bottom" secondItem="wwO-i8-AeV" secondAttribute="bottom" id="VWT-RK-PNx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7Sy-C7-812" secondAttribute="trailing" constant="20" id="XV7-cd-FC8"/>
                             <constraint firstItem="3e5-G5-ArR" firstAttribute="leading" secondItem="67l-yw-xuT" secondAttribute="trailing" constant="8" id="h0a-jH-wgD"/>
                             <constraint firstAttribute="centerX" secondItem="wwO-i8-AeV" secondAttribute="centerX" constant="-131.5" id="j8B-Uy-hfc"/>
                             <constraint firstItem="wwO-i8-AeV" firstAttribute="trailing" secondItem="7Sy-C7-812" secondAttribute="trailing" id="kfm-QO-qgC"/>
-                            <constraint firstAttribute="centerX" secondItem="3e5-G5-ArR" secondAttribute="centerX" constant="-21" id="oRT-sS-Ieo"/>
+                            <constraint firstItem="7Sy-C7-812" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="kjF-ze-Hsm"/>
+                            <constraint firstAttribute="centerX" secondItem="P9c-aP-YvW" secondAttribute="centerX" id="mtW-Db-sVa"/>
+                            <constraint firstAttribute="centerY" secondItem="3e5-G5-ArR" secondAttribute="centerY" id="oDe-w8-vJl"/>
+                            <constraint firstAttribute="centerX" secondItem="3e5-G5-ArR" secondAttribute="centerX" constant="-20" id="oRT-sS-Ieo"/>
+                            <constraint firstItem="7Sy-C7-812" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="404" id="pbP-pQ-EU3"/>
                             <constraint firstAttribute="centerX" secondItem="3e5-G5-ArR" secondAttribute="centerX" constant="-42" id="peS-Gp-MQz"/>
                             <constraint firstItem="7Sy-C7-812" firstAttribute="top" secondItem="3e5-G5-ArR" secondAttribute="bottom" constant="71" id="qGn-gP-8N1"/>
-                            <constraint firstItem="3e5-G5-ArR" firstAttribute="leading" secondItem="67l-yw-xuT" secondAttribute="trailing" constant="4" id="x6X-GA-buU"/>
+                            <constraint firstItem="7Sy-C7-812" firstAttribute="top" secondItem="wwO-i8-AeV" secondAttribute="bottom" constant="91" id="rQ2-GX-bRY"/>
+                            <constraint firstItem="7Sy-C7-812" firstAttribute="top" secondItem="3e5-G5-ArR" secondAttribute="bottom" constant="57" id="tWn-Mc-V03"/>
+                            <constraint firstItem="7Sy-C7-812" firstAttribute="top" secondItem="wwO-i8-AeV" secondAttribute="bottom" constant="65" id="uWc-nL-QXF"/>
+                            <constraint firstItem="7Sy-C7-812" firstAttribute="bottom" secondItem="3e5-G5-ArR" secondAttribute="bottom" constant="-90" id="vhe-AR-g5p"/>
+                            <constraint firstItem="3e5-G5-ArR" firstAttribute="leading" secondItem="67l-yw-xuT" secondAttribute="trailing" constant="-5" id="x6X-GA-buU"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="9DE-Wr-LJg"/>
                                 <exclude reference="HeP-j8-ccI"/>
                                 <exclude reference="EDh-hM-M9P"/>
+                                <exclude reference="M1M-vV-ARt"/>
                                 <exclude reference="h0a-jH-wgD"/>
                                 <exclude reference="peS-Gp-MQz"/>
+                                <exclude reference="EBF-b7-Nu0"/>
+                                <exclude reference="Fh7-Ib-62h"/>
+                                <exclude reference="XV7-cd-FC8"/>
+                                <exclude reference="pbP-pQ-EU3"/>
+                                <exclude reference="qGn-gP-8N1"/>
+                                <exclude reference="rQ2-GX-bRY"/>
+                                <exclude reference="uWc-nL-QXF"/>
+                                <exclude reference="vhe-AR-g5p"/>
                                 <exclude reference="K9Z-vk-AwI"/>
                                 <exclude reference="j8B-Uy-hfc"/>
-                                <exclude reference="qGn-gP-8N1"/>
+                                <exclude reference="kfm-QO-qgC"/>
                                 <exclude reference="3gE-09-gfW"/>
                                 <exclude reference="84U-Oa-3Ga"/>
+                                <exclude reference="8uY-S7-jcj"/>
                                 <exclude reference="Bay-x5-4bd"/>
+                                <exclude reference="S8q-ht-RY9"/>
                             </mask>
                         </variation>
                     </view>
