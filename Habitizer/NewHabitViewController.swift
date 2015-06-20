@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class NewHabitViewController: UIViewController {
+class NewHabitViewController: UIViewController, UITextFieldDelegate {
 
     let managedObjectContext =
     (UIApplication.sharedApplication().delegate
@@ -22,6 +22,7 @@ class NewHabitViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        habitTextField.delegate = self
         
         var todaysDate: NSDate = NSDate()
         var dateFormatter: NSDateFormatter = NSDateFormatter()
@@ -51,9 +52,13 @@ class NewHabitViewController: UIViewController {
             createHabit(habitTextField.text)
         }
     }
-
-    @IBAction func cancelButtonPressed() {
-        dismissViewControllerAnimated(true, completion: nil)
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        habitTextField.resignFirstResponder()
+        return true
+    }
+    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
+        habitTextField.resignFirstResponder()
     }
     
     func createHabit(content: String) {
