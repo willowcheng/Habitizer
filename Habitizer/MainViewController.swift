@@ -40,17 +40,16 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
 
         
         let circularProgressFrame = CGRectMake(0, 0, CGRectGetWidth(view.frame), CGRectGetHeight(view.frame)/2)
-        circularProgress = KYCircularProgress(frame: circularProgressFrame, showProgressGuide: true)
+        circularProgress = KYCircularProgress(frame: circularProgressFrame)
         
         let center = CGPoint(x: view.frame.width/2, y: view.frame.height/2)
         circularProgress.path = UIBezierPath(arcCenter: center, radius: CGFloat(CGRectGetWidth(circularProgress.frame)/3), startAngle: CGFloat(M_PI), endAngle: CGFloat(0.0), clockwise: true)
         circularProgress.colors = [UIColor.whiteColor(), UIColor.orangeColor()]
-        circularProgress.lineWidth = 16.0
+        circularProgress.lineWidth = 10.0
         circularProgress.showProgressGuide = true
-        circularProgress.progressGuideColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.6)
+        circularProgress.progressGuideColor = UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 0.2)
         
         circularProgress.progressChangedClosure({ (progress: Double, circularView: KYCircularProgress) in
-            println("progress: \(progress)")
             self.remainDaysLabel.text = "\(20 - Int(progress * 21.0))"
         })
         

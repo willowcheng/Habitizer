@@ -1,10 +1,24 @@
-//
 //  KYCircularProgress.swift
-//  KYCircularProgress
 //
-//  Created by Kengo Yokoyama on 2014/10/02.
-//  Copyright (c) 2014 Kengo Yokoyama. All rights reserved.
+//  Copyright (c) 2014-2015 Kengo Yokoyama.
 //
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in
+//  all copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//  THE SOFTWARE.
 
 import Foundation
 import UIKit
@@ -72,7 +86,7 @@ public class KYCircularProgress: UIView {
             guideLayer?.backgroundColor = newValue.CGColor
         }
     }
-
+    
     public var showProgressGuide: Bool = false {
         willSet {
             configureProgressGuideLayer(newValue)
@@ -97,13 +111,13 @@ public class KYCircularProgress: UIView {
         self.showProgressGuide = showProgressGuide
         configureProgressGuideLayer(self.showProgressGuide)
     }
-
+    
     private func configureProgressLayer() {
         progressView = KYCircularShapeView(frame: bounds)
         progressView.shapeLayer().fillColor = UIColor.clearColor().CGColor
         progressView.shapeLayer().path = path?.CGPath
         progressView.shapeLayer().strokeColor = tintColor.CGColor
-
+        
         gradientLayer = CAGradientLayer(layer: layer)
         gradientLayer.frame = progressView.frame
         gradientLayer.startPoint = CGPointMake(0, 0.5);
@@ -121,13 +135,13 @@ public class KYCircularProgress: UIView {
             progressGuideView!.shapeLayer().path = path?.CGPath
             progressGuideView!.shapeLayer().lineWidth = CGFloat(lineWidth)
             progressGuideView!.shapeLayer().strokeColor = tintColor.CGColor
-
+            
             guideLayer = CAGradientLayer(layer: layer)
             guideLayer!.frame = progressGuideView!.frame
             guideLayer!.mask = progressGuideView!.shapeLayer()
             guideLayer!.backgroundColor = progressGuideColor.CGColor
             guideLayer!.zPosition = -1
-
+            
             progressGuideView!.updateProgress(1.0)
             
             layer.addSublayer(guideLayer)
