@@ -7,657 +7,817 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0719289D632A136D6F28D910 /* Pods-HabitizerTests-BubbleTransition-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8899FB7A4EAEBDF53BD66896 /* Pods-HabitizerTests-BubbleTransition-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0AB4419F33BA7CA449F127B9 /* Pods-BubbleTransition-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A2ADAD10F2B52AAA98393EA3 /* Pods-BubbleTransition-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0CEFF23C3A777C40187846E5 /* HoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E691D96E6CE282C7FC2F062A /* HoshiTextField.swift */; };
-		27A46E323DA23603FF5AC8B9 /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E6F71BAF88392E0E8119444 /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		299A0A8645AD711B72EDF7B7 /* Pods-HabitizerTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA68BB048887DE844FADD50 /* Pods-HabitizerTests-dummy.m */; };
-		35F0A03053F3369799E6EA2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 361B1C71A1D923C866E206F1 /* Foundation.framework */; };
-		36472D1C62A0C92FDDF89D9A /* BubbleTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDA69F779429C6CADDA9292 /* BubbleTransition.swift */; };
-		37AC2FAF4EFB13090287CFA3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 361B1C71A1D923C866E206F1 /* Foundation.framework */; };
-		3B072939DAE8BAECC058BE66 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 361B1C71A1D923C866E206F1 /* Foundation.framework */; };
-		3D6AE0119EC4521B0304E1FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 361B1C71A1D923C866E206F1 /* Foundation.framework */; };
-		40A155A5AA228A5BC9D0855F /* Pods-HabitizerTests-TextFieldEffects-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BB30226582610659AA02E9 /* Pods-HabitizerTests-TextFieldEffects-dummy.m */; };
-		44E620BC6EE6286CA2A9CBAD /* Pods-HabitizerTests-KYCircularProgress-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A02033B53EF37C4ABDEC560 /* Pods-HabitizerTests-KYCircularProgress-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6046B7782E94394FE8DC19A8 /* TextFieldsEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C41A7629AD44442A1AB84E /* TextFieldsEffects.swift */; };
-		628A915AB7CF524766E33FDA /* Pods-KYCircularProgress-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A678867E9FA4AA6F4CEDDE30 /* Pods-KYCircularProgress-dummy.m */; };
-		691333682E5487D7F83A7CE6 /* KYCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6C01073F6C2BC988F9A947 /* KYCircularProgress.swift */; };
-		7BD815A7667BB3B993A2005D /* IsaoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F338F3BF4DF68FF059C54EE6 /* IsaoTextField.swift */; };
-		85061901CC0701E0B47D94AD /* HoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E691D96E6CE282C7FC2F062A /* HoshiTextField.swift */; };
-		8752483612A32F23FFF07D61 /* KaedeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E09AB578B2E8287F2C280 /* KaedeTextField.swift */; };
-		8ABF604BADD48B6680905C5C /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C871BBDF5607BCC643BB095E /* Pods-dummy.m */; };
-		8AF90A49E7804331683B8E46 /* TextFieldsEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C41A7629AD44442A1AB84E /* TextFieldsEffects.swift */; };
-		8D72A9049BD61A4B679A26EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 361B1C71A1D923C866E206F1 /* Foundation.framework */; };
-		930D6BD7EB717C3AD97FE155 /* Pods-BubbleTransition-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDD112929D5DEA0535ACDE /* Pods-BubbleTransition-dummy.m */; };
-		95E4DE26560B7E003DD67A12 /* MadokaTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230B67D3E59255EC4E9885A1 /* MadokaTextField.swift */; };
-		9C673177197FE1C9E52A946C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 361B1C71A1D923C866E206F1 /* Foundation.framework */; };
-		9F8F33E9EC3F6EF47495716A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 361B1C71A1D923C866E206F1 /* Foundation.framework */; };
-		A0158E6E6BC8FA619BA460CA /* MadokaTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230B67D3E59255EC4E9885A1 /* MadokaTextField.swift */; };
-		A40E4EE322C2605DCB86CACB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 361B1C71A1D923C866E206F1 /* Foundation.framework */; };
-		B8EE3C832AEFB1F39A42E022 /* YokoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21152D7B3248FFFB18CC66E /* YokoTextField.swift */; };
-		BA865642107A84906B640DE8 /* MinoruTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541FD0125643819AD22DC622 /* MinoruTextField.swift */; };
-		C6156BFFA7DF01B148143C84 /* KaedeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E09AB578B2E8287F2C280 /* KaedeTextField.swift */; };
-		C7E638236FA869973CE079F8 /* AkiraTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6827C28BFD1B07EA7105641F /* AkiraTextField.swift */; };
-		CA774345903FB59A2085CED9 /* Pods-TextFieldEffects-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B3292067B072F93F1A01EF /* Pods-TextFieldEffects-dummy.m */; };
-		D227A261DC46BB6071040C01 /* AkiraTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6827C28BFD1B07EA7105641F /* AkiraTextField.swift */; };
-		D2E6E4961E62B414779A5F17 /* Pods-HabitizerTests-BubbleTransition-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3D6D3A6EB9ACF3136E8837 /* Pods-HabitizerTests-BubbleTransition-dummy.m */; };
-		D3BB7118798CAA6BC2008943 /* BubbleTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDA69F779429C6CADDA9292 /* BubbleTransition.swift */; };
-		D666E98C1DD5D0EDEB2B4587 /* Pods-HabitizerTests-KYCircularProgress-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA8DC49FE0EAEDA58828A31 /* Pods-HabitizerTests-KYCircularProgress-dummy.m */; };
-		D8534089097A672A5B536BCD /* JiroTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656D0C80D5F1B91573910834 /* JiroTextField.swift */; };
-		DEDF3E533B545CFAA9A21353 /* Pods-HabitizerTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D155F3008BFAF34CA8F13218 /* Pods-HabitizerTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DF6E4672E0A5C4AA79EE7703 /* KYCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6C01073F6C2BC988F9A947 /* KYCircularProgress.swift */; };
-		EAE9E9A73B50732866F4D326 /* Pods-HabitizerTests-TextFieldEffects-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B6FDBB308ECBD2FBEA8EF66 /* Pods-HabitizerTests-TextFieldEffects-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EE329D7031105320F96FC2B5 /* Pods-TextFieldEffects-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 07939FA35D084674899075A4 /* Pods-TextFieldEffects-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F46AB4CABC0D9EBCCD6CEB05 /* Pods-KYCircularProgress-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A401856391567A41CCE3A1C /* Pods-KYCircularProgress-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F4B1381B1184F593841F157E /* MinoruTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541FD0125643819AD22DC622 /* MinoruTextField.swift */; };
-		F603DC1DD67876F1787383F6 /* YokoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21152D7B3248FFFB18CC66E /* YokoTextField.swift */; };
-		F6AEE7F4E268D55E5A5BE5B5 /* IsaoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F338F3BF4DF68FF059C54EE6 /* IsaoTextField.swift */; };
-		FCC787F8328F5A02CDC7D5D5 /* JiroTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656D0C80D5F1B91573910834 /* JiroTextField.swift */; };
+		005F582E66585C635DC2C9F7 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DAC40F6B0134BE3AF69DAB /* AsyncImageView.swift */; };
+		02B4C424CC9B4FAFB96937A4 /* DesignableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081A0B616ACDA8E5775C52C9 /* DesignableTextView.swift */; };
+		04782FDD320A7F478E4B80B9 /* MinoruTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38319363A9BE6F9FAD8BE36B /* MinoruTextField.swift */; };
+		0690000D1064ABAEBF69A447 /* SpringTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD8C813ED7259D879EBAA7C /* SpringTextView.swift */; };
+		0789946DDB768F84B87131FA /* IsaoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264EC2D38D7893DA555F1DCF /* IsaoTextField.swift */; };
+		0830A0F5C404865CA95FCE25 /* TransitionZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8B14F11E5D427FD984B2A1 /* TransitionZoom.swift */; };
+		0A6EDD7B677B0E2E6D1B61F9 /* HoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3505F094231C4F54B50E15 /* HoshiTextField.swift */; };
+		0CEECACFB787CE24F57B4CDB /* Pods-KYCircularProgress-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 51171C752F03F059E5992472 /* Pods-KYCircularProgress-dummy.m */; };
+		0F3884778F65589623A5F9E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8057983F9301A89B17461A03 /* Foundation.framework */; };
+		0FABC965875C13E4BCD1AA6B /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106FFAA218A8AC52E768F886 /* Misc.swift */; };
+		12663510DAA525C0BE0BF037 /* DesignableTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F561599CDB1B5FC4EC6EBBB3 /* DesignableTabBarController.swift */; };
+		1449729BB8C361DC9276DCB1 /* AkiraTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834D68C74D4A40FA8466E470 /* AkiraTextField.swift */; };
+		147E34E97322757E02DD35DB /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961D3D11FC9442F5F7637AB4 /* UnwindSegue.swift */; };
+		17F83ED93E3F8A2F15611283 /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E53AE1F33A235088B69F95 /* AsyncButton.swift */; };
+		1A5AE9C316BDBBF8775E7F6F /* AutoTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101F6DC54414E88FF73F068F /* AutoTextView.swift */; };
+		1A8262A060A8DD9A71F191E3 /* MadokaTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F045EE0EBB411061ED8EB8 /* MadokaTextField.swift */; };
+		1D6BB9251E9516DAC2E715BD /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74308C34160F45B9EDC52E3C /* SoundPlayer.swift */; };
+		219562FE4449DA869A7BC76E /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947ACA8E115E8B89A7B1985F /* TransitionManager.swift */; };
+		2493F8BB01504A0C0DB04F74 /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C52628C576A9861755F1235 /* DesignableTextField.swift */; };
+		2949FE336F08E8678D3F191A /* MadokaTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F045EE0EBB411061ED8EB8 /* MadokaTextField.swift */; };
+		2BF46BE1FC963341BF464C76 /* YokoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450288C09478160139E2E9D7 /* YokoTextField.swift */; };
+		2FEF6C33F48C379F156B46B3 /* Pods-HabitizerTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F32C3FA5FE78A20E1D9A62A /* Pods-HabitizerTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		306F8BF1ECAE1F4D69244740 /* SpringImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFED22AA037F516210DC600 /* SpringImageView.swift */; };
+		30B5778A1ADCA2813CDDEBDF /* BubbleTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9BBF63209E12384095E141 /* BubbleTransition.swift */; };
+		38F750F2C87BD91D2672AC86 /* TransitionZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8B14F11E5D427FD984B2A1 /* TransitionZoom.swift */; };
+		3A16635B64C9D5D9BE4B33FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8057983F9301A89B17461A03 /* Foundation.framework */; };
+		3B114EF1174B8CAAC34E3B37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8057983F9301A89B17461A03 /* Foundation.framework */; };
+		3CD79A20EC66A352BE7C6658 /* Pods-TextFieldEffects-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 40AC24CE2C55EE348C9360E2 /* Pods-TextFieldEffects-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DA2CE87AF2ACB8607DA157E /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C92AEFF8C5FF3117D033BF /* DesignableView.swift */; };
+		3F5672ADB7CF1061081172F0 /* Pods-HabitizerTests-KYCircularProgress-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EF025382B1F717A4F8478FAC /* Pods-HabitizerTests-KYCircularProgress-dummy.m */; };
+		4333724695F15739BE0167EE /* SpringTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD8C813ED7259D879EBAA7C /* SpringTextView.swift */; };
+		44184F2B0C77E5A621E4B937 /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6899DA6701739433628BD499 /* DesignableButton.swift */; };
+		445A8962576153060D59F043 /* KYCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA401CA5B6BC3DBD92979243 /* KYCircularProgress.swift */; };
+		44E169D3F9CD8B80D53998B3 /* Pods-Spring-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FBDD03AC6950104448D5BE03 /* Pods-Spring-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		469DAD4632A73DEEF0078D9C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8057983F9301A89B17461A03 /* Foundation.framework */; };
+		49F3C185E6E99B698B4187E1 /* SpringTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899C0B1F364EAC0EBF3CB234 /* SpringTextField.swift */; };
+		4AB582A25D7F938ECECCCD81 /* Pods-HabitizerTests-TextFieldEffects-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A778C85B28B2FCF364976FFD /* Pods-HabitizerTests-TextFieldEffects-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D6D14A1D8F9AF8D2105D65F /* Pods-HabitizerTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BAE7C226DFA81E1EDA800E6 /* Pods-HabitizerTests-dummy.m */; };
+		553B23625ABADC51E493FE71 /* KaedeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99497AC7CCEED1A1F318C9A7 /* KaedeTextField.swift */; };
+		5BBE3C7C9E7CAAD5DFE1791E /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E53AE1F33A235088B69F95 /* AsyncButton.swift */; };
+		63C84099692A7EF9DDBCCAF5 /* Pods-TextFieldEffects-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 837B63AC6F5E8E044A57A0E4 /* Pods-TextFieldEffects-dummy.m */; };
+		6410A181B3E7622756D43926 /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D3E167152DBB873574A897 /* KeyboardLayoutConstraint.swift */; };
+		646FDAFEDAA512D1953185A7 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 579E0D7F35787C39588E1B31 /* LoadingView.xib */; };
+		64A07E2EA9B62AC453F43C0D /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DAC40F6B0134BE3AF69DAB /* AsyncImageView.swift */; };
+		64C9270B8343610E0E7D7F8F /* SpringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81D3AF5111D388A71E9617B /* SpringView.swift */; };
+		6BD0F03A45E97E169A35C270 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8057983F9301A89B17461A03 /* Foundation.framework */; };
+		6D6D47ECBFCA84D73F54E91D /* DesignableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081A0B616ACDA8E5775C52C9 /* DesignableTextView.swift */; };
+		6E24F9CED4BB958F35747791 /* Pods-Spring-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F755903383BF9F1613E633A1 /* Pods-Spring-dummy.m */; };
+		76501E5857F7F8521C153173 /* YokoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450288C09478160139E2E9D7 /* YokoTextField.swift */; };
+		78066B609A376AAED3F6CE9A /* DesignableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07493098FD893B1E3B2385E /* DesignableImageView.swift */; };
+		7B80F0CA163A1A42152BAF95 /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6899DA6701739433628BD499 /* DesignableButton.swift */; };
+		7C15DE10343692FD36179D33 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A470443E2E21EC3CB4D88105 /* Images.xcassets */; };
+		7D193CF1939004E11EA15C3D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A470443E2E21EC3CB4D88105 /* Images.xcassets */; };
+		7E0AF69543673091C06CA118 /* JiroTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E070829057528223654156C4 /* JiroTextField.swift */; };
+		8088A37BEB196CC2454A8E07 /* Pods-HabitizerTests-Spring-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C54A414411A65ED9702A9E1 /* Pods-HabitizerTests-Spring-dummy.m */; };
+		83CC7020386BA91173331E30 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0543E9E43E0EB321C5948A /* Pods-dummy.m */; };
+		846AD8EB5B113B20C6FE6731 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F80FCEDA1DD4D1396FA0AF /* LoadingView.swift */; };
+		87C421F1426E759F3F6E88C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8057983F9301A89B17461A03 /* Foundation.framework */; };
+		8935043B0D20A49A7A2E3404 /* SpringLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58FD34C07F1DE40E7AA69BD /* SpringLabel.swift */; };
+		897A47BAA45A1D188A24CC07 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0DCBDE08AEA04000D942EC /* ImageLoader.swift */; };
+		8AB6CB0D1EE0573DD52AC6C6 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74308C34160F45B9EDC52E3C /* SoundPlayer.swift */; };
+		8F4394BE3CC6A2EFD2C71423 /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961D3D11FC9442F5F7637AB4 /* UnwindSegue.swift */; };
+		922D1C04341F7A164A405F13 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F80FCEDA1DD4D1396FA0AF /* LoadingView.swift */; };
+		940E125C8D508A8CF10A489E /* AkiraTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834D68C74D4A40FA8466E470 /* AkiraTextField.swift */; };
+		945E7AA74147B066963ED74F /* MinoruTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38319363A9BE6F9FAD8BE36B /* MinoruTextField.swift */; };
+		95EA897D8599433162720D6F /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E845E1C6BDBF7CC9366D5D /* SpringAnimation.swift */; };
+		9624BDE811E17994B17EF2B4 /* SpringLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58FD34C07F1DE40E7AA69BD /* SpringLabel.swift */; };
+		994780902F70853B2D8C8203 /* SpringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81D3AF5111D388A71E9617B /* SpringView.swift */; };
+		9CB3DEF46AE836B6D55A5923 /* Pods-HabitizerTests-KYCircularProgress-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0405B91A5B72C6171490016E /* Pods-HabitizerTests-KYCircularProgress-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9D3BCDA8B6AC0E3191F783C2 /* AutoTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101F6DC54414E88FF73F068F /* AutoTextView.swift */; };
+		9D452C4C66E0D66159DC7E3E /* Pods-HabitizerTests-BubbleTransition-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 54DAA84E0B268F2D9C3AC805 /* Pods-HabitizerTests-BubbleTransition-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9DF1DC020B978BC9016B7980 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E845E1C6BDBF7CC9366D5D /* SpringAnimation.swift */; };
+		A151CDB8AED429C808699293 /* TextFieldsEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8267C923909E791069884D11 /* TextFieldsEffects.swift */; };
+		A349613203B5D0AAFE2F37EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8057983F9301A89B17461A03 /* Foundation.framework */; };
+		A435E8FD17F65DDB08C8CCE6 /* Pods-HabitizerTests-TextFieldEffects-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B49A44FF718ED2BF6E6A7AD /* Pods-HabitizerTests-TextFieldEffects-dummy.m */; };
+		A6714E4E0014912A7251D371 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0DCBDE08AEA04000D942EC /* ImageLoader.swift */; };
+		A7E303C538ADA9677ECACB8C /* JiroTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E070829057528223654156C4 /* JiroTextField.swift */; };
+		AD5BE039CDD4801477D7CACB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8057983F9301A89B17461A03 /* Foundation.framework */; };
+		ADA1E2A53C395FE1C72C1BE7 /* SpringTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899C0B1F364EAC0EBF3CB234 /* SpringTextField.swift */; };
+		ADFDDB790DCB9D7D939D91DC /* Pods-BubbleTransition-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EAB5EB3D81DB07A577A4318E /* Pods-BubbleTransition-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEA5D8C274A0EDA60319D5A2 /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D3E167152DBB873574A897 /* KeyboardLayoutConstraint.swift */; };
+		B18972FC486DF55F0AB847E3 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 579E0D7F35787C39588E1B31 /* LoadingView.xib */; };
+		B3827D07D16ECC4270345762 /* KYCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA401CA5B6BC3DBD92979243 /* KYCircularProgress.swift */; };
+		B969CF0DC9AD85A3EAAE6519 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FD446981B25B0569824027 /* BlurView.swift */; };
+		BA0D730E27E9A6DDEDE4DC11 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8057983F9301A89B17461A03 /* Foundation.framework */; };
+		BA6780FD49B2BC08732D0290 /* DesignableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07493098FD893B1E3B2385E /* DesignableImageView.swift */; };
+		BE8EEAC13A7016815F71539E /* TextFieldsEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8267C923909E791069884D11 /* TextFieldsEffects.swift */; };
+		BFFCDFFB3A2D1D58D7DD7BD7 /* BubbleTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9BBF63209E12384095E141 /* BubbleTransition.swift */; };
+		C114D8AC4C9B45781C2DA172 /* DesignableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F48C3CC4B98E962A1853FAB /* DesignableLabel.swift */; };
+		C141FA463E026D7559920CB1 /* Spring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1C31EC36A784527352EFFC /* Spring.swift */; };
+		C64578E6CE37FED844FBCF43 /* Pods-KYCircularProgress-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A4B1353CE83CEF2DAA6D588 /* Pods-KYCircularProgress-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C892071D3F4400F8D1D28BAB /* Pods-HabitizerTests-BubbleTransition-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C2E6A781AB4800A175FA8D /* Pods-HabitizerTests-BubbleTransition-dummy.m */; };
+		C9A00B275A836CB9172A2E28 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C92AEFF8C5FF3117D033BF /* DesignableView.swift */; };
+		CA6D21734FC497D0D56639E9 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947ACA8E115E8B89A7B1985F /* TransitionManager.swift */; };
+		CE0573BC58658A95F996EEE5 /* Pods-BubbleTransition-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5997380C758BB10FD8750E6B /* Pods-BubbleTransition-dummy.m */; };
+		D0B6D56BDE3AFC97C015E81F /* DesignableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F48C3CC4B98E962A1853FAB /* DesignableLabel.swift */; };
+		DA94A008C6D5FA65570AE363 /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F9C3CDA358103362AB3EC02F /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC686551EE3A1782EC3AD1BB /* Pods-HabitizerTests-Spring-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BBD3F8FEC48D5B6FB33713B /* Pods-HabitizerTests-Spring-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DDA736B7ED3DFD4EA25F4213 /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106FFAA218A8AC52E768F886 /* Misc.swift */; };
+		DE750D1486DFB268D3AB89A9 /* SpringImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFED22AA037F516210DC600 /* SpringImageView.swift */; };
+		E0159FA367057F9A2855EF95 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8057983F9301A89B17461A03 /* Foundation.framework */; };
+		E0EA8C4E667B2B00B05AD98F /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C52628C576A9861755F1235 /* DesignableTextField.swift */; };
+		E38F7F07668A18BE97C1FD02 /* Spring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1C31EC36A784527352EFFC /* Spring.swift */; };
+		E687DFD48FD5F87D7E5ABAC4 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FD446981B25B0569824027 /* BlurView.swift */; };
+		EE7AC6B6CC02C17D4D64D9CC /* IsaoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264EC2D38D7893DA555F1DCF /* IsaoTextField.swift */; };
+		F039F7E91F0BCDC452C06BF6 /* DesignableTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F561599CDB1B5FC4EC6EBBB3 /* DesignableTabBarController.swift */; };
+		F1DD6E347C1880F4C4AFF21C /* HoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3505F094231C4F54B50E15 /* HoshiTextField.swift */; };
+		F4A553F13419A784526F4BBE /* KaedeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99497AC7CCEED1A1F318C9A7 /* KaedeTextField.swift */; };
+		F7E048608C7DEFB4CABF7850 /* SpringButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170B9172CE0AE06AE289FCB3 /* SpringButton.swift */; };
+		FD28C8F90C17A602257C5A99 /* SpringButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170B9172CE0AE06AE289FCB3 /* SpringButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3D7521320D99270F10D9B481 /* PBXContainerItemProxy */ = {
+		0FDB2781213BFC208C132AD8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5784728FE73F2B9A5B737623 /* Project object */;
+			containerPortal = 8DB8EA04480C3098471FA2F9 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EEB25A8D8BB63B4163462A19;
-			remoteInfo = "Pods-TextFieldEffects";
+			remoteGlobalIDString = DF2D5C31CF96ADF3E395AAA2;
+			remoteInfo = "Pods-Spring";
 		};
-		97AE120A45661A2EA4E7454F /* PBXContainerItemProxy */ = {
+		23AC528C3D289DDDF2455884 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5784728FE73F2B9A5B737623 /* Project object */;
+			containerPortal = 8DB8EA04480C3098471FA2F9 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 441D2ABE74F8048AAD9C3A07;
-			remoteInfo = "Pods-HabitizerTests-TextFieldEffects";
-		};
-		A147633C6A07C48A5EAAE324 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5784728FE73F2B9A5B737623 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4C5E89724CDBE822109DF5C5;
-			remoteInfo = "Pods-HabitizerTests-BubbleTransition";
-		};
-		B4C8B2F34E0A5DED385FD894 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5784728FE73F2B9A5B737623 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FC39A5BDC9987D604C5D72C4;
+			remoteGlobalIDString = A69F743BB0D37CDC7A03543C;
 			remoteInfo = "Pods-KYCircularProgress";
 		};
-		D833AD404D52D78C1F4CAE6A /* PBXContainerItemProxy */ = {
+		3A640E6A313F89EFAF082A09 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5784728FE73F2B9A5B737623 /* Project object */;
+			containerPortal = 8DB8EA04480C3098471FA2F9 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 17DC9A1D7F17964AF2A8D050;
+			remoteGlobalIDString = DB93096CE73424DFD9A283C9;
+			remoteInfo = "Pods-BubbleTransition";
+		};
+		7DFBC6EAE12645B8EE56C12E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8DB8EA04480C3098471FA2F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B740788F43D04AA60D5B1C19;
+			remoteInfo = "Pods-HabitizerTests-TextFieldEffects";
+		};
+		89DFFABE606E19D914ADFA78 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8DB8EA04480C3098471FA2F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 454A3CE43487FB184BB30D7E;
+			remoteInfo = "Pods-HabitizerTests-Spring";
+		};
+		8A33597D3CBFD398C0907E9C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8DB8EA04480C3098471FA2F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A94534CD57588466DBBE69FC;
 			remoteInfo = "Pods-HabitizerTests-KYCircularProgress";
 		};
-		FD380D101316BFA24AB412AB /* PBXContainerItemProxy */ = {
+		9243CC7C96832F4CA87D9D3B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5784728FE73F2B9A5B737623 /* Project object */;
+			containerPortal = 8DB8EA04480C3098471FA2F9 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C81F66E219C0FD81CE03297C;
-			remoteInfo = "Pods-BubbleTransition";
+			remoteGlobalIDString = D13F89C0E7E889A757304A07;
+			remoteInfo = "Pods-TextFieldEffects";
+		};
+		A01A27E8A3998C68D44EC49E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8DB8EA04480C3098471FA2F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1E36FA84039500CB5A4D03B;
+			remoteInfo = "Pods-HabitizerTests-BubbleTransition";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		033DB1A23F7AF5D061FAFA27 /* Pods-HabitizerTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HabitizerTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		04F4E5EA221571E794917191 /* TextFieldEffects.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TextFieldEffects.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		07939FA35D084674899075A4 /* Pods-TextFieldEffects-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-TextFieldEffects-umbrella.h"; path = "../Pods-TextFieldEffects/Pods-TextFieldEffects-umbrella.h"; sourceTree = "<group>"; };
-		09C808DCDAA47EEC40D61E48 /* Pods-HabitizerTests-TextFieldEffects-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HabitizerTests-TextFieldEffects-prefix.pch"; sourceTree = "<group>"; };
-		10910CD7353C86F1FFE1134A /* TextFieldEffects.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TextFieldEffects.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1DB837DCA3D7E606A26109B2 /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
-		1F059CAB5C22C0B0288535A8 /* Pods-TextFieldEffects-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-TextFieldEffects-prefix.pch"; path = "../Pods-TextFieldEffects/Pods-TextFieldEffects-prefix.pch"; sourceTree = "<group>"; };
-		204CA605534DF96B8B6EF1B7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2214E57718648A43AB7DE98A /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		230B67D3E59255EC4E9885A1 /* MadokaTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MadokaTextField.swift; path = TextFieldEffects/TextFieldEffects/MadokaTextField.swift; sourceTree = "<group>"; };
-		2E5820EFA396B8915195C149 /* Pods-HabitizerTests-KYCircularProgress.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-HabitizerTests-KYCircularProgress.modulemap"; sourceTree = "<group>"; };
-		344B838EF0FC5013A69CFC50 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		345A15541299A6F60E504E18 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		35BD99F70499FF4C37EFBEE7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		361B1C71A1D923C866E206F1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		377BF4DF98CE93CDB8D1715C /* Pods_HabitizerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HabitizerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3823DC4FDA7C1A2921852031 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		3A401856391567A41CCE3A1C /* Pods-KYCircularProgress-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-KYCircularProgress-umbrella.h"; path = "../Pods-KYCircularProgress/Pods-KYCircularProgress-umbrella.h"; sourceTree = "<group>"; };
-		3A4F06C38525ED6D637B5764 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3A92D912FB9C623CCC780307 /* BubbleTransition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BubbleTransition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B0F82BBFFC4C383749CA0C3 /* Pods-HabitizerTests-KYCircularProgress-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HabitizerTests-KYCircularProgress-prefix.pch"; sourceTree = "<group>"; };
-		3BDA69F779429C6CADDA9292 /* BubbleTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BubbleTransition.swift; path = Source/BubbleTransition.swift; sourceTree = "<group>"; };
-		3BF9BB30B3E0F1A46896EE51 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3ECB225F52E7007C3FA0DCB7 /* Pods-BubbleTransition-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BubbleTransition-Private.xcconfig"; sourceTree = "<group>"; };
-		4285427B36154EE2D44BD25A /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		47BB30226582610659AA02E9 /* Pods-HabitizerTests-TextFieldEffects-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HabitizerTests-TextFieldEffects-dummy.m"; sourceTree = "<group>"; };
-		51A17FA95853F4D660FF6A94 /* Pods-HabitizerTests-BubbleTransition.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "Pods-HabitizerTests-BubbleTransition.modulemap"; path = "../Pods-HabitizerTests-BubbleTransition/Pods-HabitizerTests-BubbleTransition.modulemap"; sourceTree = "<group>"; };
-		51B3292067B072F93F1A01EF /* Pods-TextFieldEffects-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-TextFieldEffects-dummy.m"; path = "../Pods-TextFieldEffects/Pods-TextFieldEffects-dummy.m"; sourceTree = "<group>"; };
-		541FD0125643819AD22DC622 /* MinoruTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MinoruTextField.swift; path = TextFieldEffects/TextFieldEffects/MinoruTextField.swift; sourceTree = "<group>"; };
-		55CE808B1CD152DF5E260FBD /* Pods-HabitizerTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-HabitizerTests.modulemap"; sourceTree = "<group>"; };
-		58C41A7629AD44442A1AB84E /* TextFieldsEffects.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextFieldsEffects.swift; path = TextFieldEffects/TextFieldEffects/TextFieldsEffects.swift; sourceTree = "<group>"; };
-		5B6FDBB308ECBD2FBEA8EF66 /* Pods-HabitizerTests-TextFieldEffects-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HabitizerTests-TextFieldEffects-umbrella.h"; sourceTree = "<group>"; };
-		5DB5C6B1D6085D4EB1EE18F2 /* Pods-TextFieldEffects.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "Pods-TextFieldEffects.modulemap"; path = "../Pods-TextFieldEffects/Pods-TextFieldEffects.modulemap"; sourceTree = "<group>"; };
-		5EDDD112929D5DEA0535ACDE /* Pods-BubbleTransition-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BubbleTransition-dummy.m"; sourceTree = "<group>"; };
-		616CA3E87FC83D6AB1D7BFFB /* Pods-HabitizerTests-KYCircularProgress.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HabitizerTests-KYCircularProgress.xcconfig"; sourceTree = "<group>"; };
-		6461C06FAF0483D23F2F6D52 /* Pods-HabitizerTests-BubbleTransition.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HabitizerTests-BubbleTransition.xcconfig"; path = "../Pods-HabitizerTests-BubbleTransition/Pods-HabitizerTests-BubbleTransition.xcconfig"; sourceTree = "<group>"; };
-		64FF5DE9ACB8028AF0FD1626 /* Pods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pods.modulemap; sourceTree = "<group>"; };
-		656D0C80D5F1B91573910834 /* JiroTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JiroTextField.swift; path = TextFieldEffects/TextFieldEffects/JiroTextField.swift; sourceTree = "<group>"; };
-		671149D0F2B2290D92ADE576 /* Pods-HabitizerTests-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HabitizerTests-environment.h"; sourceTree = "<group>"; };
-		6827C28BFD1B07EA7105641F /* AkiraTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AkiraTextField.swift; path = TextFieldEffects/TextFieldEffects/AkiraTextField.swift; sourceTree = "<group>"; };
-		699CA44E9FE434AB89A43968 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		6C3D6D3A6EB9ACF3136E8837 /* Pods-HabitizerTests-BubbleTransition-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-HabitizerTests-BubbleTransition-dummy.m"; path = "../Pods-HabitizerTests-BubbleTransition/Pods-HabitizerTests-BubbleTransition-dummy.m"; sourceTree = "<group>"; };
-		6E1E6B00BF581D475CE6585C /* Pods-HabitizerTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HabitizerTests-frameworks.sh"; sourceTree = "<group>"; };
-		70AC8358B90A7370F1925A6D /* Pods-BubbleTransition.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BubbleTransition.modulemap"; sourceTree = "<group>"; };
-		7A02033B53EF37C4ABDEC560 /* Pods-HabitizerTests-KYCircularProgress-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HabitizerTests-KYCircularProgress-umbrella.h"; sourceTree = "<group>"; };
-		81E7B888DB572D6F8C828564 /* Pods-HabitizerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HabitizerTests.release.xcconfig"; sourceTree = "<group>"; };
-		853B76FBAEE84E1DA1EDB1AB /* KYCircularProgress.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KYCircularProgress.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8899FB7A4EAEBDF53BD66896 /* Pods-HabitizerTests-BubbleTransition-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-HabitizerTests-BubbleTransition-umbrella.h"; path = "../Pods-HabitizerTests-BubbleTransition/Pods-HabitizerTests-BubbleTransition-umbrella.h"; sourceTree = "<group>"; };
-		89D2A86ACCBA0C8D1134F1E4 /* Pods-KYCircularProgress-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-KYCircularProgress-prefix.pch"; path = "../Pods-KYCircularProgress/Pods-KYCircularProgress-prefix.pch"; sourceTree = "<group>"; };
-		8EBF778D299755FE157130A8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Pods-TextFieldEffects/Info.plist"; sourceTree = "<group>"; };
-		8ECD4A7183866BBB23EF8435 /* Pods-HabitizerTests-TextFieldEffects-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HabitizerTests-TextFieldEffects-Private.xcconfig"; sourceTree = "<group>"; };
-		8FA68BB048887DE844FADD50 /* Pods-HabitizerTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HabitizerTests-dummy.m"; sourceTree = "<group>"; };
-		92440FAAD0A829F9FB061699 /* Pods-KYCircularProgress.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KYCircularProgress.xcconfig"; path = "../Pods-KYCircularProgress/Pods-KYCircularProgress.xcconfig"; sourceTree = "<group>"; };
-		9E27CE16F92C5D09AC492C9F /* KYCircularProgress.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KYCircularProgress.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9E6F71BAF88392E0E8119444 /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
-		A23E09AB578B2E8287F2C280 /* KaedeTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KaedeTextField.swift; path = TextFieldEffects/TextFieldEffects/KaedeTextField.swift; sourceTree = "<group>"; };
-		A2A3DFA04155509CC6BA9E21 /* Pods-HabitizerTests-TextFieldEffects.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HabitizerTests-TextFieldEffects.xcconfig"; sourceTree = "<group>"; };
-		A2ADAD10F2B52AAA98393EA3 /* Pods-BubbleTransition-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BubbleTransition-umbrella.h"; sourceTree = "<group>"; };
-		A678867E9FA4AA6F4CEDDE30 /* Pods-KYCircularProgress-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-KYCircularProgress-dummy.m"; path = "../Pods-KYCircularProgress/Pods-KYCircularProgress-dummy.m"; sourceTree = "<group>"; };
-		AEB7061A5C2C8C02D1F716F0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		B012B3153D41DEA6785AE15B /* BubbleTransition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BubbleTransition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1E03AF2BB950311F5284DEA /* Pods-HabitizerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HabitizerTests.debug.xcconfig"; sourceTree = "<group>"; };
-		B335B57001BCAD7E0DB7D821 /* Pods-TextFieldEffects-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextFieldEffects-Private.xcconfig"; path = "../Pods-TextFieldEffects/Pods-TextFieldEffects-Private.xcconfig"; sourceTree = "<group>"; };
-		BB7747BC70C71D0A83BCB40F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Pods-HabitizerTests-BubbleTransition/Info.plist"; sourceTree = "<group>"; };
-		BD1381E0BD7B1C803012C20C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BE6C01073F6C2BC988F9A947 /* KYCircularProgress.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KYCircularProgress.swift; path = KYCircularProgress/KYCircularProgress.swift; sourceTree = "<group>"; };
-		C37A6BD50675ECEBDFB9885E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Pods-KYCircularProgress/Info.plist"; sourceTree = "<group>"; };
-		C7148073114E335FB8BD8EAC /* Pods-HabitizerTests-KYCircularProgress-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HabitizerTests-KYCircularProgress-Private.xcconfig"; sourceTree = "<group>"; };
-		C871BBDF5607BCC643BB095E /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		CCA0BB4CC19B50A6DE7DB424 /* Pods-HabitizerTests-BubbleTransition-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-HabitizerTests-BubbleTransition-prefix.pch"; path = "../Pods-HabitizerTests-BubbleTransition/Pods-HabitizerTests-BubbleTransition-prefix.pch"; sourceTree = "<group>"; };
-		D155F3008BFAF34CA8F13218 /* Pods-HabitizerTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HabitizerTests-umbrella.h"; sourceTree = "<group>"; };
-		D1F496EA5FE1BD64B2D4D701 /* Pods-KYCircularProgress.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "Pods-KYCircularProgress.modulemap"; path = "../Pods-KYCircularProgress/Pods-KYCircularProgress.modulemap"; sourceTree = "<group>"; };
-		DEB9F1C157C37355CE126BFF /* Pods-KYCircularProgress-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KYCircularProgress-Private.xcconfig"; path = "../Pods-KYCircularProgress/Pods-KYCircularProgress-Private.xcconfig"; sourceTree = "<group>"; };
-		E21152D7B3248FFFB18CC66E /* YokoTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YokoTextField.swift; path = TextFieldEffects/TextFieldEffects/YokoTextField.swift; sourceTree = "<group>"; };
-		E691D96E6CE282C7FC2F062A /* HoshiTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HoshiTextField.swift; path = TextFieldEffects/TextFieldEffects/HoshiTextField.swift; sourceTree = "<group>"; };
-		EC5BE2B8443A201E4322DE8E /* Pods-HabitizerTests-BubbleTransition-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HabitizerTests-BubbleTransition-Private.xcconfig"; path = "../Pods-HabitizerTests-BubbleTransition/Pods-HabitizerTests-BubbleTransition-Private.xcconfig"; sourceTree = "<group>"; };
-		ECA8DC49FE0EAEDA58828A31 /* Pods-HabitizerTests-KYCircularProgress-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HabitizerTests-KYCircularProgress-dummy.m"; sourceTree = "<group>"; };
-		EF15B2BBBDF34A01D2B2F969 /* Pods-BubbleTransition.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BubbleTransition.xcconfig"; sourceTree = "<group>"; };
-		F338F3BF4DF68FF059C54EE6 /* IsaoTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IsaoTextField.swift; path = TextFieldEffects/TextFieldEffects/IsaoTextField.swift; sourceTree = "<group>"; };
-		F45EA148E8E2E64CCE096A96 /* Pods-HabitizerTests-TextFieldEffects.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-HabitizerTests-TextFieldEffects.modulemap"; sourceTree = "<group>"; };
-		F6A32C0F26EAB9E255B6747B /* Pods-HabitizerTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HabitizerTests-resources.sh"; sourceTree = "<group>"; };
-		F93A94B8C36C2DA9A578E25D /* Pods-TextFieldEffects.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextFieldEffects.xcconfig"; path = "../Pods-TextFieldEffects/Pods-TextFieldEffects.xcconfig"; sourceTree = "<group>"; };
-		FB964FA4111C0CD6604D14FD /* Pods-BubbleTransition-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BubbleTransition-prefix.pch"; sourceTree = "<group>"; };
-		FE334C9133BE8BCC506E5384 /* Pods-HabitizerTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HabitizerTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		FE5CFC0CC56E95BADBD9E3A7 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
+		0405B91A5B72C6171490016E /* Pods-HabitizerTests-KYCircularProgress-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HabitizerTests-KYCircularProgress-umbrella.h"; sourceTree = "<group>"; };
+		07C2E6A781AB4800A175FA8D /* Pods-HabitizerTests-BubbleTransition-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-HabitizerTests-BubbleTransition-dummy.m"; path = "../Pods-HabitizerTests-BubbleTransition/Pods-HabitizerTests-BubbleTransition-dummy.m"; sourceTree = "<group>"; };
+		081A0B616ACDA8E5775C52C9 /* DesignableTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableTextView.swift; path = Spring/DesignableTextView.swift; sourceTree = "<group>"; };
+		0EFED22AA037F516210DC600 /* SpringImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringImageView.swift; path = Spring/SpringImageView.swift; sourceTree = "<group>"; };
+		0F3EB67C6F780527A9EA6E39 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Pods-KYCircularProgress/Info.plist"; sourceTree = "<group>"; };
+		101F6DC54414E88FF73F068F /* AutoTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AutoTextView.swift; path = Spring/AutoTextView.swift; sourceTree = "<group>"; };
+		106FFAA218A8AC52E768F886 /* Misc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Misc.swift; path = Spring/Misc.swift; sourceTree = "<group>"; };
+		10AAEF335AA913FC3463E2EB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Pods-Spring/Info.plist"; sourceTree = "<group>"; };
+		10F80FCEDA1DD4D1396FA0AF /* LoadingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoadingView.swift; path = Spring/LoadingView.swift; sourceTree = "<group>"; };
+		112FEE2835B8B4700679972B /* KYCircularProgress.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KYCircularProgress.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		16F045EE0EBB411061ED8EB8 /* MadokaTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MadokaTextField.swift; path = TextFieldEffects/TextFieldEffects/MadokaTextField.swift; sourceTree = "<group>"; };
+		170B9172CE0AE06AE289FCB3 /* SpringButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringButton.swift; path = Spring/SpringButton.swift; sourceTree = "<group>"; };
+		18048AC5E59E2E2903446DE3 /* Pods-Spring.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spring.xcconfig"; path = "../Pods-Spring/Pods-Spring.xcconfig"; sourceTree = "<group>"; };
+		18361C8DF0C4C86B7E577630 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		1A9A71AA295AD0D51A7E2C5D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Pods-TextFieldEffects/Info.plist"; sourceTree = "<group>"; };
+		1C147349D60B7E1886DC7C8E /* BubbleTransition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BubbleTransition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C54A414411A65ED9702A9E1 /* Pods-HabitizerTests-Spring-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HabitizerTests-Spring-dummy.m"; sourceTree = "<group>"; };
+		2296B1E6CBDA5466E95A8140 /* Pods-TextFieldEffects-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-TextFieldEffects-prefix.pch"; path = "../Pods-TextFieldEffects/Pods-TextFieldEffects-prefix.pch"; sourceTree = "<group>"; };
+		24885D7A8E5E578E19A53B0F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25D3E167152DBB873574A897 /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyboardLayoutConstraint.swift; path = Spring/KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
+		264EC2D38D7893DA555F1DCF /* IsaoTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IsaoTextField.swift; path = TextFieldEffects/TextFieldEffects/IsaoTextField.swift; sourceTree = "<group>"; };
+		267DB91CAEE751061835B64B /* Pods-HabitizerTests-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HabitizerTests-environment.h"; sourceTree = "<group>"; };
+		2725A72730C60D3173701634 /* Pods-HabitizerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HabitizerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2CA180F3CB0568D00C4E93E7 /* Pods-KYCircularProgress.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "Pods-KYCircularProgress.modulemap"; path = "../Pods-KYCircularProgress/Pods-KYCircularProgress.modulemap"; sourceTree = "<group>"; };
+		35084D77EC9DED9E6A0D5DC9 /* Pods_HabitizerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HabitizerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		364DF29A2FC37181C1CE7A83 /* Pods-HabitizerTests-Spring.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HabitizerTests-Spring.xcconfig"; sourceTree = "<group>"; };
+		38319363A9BE6F9FAD8BE36B /* MinoruTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MinoruTextField.swift; path = TextFieldEffects/TextFieldEffects/MinoruTextField.swift; sourceTree = "<group>"; };
+		3A99F08A78FCBC713AD0A547 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BBD3F8FEC48D5B6FB33713B /* Pods-HabitizerTests-Spring-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HabitizerTests-Spring-umbrella.h"; sourceTree = "<group>"; };
+		3F30115F4946F83C9D4B786F /* Pods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pods.modulemap; sourceTree = "<group>"; };
+		40AC24CE2C55EE348C9360E2 /* Pods-TextFieldEffects-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-TextFieldEffects-umbrella.h"; path = "../Pods-TextFieldEffects/Pods-TextFieldEffects-umbrella.h"; sourceTree = "<group>"; };
+		416533C55106705705F815B0 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		422DB6095C7ED46CE45918CD /* Pods-TextFieldEffects-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextFieldEffects-Private.xcconfig"; path = "../Pods-TextFieldEffects/Pods-TextFieldEffects-Private.xcconfig"; sourceTree = "<group>"; };
+		43E5332B32D03A0C38F777F7 /* Pods-HabitizerTests-KYCircularProgress.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-HabitizerTests-KYCircularProgress.modulemap"; sourceTree = "<group>"; };
+		450288C09478160139E2E9D7 /* YokoTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YokoTextField.swift; path = TextFieldEffects/TextFieldEffects/YokoTextField.swift; sourceTree = "<group>"; };
+		48AC474135C5A022AC853578 /* Pods-HabitizerTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HabitizerTests-resources.sh"; sourceTree = "<group>"; };
+		4A1C31EC36A784527352EFFC /* Spring.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Spring.swift; path = Spring/Spring.swift; sourceTree = "<group>"; };
+		4D6E78361A3991126AC7EB5A /* Pods-BubbleTransition.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BubbleTransition.modulemap"; sourceTree = "<group>"; };
+		4F32C3FA5FE78A20E1D9A62A /* Pods-HabitizerTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HabitizerTests-umbrella.h"; sourceTree = "<group>"; };
+		4F48C3CC4B98E962A1853FAB /* DesignableLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableLabel.swift; path = Spring/DesignableLabel.swift; sourceTree = "<group>"; };
+		4F9BBF63209E12384095E141 /* BubbleTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BubbleTransition.swift; path = Source/BubbleTransition.swift; sourceTree = "<group>"; };
+		51171C752F03F059E5992472 /* Pods-KYCircularProgress-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-KYCircularProgress-dummy.m"; path = "../Pods-KYCircularProgress/Pods-KYCircularProgress-dummy.m"; sourceTree = "<group>"; };
+		53BF9604FDE313B8FFDDC347 /* Pods-HabitizerTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HabitizerTests-frameworks.sh"; sourceTree = "<group>"; };
+		54DAA84E0B268F2D9C3AC805 /* Pods-HabitizerTests-BubbleTransition-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-HabitizerTests-BubbleTransition-umbrella.h"; path = "../Pods-HabitizerTests-BubbleTransition/Pods-HabitizerTests-BubbleTransition-umbrella.h"; sourceTree = "<group>"; };
+		56C92AEFF8C5FF3117D033BF /* DesignableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableView.swift; path = Spring/DesignableView.swift; sourceTree = "<group>"; };
+		579E0D7F35787C39588E1B31 /* LoadingView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = LoadingView.xib; path = Spring/LoadingView.xib; sourceTree = "<group>"; };
+		57F67586BB5868FC8886A4B0 /* Pods-TextFieldEffects.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextFieldEffects.xcconfig"; path = "../Pods-TextFieldEffects/Pods-TextFieldEffects.xcconfig"; sourceTree = "<group>"; };
+		591BB83460508108EF427C9A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		5997380C758BB10FD8750E6B /* Pods-BubbleTransition-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BubbleTransition-dummy.m"; sourceTree = "<group>"; };
+		5B49A44FF718ED2BF6E6A7AD /* Pods-HabitizerTests-TextFieldEffects-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HabitizerTests-TextFieldEffects-dummy.m"; sourceTree = "<group>"; };
+		5C52628C576A9861755F1235 /* DesignableTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableTextField.swift; path = Spring/DesignableTextField.swift; sourceTree = "<group>"; };
+		5C65E89A3DAD848C02B34833 /* Spring.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Spring.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6013EFFC7648FB8710587A2F /* Pods-HabitizerTests-TextFieldEffects-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HabitizerTests-TextFieldEffects-prefix.pch"; sourceTree = "<group>"; };
+		676AC824633B16A7D3DDC269 /* Pods-HabitizerTests-BubbleTransition-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HabitizerTests-BubbleTransition-Private.xcconfig"; path = "../Pods-HabitizerTests-BubbleTransition/Pods-HabitizerTests-BubbleTransition-Private.xcconfig"; sourceTree = "<group>"; };
+		67CAF48A74844212D915FC01 /* TextFieldEffects.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TextFieldEffects.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6899DA6701739433628BD499 /* DesignableButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableButton.swift; path = Spring/DesignableButton.swift; sourceTree = "<group>"; };
+		6A4B1353CE83CEF2DAA6D588 /* Pods-KYCircularProgress-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-KYCircularProgress-umbrella.h"; path = "../Pods-KYCircularProgress/Pods-KYCircularProgress-umbrella.h"; sourceTree = "<group>"; };
+		6B437A9CB9C32F52E32888D8 /* Pods-TextFieldEffects.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "Pods-TextFieldEffects.modulemap"; path = "../Pods-TextFieldEffects/Pods-TextFieldEffects.modulemap"; sourceTree = "<group>"; };
+		74308C34160F45B9EDC52E3C /* SoundPlayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SoundPlayer.swift; path = Spring/SoundPlayer.swift; sourceTree = "<group>"; };
+		78E53AE1F33A235088B69F95 /* AsyncButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsyncButton.swift; path = Spring/AsyncButton.swift; sourceTree = "<group>"; };
+		7F78EA9143A548248D89B080 /* Pods-Spring.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "Pods-Spring.modulemap"; path = "../Pods-Spring/Pods-Spring.modulemap"; sourceTree = "<group>"; };
+		8057983F9301A89B17461A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		815335F3307071BD9280A861 /* BubbleTransition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BubbleTransition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81E845E1C6BDBF7CC9366D5D /* SpringAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringAnimation.swift; path = Spring/SpringAnimation.swift; sourceTree = "<group>"; };
+		8267C923909E791069884D11 /* TextFieldsEffects.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextFieldsEffects.swift; path = TextFieldEffects/TextFieldEffects/TextFieldsEffects.swift; sourceTree = "<group>"; };
+		82F08274719A91D1CB4B572F /* Pods-HabitizerTests-KYCircularProgress-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HabitizerTests-KYCircularProgress-prefix.pch"; sourceTree = "<group>"; };
+		834D68C74D4A40FA8466E470 /* AkiraTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AkiraTextField.swift; path = TextFieldEffects/TextFieldEffects/AkiraTextField.swift; sourceTree = "<group>"; };
+		837B63AC6F5E8E044A57A0E4 /* Pods-TextFieldEffects-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-TextFieldEffects-dummy.m"; path = "../Pods-TextFieldEffects/Pods-TextFieldEffects-dummy.m"; sourceTree = "<group>"; };
+		8787E4F3C3082BF081E274C5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8926FE9BC0AC56D308F5ACFD /* Pods-KYCircularProgress-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-KYCircularProgress-prefix.pch"; path = "../Pods-KYCircularProgress/Pods-KYCircularProgress-prefix.pch"; sourceTree = "<group>"; };
+		8960D435D2359DD16A27B143 /* TextFieldEffects.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TextFieldEffects.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		899BB1EFBB3F89BCFB1175A2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		899C0B1F364EAC0EBF3CB234 /* SpringTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringTextField.swift; path = Spring/SpringTextField.swift; sourceTree = "<group>"; };
+		8A51DDF5666738512884D5A8 /* Pods-HabitizerTests-BubbleTransition.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "Pods-HabitizerTests-BubbleTransition.modulemap"; path = "../Pods-HabitizerTests-BubbleTransition/Pods-HabitizerTests-BubbleTransition.modulemap"; sourceTree = "<group>"; };
+		8BAE7C226DFA81E1EDA800E6 /* Pods-HabitizerTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HabitizerTests-dummy.m"; sourceTree = "<group>"; };
+		8C1497F8269B210FB4DBC806 /* Pods-HabitizerTests-Spring-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HabitizerTests-Spring-Private.xcconfig"; sourceTree = "<group>"; };
+		8DF851F572C16D4413670411 /* Pods-HabitizerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HabitizerTests.release.xcconfig"; sourceTree = "<group>"; };
+		903CCA7E31F919043FE5C261 /* Pods-HabitizerTests-Spring.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-HabitizerTests-Spring.modulemap"; sourceTree = "<group>"; };
+		932754EE6D2832468DE0FCF9 /* Pods-BubbleTransition-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BubbleTransition-Private.xcconfig"; sourceTree = "<group>"; };
+		93DAC40F6B0134BE3AF69DAB /* AsyncImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsyncImageView.swift; path = Spring/AsyncImageView.swift; sourceTree = "<group>"; };
+		947ACA8E115E8B89A7B1985F /* TransitionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionManager.swift; path = Spring/TransitionManager.swift; sourceTree = "<group>"; };
+		961D3D11FC9442F5F7637AB4 /* UnwindSegue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnwindSegue.swift; path = Spring/UnwindSegue.swift; sourceTree = "<group>"; };
+		99497AC7CCEED1A1F318C9A7 /* KaedeTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KaedeTextField.swift; path = TextFieldEffects/TextFieldEffects/KaedeTextField.swift; sourceTree = "<group>"; };
+		9B99E1E915EB45428934DCD8 /* Pods-Spring-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-Spring-prefix.pch"; path = "../Pods-Spring/Pods-Spring-prefix.pch"; sourceTree = "<group>"; };
+		9BE8F15090C2A904034646F8 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
+		9D42827AE8C9CBC34D8B2046 /* KYCircularProgress.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KYCircularProgress.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E0B538695373F09CADD6CF4 /* Pods-HabitizerTests-Spring-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HabitizerTests-Spring-prefix.pch"; sourceTree = "<group>"; };
+		A1E2A39AF4317F99DB5E734D /* Pods-BubbleTransition-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BubbleTransition-prefix.pch"; sourceTree = "<group>"; };
+		A30D51B41BBC3ED2CFBE6C3A /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		A3ADCCC91ED404D90BCA8373 /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		A470443E2E21EC3CB4D88105 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SpringApp/Images.xcassets; sourceTree = "<group>"; };
+		A778C85B28B2FCF364976FFD /* Pods-HabitizerTests-TextFieldEffects-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HabitizerTests-TextFieldEffects-umbrella.h"; sourceTree = "<group>"; };
+		AA8825EBE77AF9BCBFAB684A /* Pods-BubbleTransition.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BubbleTransition.xcconfig"; sourceTree = "<group>"; };
+		AC0DCBDE08AEA04000D942EC /* ImageLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageLoader.swift; path = Spring/ImageLoader.swift; sourceTree = "<group>"; };
+		B2765049EB60159F2247884A /* Pods-HabitizerTests-TextFieldEffects-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HabitizerTests-TextFieldEffects-Private.xcconfig"; sourceTree = "<group>"; };
+		B36E4D1A75A62D3FE9BB8DA4 /* Pods-HabitizerTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-HabitizerTests.modulemap"; sourceTree = "<group>"; };
+		B39946D00776C01622B2E9CD /* Pods-HabitizerTests-BubbleTransition-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-HabitizerTests-BubbleTransition-prefix.pch"; path = "../Pods-HabitizerTests-BubbleTransition/Pods-HabitizerTests-BubbleTransition-prefix.pch"; sourceTree = "<group>"; };
+		B58FD34C07F1DE40E7AA69BD /* SpringLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringLabel.swift; path = Spring/SpringLabel.swift; sourceTree = "<group>"; };
+		B6FD446981B25B0569824027 /* BlurView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlurView.swift; path = Spring/BlurView.swift; sourceTree = "<group>"; };
+		B75E010FB379C87412A90020 /* Pods-HabitizerTests-BubbleTransition.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HabitizerTests-BubbleTransition.xcconfig"; path = "../Pods-HabitizerTests-BubbleTransition/Pods-HabitizerTests-BubbleTransition.xcconfig"; sourceTree = "<group>"; };
+		B871510613D13E5B94BC262B /* Pods-HabitizerTests-TextFieldEffects.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-HabitizerTests-TextFieldEffects.modulemap"; sourceTree = "<group>"; };
+		BB3505F094231C4F54B50E15 /* HoshiTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HoshiTextField.swift; path = TextFieldEffects/TextFieldEffects/HoshiTextField.swift; sourceTree = "<group>"; };
+		C05A82A0EE735FC31C6C6114 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C07493098FD893B1E3B2385E /* DesignableImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableImageView.swift; path = Spring/DesignableImageView.swift; sourceTree = "<group>"; };
+		C1EA6C0E43D8DB651ECD78BC /* Pods-HabitizerTests-KYCircularProgress-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HabitizerTests-KYCircularProgress-Private.xcconfig"; sourceTree = "<group>"; };
+		C81D3AF5111D388A71E9617B /* SpringView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringView.swift; path = Spring/SpringView.swift; sourceTree = "<group>"; };
+		C987115680ED356740C52942 /* Pods-KYCircularProgress-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KYCircularProgress-Private.xcconfig"; path = "../Pods-KYCircularProgress/Pods-KYCircularProgress-Private.xcconfig"; sourceTree = "<group>"; };
+		C99914B2764D6B8EF6711015 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Pods-HabitizerTests-BubbleTransition/Info.plist"; sourceTree = "<group>"; };
+		CA401CA5B6BC3DBD92979243 /* KYCircularProgress.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KYCircularProgress.swift; path = KYCircularProgress/KYCircularProgress.swift; sourceTree = "<group>"; };
+		CC8B14F11E5D427FD984B2A1 /* TransitionZoom.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionZoom.swift; path = Spring/TransitionZoom.swift; sourceTree = "<group>"; };
+		CCD614AD53192976057F7309 /* Pods-Spring-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spring-Private.xcconfig"; path = "../Pods-Spring/Pods-Spring-Private.xcconfig"; sourceTree = "<group>"; };
+		CCD6F952166BC333B4F6E235 /* Pods-HabitizerTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HabitizerTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CCDA5389315F782D6A8952D0 /* Pods-HabitizerTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HabitizerTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		D58F7E0F8B25617C148E1690 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA0543E9E43E0EB321C5948A /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		DB5AF4CEA98C9129C11D4792 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		DC362A596EA0D177C794C1F8 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E070829057528223654156C4 /* JiroTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JiroTextField.swift; path = TextFieldEffects/TextFieldEffects/JiroTextField.swift; sourceTree = "<group>"; };
+		E2204FD0DF58884679478523 /* Spring.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Spring.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAB5EB3D81DB07A577A4318E /* Pods-BubbleTransition-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BubbleTransition-umbrella.h"; sourceTree = "<group>"; };
+		EBEB564277554E7E7F3B5875 /* Pods-KYCircularProgress.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KYCircularProgress.xcconfig"; path = "../Pods-KYCircularProgress/Pods-KYCircularProgress.xcconfig"; sourceTree = "<group>"; };
+		EF025382B1F717A4F8478FAC /* Pods-HabitizerTests-KYCircularProgress-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HabitizerTests-KYCircularProgress-dummy.m"; sourceTree = "<group>"; };
+		EFD8C813ED7259D879EBAA7C /* SpringTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringTextView.swift; path = Spring/SpringTextView.swift; sourceTree = "<group>"; };
+		F561599CDB1B5FC4EC6EBBB3 /* DesignableTabBarController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableTabBarController.swift; path = Spring/DesignableTabBarController.swift; sourceTree = "<group>"; };
+		F755903383BF9F1613E633A1 /* Pods-Spring-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-Spring-dummy.m"; path = "../Pods-Spring/Pods-Spring-dummy.m"; sourceTree = "<group>"; };
+		F94CB635778C9675441C782D /* Pods-HabitizerTests-TextFieldEffects.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HabitizerTests-TextFieldEffects.xcconfig"; sourceTree = "<group>"; };
+		F9C3CDA358103362AB3EC02F /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
+		FA5602156E2ED9854A9EB339 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB6DB4942A2C1EA33BBA45EF /* Pods-HabitizerTests-KYCircularProgress.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HabitizerTests-KYCircularProgress.xcconfig"; sourceTree = "<group>"; };
+		FBDD03AC6950104448D5BE03 /* Pods-Spring-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-Spring-umbrella.h"; path = "../Pods-Spring/Pods-Spring-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		672939D960B7E502E7F7E981 /* Frameworks */ = {
+		1BA8EC6B729CBFCEAB838658 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C673177197FE1C9E52A946C /* Foundation.framework in Frameworks */,
+				E0159FA367057F9A2855EF95 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		84EFA27302A73E9CF374A744 /* Frameworks */ = {
+		3E9B96C246917977A3AA232D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D72A9049BD61A4B679A26EE /* Foundation.framework in Frameworks */,
+				0F3884778F65589623A5F9E9 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		89367F153E5E56F2DA8699AD /* Frameworks */ = {
+		41903D34FC0306B243454180 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35F0A03053F3369799E6EA2B /* Foundation.framework in Frameworks */,
+				BA0D730E27E9A6DDEDE4DC11 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AADB2D2786A3BD17DD20EC40 /* Frameworks */ = {
+		5157742A33B5143D79C0ADD6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A40E4EE322C2605DCB86CACB /* Foundation.framework in Frameworks */,
+				AD5BE039CDD4801477D7CACB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B56F22971C624CAE9CDA30EC /* Frameworks */ = {
+		70D4B7CA9E5DB9965D67CA16 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D6AE0119EC4521B0304E1FC /* Foundation.framework in Frameworks */,
+				3B114EF1174B8CAAC34E3B37 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B92637CAEB2943141DE78BF9 /* Frameworks */ = {
+		7B949209470352568109F000 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37AC2FAF4EFB13090287CFA3 /* Foundation.framework in Frameworks */,
+				A349613203B5D0AAFE2F37EB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BAF9F7EBD6CF4CBC7E24634C /* Frameworks */ = {
+		7C42B6C02F710C3C93F9BBDF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F8F33E9EC3F6EF47495716A /* Foundation.framework in Frameworks */,
+				87C421F1426E759F3F6E88C3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E5EE5EBD53C6DF01FAFC0CAF /* Frameworks */ = {
+		C43A315D7CF932F291983A34 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B072939DAE8BAECC058BE66 /* Foundation.framework in Frameworks */,
+				469DAD4632A73DEEF0078D9C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D831B80730E450440CE4DACC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A16635B64C9D5D9BE4B33FA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E06B23278206EF492DB04610 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BD0F03A45E97E169A35C270 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00104666EAF5F3EDCBFF5341 /* Pods */ = {
+		06B7BDFF9F0290E6C61E9067 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				BD1381E0BD7B1C803012C20C /* Info.plist */,
-				64FF5DE9ACB8028AF0FD1626 /* Pods.modulemap */,
-				3BF9BB30B3E0F1A46896EE51 /* Pods-acknowledgements.markdown */,
-				699CA44E9FE434AB89A43968 /* Pods-acknowledgements.plist */,
-				C871BBDF5607BCC643BB095E /* Pods-dummy.m */,
-				1DB837DCA3D7E606A26109B2 /* Pods-environment.h */,
-				FE5CFC0CC56E95BADBD9E3A7 /* Pods-frameworks.sh */,
-				2214E57718648A43AB7DE98A /* Pods-resources.sh */,
-				9E6F71BAF88392E0E8119444 /* Pods-umbrella.h */,
-				AEB7061A5C2C8C02D1F716F0 /* Pods.debug.xcconfig */,
-				3823DC4FDA7C1A2921852031 /* Pods.release.xcconfig */,
+				A470443E2E21EC3CB4D88105 /* Images.xcassets */,
+				579E0D7F35787C39588E1B31 /* LoadingView.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		129A5430B00C9BE935CEE5FE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8787E4F3C3082BF081E274C5 /* Info.plist */,
+				3F30115F4946F83C9D4B786F /* Pods.modulemap */,
+				DC362A596EA0D177C794C1F8 /* Pods-acknowledgements.markdown */,
+				A30D51B41BBC3ED2CFBE6C3A /* Pods-acknowledgements.plist */,
+				DA0543E9E43E0EB321C5948A /* Pods-dummy.m */,
+				A3ADCCC91ED404D90BCA8373 /* Pods-environment.h */,
+				9BE8F15090C2A904034646F8 /* Pods-frameworks.sh */,
+				416533C55106705705F815B0 /* Pods-resources.sh */,
+				F9C3CDA358103362AB3EC02F /* Pods-umbrella.h */,
+				591BB83460508108EF427C9A /* Pods.debug.xcconfig */,
+				18361C8DF0C4C86B7E577630 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
 			path = "Target Support Files/Pods";
 			sourceTree = "<group>";
 		};
-		3116BDFFC1D82AB12CD0BAAA /* Support Files */ = {
+		13B391B790D91490FC58E490 = {
 			isa = PBXGroup;
 			children = (
-				3A4F06C38525ED6D637B5764 /* Info.plist */,
-				8EBF778D299755FE157130A8 /* Info.plist */,
-				F45EA148E8E2E64CCE096A96 /* Pods-HabitizerTests-TextFieldEffects.modulemap */,
-				A2A3DFA04155509CC6BA9E21 /* Pods-HabitizerTests-TextFieldEffects.xcconfig */,
-				8ECD4A7183866BBB23EF8435 /* Pods-HabitizerTests-TextFieldEffects-Private.xcconfig */,
-				47BB30226582610659AA02E9 /* Pods-HabitizerTests-TextFieldEffects-dummy.m */,
-				09C808DCDAA47EEC40D61E48 /* Pods-HabitizerTests-TextFieldEffects-prefix.pch */,
-				5B6FDBB308ECBD2FBEA8EF66 /* Pods-HabitizerTests-TextFieldEffects-umbrella.h */,
-				5DB5C6B1D6085D4EB1EE18F2 /* Pods-TextFieldEffects.modulemap */,
-				F93A94B8C36C2DA9A578E25D /* Pods-TextFieldEffects.xcconfig */,
-				B335B57001BCAD7E0DB7D821 /* Pods-TextFieldEffects-Private.xcconfig */,
-				51B3292067B072F93F1A01EF /* Pods-TextFieldEffects-dummy.m */,
-				1F059CAB5C22C0B0288535A8 /* Pods-TextFieldEffects-prefix.pch */,
-				07939FA35D084674899075A4 /* Pods-TextFieldEffects-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-HabitizerTests-TextFieldEffects";
-			sourceTree = "<group>";
-		};
-		41AE393831A88F81DEDA4262 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				361B1C71A1D923C866E206F1 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		480CBAF36186E2DF3FA6A47E /* BubbleTransition */ = {
-			isa = PBXGroup;
-			children = (
-				3BDA69F779429C6CADDA9292 /* BubbleTransition.swift */,
-				9C7990A2FBDAD29971AB5277 /* Support Files */,
-			);
-			path = BubbleTransition;
-			sourceTree = "<group>";
-		};
-		4D5344D80DFF30199059792E = {
-			isa = PBXGroup;
-			children = (
-				4285427B36154EE2D44BD25A /* Podfile */,
-				D33D8962021491E53D5928FB /* Frameworks */,
-				E69A25F737077235874DDB52 /* Pods */,
-				4DC5DC3B74DDB8F964210A45 /* Products */,
-				7BBC84B9B060C57C54EC3D9D /* Targets Support Files */,
+				DB5AF4CEA98C9129C11D4792 /* Podfile */,
+				95FB928A0733E60A5886DF55 /* Frameworks */,
+				DA0D794EB8B552C5F3BFC951 /* Pods */,
+				A82E97711575597F3D5735E5 /* Products */,
+				6DA631DFFA9E7E025D4D1352 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		4DC5DC3B74DDB8F964210A45 /* Products */ = {
+		26A454600081F3712A97509E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				B012B3153D41DEA6785AE15B /* BubbleTransition.framework */,
-				3A92D912FB9C623CCC780307 /* BubbleTransition.framework */,
-				9E27CE16F92C5D09AC492C9F /* KYCircularProgress.framework */,
-				853B76FBAEE84E1DA1EDB1AB /* KYCircularProgress.framework */,
-				344B838EF0FC5013A69CFC50 /* Pods.framework */,
-				377BF4DF98CE93CDB8D1715C /* Pods_HabitizerTests.framework */,
-				04F4E5EA221571E794917191 /* TextFieldEffects.framework */,
-				10910CD7353C86F1FFE1134A /* TextFieldEffects.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		7BBC84B9B060C57C54EC3D9D /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				00104666EAF5F3EDCBFF5341 /* Pods */,
-				7F015C1652816F803D20F139 /* Pods-HabitizerTests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		7F015C1652816F803D20F139 /* Pods-HabitizerTests */ = {
-			isa = PBXGroup;
-			children = (
-				204CA605534DF96B8B6EF1B7 /* Info.plist */,
-				55CE808B1CD152DF5E260FBD /* Pods-HabitizerTests.modulemap */,
-				033DB1A23F7AF5D061FAFA27 /* Pods-HabitizerTests-acknowledgements.markdown */,
-				FE334C9133BE8BCC506E5384 /* Pods-HabitizerTests-acknowledgements.plist */,
-				8FA68BB048887DE844FADD50 /* Pods-HabitizerTests-dummy.m */,
-				671149D0F2B2290D92ADE576 /* Pods-HabitizerTests-environment.h */,
-				6E1E6B00BF581D475CE6585C /* Pods-HabitizerTests-frameworks.sh */,
-				F6A32C0F26EAB9E255B6747B /* Pods-HabitizerTests-resources.sh */,
-				D155F3008BFAF34CA8F13218 /* Pods-HabitizerTests-umbrella.h */,
-				B1E03AF2BB950311F5284DEA /* Pods-HabitizerTests.debug.xcconfig */,
-				81E7B888DB572D6F8C828564 /* Pods-HabitizerTests.release.xcconfig */,
-			);
-			name = "Pods-HabitizerTests";
-			path = "Target Support Files/Pods-HabitizerTests";
-			sourceTree = "<group>";
-		};
-		9C7990A2FBDAD29971AB5277 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				345A15541299A6F60E504E18 /* Info.plist */,
-				BB7747BC70C71D0A83BCB40F /* Info.plist */,
-				70AC8358B90A7370F1925A6D /* Pods-BubbleTransition.modulemap */,
-				EF15B2BBBDF34A01D2B2F969 /* Pods-BubbleTransition.xcconfig */,
-				3ECB225F52E7007C3FA0DCB7 /* Pods-BubbleTransition-Private.xcconfig */,
-				5EDDD112929D5DEA0535ACDE /* Pods-BubbleTransition-dummy.m */,
-				FB964FA4111C0CD6604D14FD /* Pods-BubbleTransition-prefix.pch */,
-				A2ADAD10F2B52AAA98393EA3 /* Pods-BubbleTransition-umbrella.h */,
-				51A17FA95853F4D660FF6A94 /* Pods-HabitizerTests-BubbleTransition.modulemap */,
-				6461C06FAF0483D23F2F6D52 /* Pods-HabitizerTests-BubbleTransition.xcconfig */,
-				EC5BE2B8443A201E4322DE8E /* Pods-HabitizerTests-BubbleTransition-Private.xcconfig */,
-				6C3D6D3A6EB9ACF3136E8837 /* Pods-HabitizerTests-BubbleTransition-dummy.m */,
-				CCA0BB4CC19B50A6DE7DB424 /* Pods-HabitizerTests-BubbleTransition-prefix.pch */,
-				8899FB7A4EAEBDF53BD66896 /* Pods-HabitizerTests-BubbleTransition-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-BubbleTransition";
-			sourceTree = "<group>";
-		};
-		A4EA974429E5E60B47ED5136 /* KYCircularProgress */ = {
-			isa = PBXGroup;
-			children = (
-				BE6C01073F6C2BC988F9A947 /* KYCircularProgress.swift */,
-				E1FD357EE70D3A84B05AD989 /* Support Files */,
-			);
-			path = KYCircularProgress;
-			sourceTree = "<group>";
-		};
-		B4B9AD13B8E5DA4BF85F5B13 /* TextFieldEffects */ = {
-			isa = PBXGroup;
-			children = (
-				6827C28BFD1B07EA7105641F /* AkiraTextField.swift */,
-				E691D96E6CE282C7FC2F062A /* HoshiTextField.swift */,
-				F338F3BF4DF68FF059C54EE6 /* IsaoTextField.swift */,
-				656D0C80D5F1B91573910834 /* JiroTextField.swift */,
-				A23E09AB578B2E8287F2C280 /* KaedeTextField.swift */,
-				230B67D3E59255EC4E9885A1 /* MadokaTextField.swift */,
-				541FD0125643819AD22DC622 /* MinoruTextField.swift */,
-				58C41A7629AD44442A1AB84E /* TextFieldsEffects.swift */,
-				E21152D7B3248FFFB18CC66E /* YokoTextField.swift */,
-				3116BDFFC1D82AB12CD0BAAA /* Support Files */,
-			);
-			path = TextFieldEffects;
-			sourceTree = "<group>";
-		};
-		D33D8962021491E53D5928FB /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				41AE393831A88F81DEDA4262 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E1FD357EE70D3A84B05AD989 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				35BD99F70499FF4C37EFBEE7 /* Info.plist */,
-				C37A6BD50675ECEBDFB9885E /* Info.plist */,
-				2E5820EFA396B8915195C149 /* Pods-HabitizerTests-KYCircularProgress.modulemap */,
-				616CA3E87FC83D6AB1D7BFFB /* Pods-HabitizerTests-KYCircularProgress.xcconfig */,
-				C7148073114E335FB8BD8EAC /* Pods-HabitizerTests-KYCircularProgress-Private.xcconfig */,
-				ECA8DC49FE0EAEDA58828A31 /* Pods-HabitizerTests-KYCircularProgress-dummy.m */,
-				3B0F82BBFFC4C383749CA0C3 /* Pods-HabitizerTests-KYCircularProgress-prefix.pch */,
-				7A02033B53EF37C4ABDEC560 /* Pods-HabitizerTests-KYCircularProgress-umbrella.h */,
-				D1F496EA5FE1BD64B2D4D701 /* Pods-KYCircularProgress.modulemap */,
-				92440FAAD0A829F9FB061699 /* Pods-KYCircularProgress.xcconfig */,
-				DEB9F1C157C37355CE126BFF /* Pods-KYCircularProgress-Private.xcconfig */,
-				A678867E9FA4AA6F4CEDDE30 /* Pods-KYCircularProgress-dummy.m */,
-				89D2A86ACCBA0C8D1134F1E4 /* Pods-KYCircularProgress-prefix.pch */,
-				3A401856391567A41CCE3A1C /* Pods-KYCircularProgress-umbrella.h */,
+				899BB1EFBB3F89BCFB1175A2 /* Info.plist */,
+				0F3EB67C6F780527A9EA6E39 /* Info.plist */,
+				43E5332B32D03A0C38F777F7 /* Pods-HabitizerTests-KYCircularProgress.modulemap */,
+				FB6DB4942A2C1EA33BBA45EF /* Pods-HabitizerTests-KYCircularProgress.xcconfig */,
+				C1EA6C0E43D8DB651ECD78BC /* Pods-HabitizerTests-KYCircularProgress-Private.xcconfig */,
+				EF025382B1F717A4F8478FAC /* Pods-HabitizerTests-KYCircularProgress-dummy.m */,
+				82F08274719A91D1CB4B572F /* Pods-HabitizerTests-KYCircularProgress-prefix.pch */,
+				0405B91A5B72C6171490016E /* Pods-HabitizerTests-KYCircularProgress-umbrella.h */,
+				2CA180F3CB0568D00C4E93E7 /* Pods-KYCircularProgress.modulemap */,
+				EBEB564277554E7E7F3B5875 /* Pods-KYCircularProgress.xcconfig */,
+				C987115680ED356740C52942 /* Pods-KYCircularProgress-Private.xcconfig */,
+				51171C752F03F059E5992472 /* Pods-KYCircularProgress-dummy.m */,
+				8926FE9BC0AC56D308F5ACFD /* Pods-KYCircularProgress-prefix.pch */,
+				6A4B1353CE83CEF2DAA6D588 /* Pods-KYCircularProgress-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Pods-HabitizerTests-KYCircularProgress";
 			sourceTree = "<group>";
 		};
-		E69A25F737077235874DDB52 /* Pods */ = {
+		32200AB9EA784EDB315C9877 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				480CBAF36186E2DF3FA6A47E /* BubbleTransition */,
-				A4EA974429E5E60B47ED5136 /* KYCircularProgress */,
-				B4B9AD13B8E5DA4BF85F5B13 /* TextFieldEffects */,
+				8057983F9301A89B17461A03 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		32D9CD2F377581FBCCE36554 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3A99F08A78FCBC713AD0A547 /* Info.plist */,
+				1A9A71AA295AD0D51A7E2C5D /* Info.plist */,
+				B871510613D13E5B94BC262B /* Pods-HabitizerTests-TextFieldEffects.modulemap */,
+				F94CB635778C9675441C782D /* Pods-HabitizerTests-TextFieldEffects.xcconfig */,
+				B2765049EB60159F2247884A /* Pods-HabitizerTests-TextFieldEffects-Private.xcconfig */,
+				5B49A44FF718ED2BF6E6A7AD /* Pods-HabitizerTests-TextFieldEffects-dummy.m */,
+				6013EFFC7648FB8710587A2F /* Pods-HabitizerTests-TextFieldEffects-prefix.pch */,
+				A778C85B28B2FCF364976FFD /* Pods-HabitizerTests-TextFieldEffects-umbrella.h */,
+				6B437A9CB9C32F52E32888D8 /* Pods-TextFieldEffects.modulemap */,
+				57F67586BB5868FC8886A4B0 /* Pods-TextFieldEffects.xcconfig */,
+				422DB6095C7ED46CE45918CD /* Pods-TextFieldEffects-Private.xcconfig */,
+				837B63AC6F5E8E044A57A0E4 /* Pods-TextFieldEffects-dummy.m */,
+				2296B1E6CBDA5466E95A8140 /* Pods-TextFieldEffects-prefix.pch */,
+				40AC24CE2C55EE348C9360E2 /* Pods-TextFieldEffects-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-HabitizerTests-TextFieldEffects";
+			sourceTree = "<group>";
+		};
+		5438C08BB9FAC1B5388CD9FC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				24885D7A8E5E578E19A53B0F /* Info.plist */,
+				10AAEF335AA913FC3463E2EB /* Info.plist */,
+				903CCA7E31F919043FE5C261 /* Pods-HabitizerTests-Spring.modulemap */,
+				364DF29A2FC37181C1CE7A83 /* Pods-HabitizerTests-Spring.xcconfig */,
+				8C1497F8269B210FB4DBC806 /* Pods-HabitizerTests-Spring-Private.xcconfig */,
+				1C54A414411A65ED9702A9E1 /* Pods-HabitizerTests-Spring-dummy.m */,
+				9E0B538695373F09CADD6CF4 /* Pods-HabitizerTests-Spring-prefix.pch */,
+				3BBD3F8FEC48D5B6FB33713B /* Pods-HabitizerTests-Spring-umbrella.h */,
+				7F78EA9143A548248D89B080 /* Pods-Spring.modulemap */,
+				18048AC5E59E2E2903446DE3 /* Pods-Spring.xcconfig */,
+				CCD614AD53192976057F7309 /* Pods-Spring-Private.xcconfig */,
+				F755903383BF9F1613E633A1 /* Pods-Spring-dummy.m */,
+				9B99E1E915EB45428934DCD8 /* Pods-Spring-prefix.pch */,
+				FBDD03AC6950104448D5BE03 /* Pods-Spring-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-HabitizerTests-Spring";
+			sourceTree = "<group>";
+		};
+		5A40C99DB8B0AA1058F12200 /* BubbleTransition */ = {
+			isa = PBXGroup;
+			children = (
+				4F9BBF63209E12384095E141 /* BubbleTransition.swift */,
+				FFFE725B5C6FF7D382CB4DD3 /* Support Files */,
+			);
+			path = BubbleTransition;
+			sourceTree = "<group>";
+		};
+		6DA631DFFA9E7E025D4D1352 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				129A5430B00C9BE935CEE5FE /* Pods */,
+				B75F9580D582E2E7BFA9975D /* Pods-HabitizerTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		95FB928A0733E60A5886DF55 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32200AB9EA784EDB315C9877 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A7A7D3E254B506FB3B92D9C9 /* TextFieldEffects */ = {
+			isa = PBXGroup;
+			children = (
+				834D68C74D4A40FA8466E470 /* AkiraTextField.swift */,
+				BB3505F094231C4F54B50E15 /* HoshiTextField.swift */,
+				264EC2D38D7893DA555F1DCF /* IsaoTextField.swift */,
+				E070829057528223654156C4 /* JiroTextField.swift */,
+				99497AC7CCEED1A1F318C9A7 /* KaedeTextField.swift */,
+				16F045EE0EBB411061ED8EB8 /* MadokaTextField.swift */,
+				38319363A9BE6F9FAD8BE36B /* MinoruTextField.swift */,
+				8267C923909E791069884D11 /* TextFieldsEffects.swift */,
+				450288C09478160139E2E9D7 /* YokoTextField.swift */,
+				32D9CD2F377581FBCCE36554 /* Support Files */,
+			);
+			path = TextFieldEffects;
+			sourceTree = "<group>";
+		};
+		A82E97711575597F3D5735E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				815335F3307071BD9280A861 /* BubbleTransition.framework */,
+				1C147349D60B7E1886DC7C8E /* BubbleTransition.framework */,
+				112FEE2835B8B4700679972B /* KYCircularProgress.framework */,
+				9D42827AE8C9CBC34D8B2046 /* KYCircularProgress.framework */,
+				C05A82A0EE735FC31C6C6114 /* Pods.framework */,
+				35084D77EC9DED9E6A0D5DC9 /* Pods_HabitizerTests.framework */,
+				E2204FD0DF58884679478523 /* Spring.framework */,
+				5C65E89A3DAD848C02B34833 /* Spring.framework */,
+				8960D435D2359DD16A27B143 /* TextFieldEffects.framework */,
+				67CAF48A74844212D915FC01 /* TextFieldEffects.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B75F9580D582E2E7BFA9975D /* Pods-HabitizerTests */ = {
+			isa = PBXGroup;
+			children = (
+				FA5602156E2ED9854A9EB339 /* Info.plist */,
+				B36E4D1A75A62D3FE9BB8DA4 /* Pods-HabitizerTests.modulemap */,
+				CCD6F952166BC333B4F6E235 /* Pods-HabitizerTests-acknowledgements.markdown */,
+				CCDA5389315F782D6A8952D0 /* Pods-HabitizerTests-acknowledgements.plist */,
+				8BAE7C226DFA81E1EDA800E6 /* Pods-HabitizerTests-dummy.m */,
+				267DB91CAEE751061835B64B /* Pods-HabitizerTests-environment.h */,
+				53BF9604FDE313B8FFDDC347 /* Pods-HabitizerTests-frameworks.sh */,
+				48AC474135C5A022AC853578 /* Pods-HabitizerTests-resources.sh */,
+				4F32C3FA5FE78A20E1D9A62A /* Pods-HabitizerTests-umbrella.h */,
+				2725A72730C60D3173701634 /* Pods-HabitizerTests.debug.xcconfig */,
+				8DF851F572C16D4413670411 /* Pods-HabitizerTests.release.xcconfig */,
+			);
+			name = "Pods-HabitizerTests";
+			path = "Target Support Files/Pods-HabitizerTests";
+			sourceTree = "<group>";
+		};
+		DA0D794EB8B552C5F3BFC951 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5A40C99DB8B0AA1058F12200 /* BubbleTransition */,
+				DE72E5FF5995DD24FCD1D2CF /* KYCircularProgress */,
+				E39638764D7E51BBF167B748 /* Spring */,
+				A7A7D3E254B506FB3B92D9C9 /* TextFieldEffects */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		DE72E5FF5995DD24FCD1D2CF /* KYCircularProgress */ = {
+			isa = PBXGroup;
+			children = (
+				CA401CA5B6BC3DBD92979243 /* KYCircularProgress.swift */,
+				26A454600081F3712A97509E /* Support Files */,
+			);
+			path = KYCircularProgress;
+			sourceTree = "<group>";
+		};
+		E39638764D7E51BBF167B748 /* Spring */ = {
+			isa = PBXGroup;
+			children = (
+				78E53AE1F33A235088B69F95 /* AsyncButton.swift */,
+				93DAC40F6B0134BE3AF69DAB /* AsyncImageView.swift */,
+				101F6DC54414E88FF73F068F /* AutoTextView.swift */,
+				B6FD446981B25B0569824027 /* BlurView.swift */,
+				6899DA6701739433628BD499 /* DesignableButton.swift */,
+				C07493098FD893B1E3B2385E /* DesignableImageView.swift */,
+				4F48C3CC4B98E962A1853FAB /* DesignableLabel.swift */,
+				F561599CDB1B5FC4EC6EBBB3 /* DesignableTabBarController.swift */,
+				5C52628C576A9861755F1235 /* DesignableTextField.swift */,
+				081A0B616ACDA8E5775C52C9 /* DesignableTextView.swift */,
+				56C92AEFF8C5FF3117D033BF /* DesignableView.swift */,
+				AC0DCBDE08AEA04000D942EC /* ImageLoader.swift */,
+				25D3E167152DBB873574A897 /* KeyboardLayoutConstraint.swift */,
+				10F80FCEDA1DD4D1396FA0AF /* LoadingView.swift */,
+				106FFAA218A8AC52E768F886 /* Misc.swift */,
+				74308C34160F45B9EDC52E3C /* SoundPlayer.swift */,
+				4A1C31EC36A784527352EFFC /* Spring.swift */,
+				81E845E1C6BDBF7CC9366D5D /* SpringAnimation.swift */,
+				170B9172CE0AE06AE289FCB3 /* SpringButton.swift */,
+				0EFED22AA037F516210DC600 /* SpringImageView.swift */,
+				B58FD34C07F1DE40E7AA69BD /* SpringLabel.swift */,
+				899C0B1F364EAC0EBF3CB234 /* SpringTextField.swift */,
+				EFD8C813ED7259D879EBAA7C /* SpringTextView.swift */,
+				C81D3AF5111D388A71E9617B /* SpringView.swift */,
+				947ACA8E115E8B89A7B1985F /* TransitionManager.swift */,
+				CC8B14F11E5D427FD984B2A1 /* TransitionZoom.swift */,
+				961D3D11FC9442F5F7637AB4 /* UnwindSegue.swift */,
+				06B7BDFF9F0290E6C61E9067 /* Resources */,
+				5438C08BB9FAC1B5388CD9FC /* Support Files */,
+			);
+			path = Spring;
+			sourceTree = "<group>";
+		};
+		FFFE725B5C6FF7D382CB4DD3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D58F7E0F8B25617C148E1690 /* Info.plist */,
+				C99914B2764D6B8EF6711015 /* Info.plist */,
+				4D6E78361A3991126AC7EB5A /* Pods-BubbleTransition.modulemap */,
+				AA8825EBE77AF9BCBFAB684A /* Pods-BubbleTransition.xcconfig */,
+				932754EE6D2832468DE0FCF9 /* Pods-BubbleTransition-Private.xcconfig */,
+				5997380C758BB10FD8750E6B /* Pods-BubbleTransition-dummy.m */,
+				A1E2A39AF4317F99DB5E734D /* Pods-BubbleTransition-prefix.pch */,
+				EAB5EB3D81DB07A577A4318E /* Pods-BubbleTransition-umbrella.h */,
+				8A51DDF5666738512884D5A8 /* Pods-HabitizerTests-BubbleTransition.modulemap */,
+				B75E010FB379C87412A90020 /* Pods-HabitizerTests-BubbleTransition.xcconfig */,
+				676AC824633B16A7D3DDC269 /* Pods-HabitizerTests-BubbleTransition-Private.xcconfig */,
+				07C2E6A781AB4800A175FA8D /* Pods-HabitizerTests-BubbleTransition-dummy.m */,
+				B39946D00776C01622B2E9CD /* Pods-HabitizerTests-BubbleTransition-prefix.pch */,
+				54DAA84E0B268F2D9C3AC805 /* Pods-HabitizerTests-BubbleTransition-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-BubbleTransition";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1148793032F2374ABBDDB9A8 /* Headers */ = {
+		05D5F05C97741F1DAA21D63E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAE9E9A73B50732866F4D326 /* Pods-HabitizerTests-TextFieldEffects-umbrella.h in Headers */,
+				C64578E6CE37FED844FBCF43 /* Pods-KYCircularProgress-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1A79C630E058994A52042A0F /* Headers */ = {
+		0AEB2230D5EE9DB1031D6A61 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AB4419F33BA7CA449F127B9 /* Pods-BubbleTransition-umbrella.h in Headers */,
+				ADFDDB790DCB9D7D939D91DC /* Pods-BubbleTransition-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1C0AABE57DE5E827EE1C0D70 /* Headers */ = {
+		0E405DA2723DAE034D5C1160 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44E620BC6EE6286CA2A9CBAD /* Pods-HabitizerTests-KYCircularProgress-umbrella.h in Headers */,
+				3CD79A20EC66A352BE7C6658 /* Pods-TextFieldEffects-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3B3079A3FDB4FD671399BF9F /* Headers */ = {
+		1F452473210C5EAF588429D5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE329D7031105320F96FC2B5 /* Pods-TextFieldEffects-umbrella.h in Headers */,
+				9D452C4C66E0D66159DC7E3E /* Pods-HabitizerTests-BubbleTransition-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		42F1BCAEF6FD214B88821A9D /* Headers */ = {
+		5A2BD1E225144DF7581DCAD6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27A46E323DA23603FF5AC8B9 /* Pods-umbrella.h in Headers */,
+				DA94A008C6D5FA65570AE363 /* Pods-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9EE37F62E188D3A325EA8722 /* Headers */ = {
+		5AB7B73F1A7FA2B92C9BD0E5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0719289D632A136D6F28D910 /* Pods-HabitizerTests-BubbleTransition-umbrella.h in Headers */,
+				9CB3DEF46AE836B6D55A5923 /* Pods-HabitizerTests-KYCircularProgress-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A99DF2F3DFC94249636D80FF /* Headers */ = {
+		6FAE5BE5CA28078B284CB522 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F46AB4CABC0D9EBCCD6CEB05 /* Pods-KYCircularProgress-umbrella.h in Headers */,
+				DC686551EE3A1782EC3AD1BB /* Pods-HabitizerTests-Spring-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ADE99287498172A926CB9FAE /* Headers */ = {
+		8A4F04C98E88E1BE728E39F9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEDF3E533B545CFAA9A21353 /* Pods-HabitizerTests-umbrella.h in Headers */,
+				4AB582A25D7F938ECECCCD81 /* Pods-HabitizerTests-TextFieldEffects-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		950F8A79845C8EBF410471FE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FEF6C33F48C379F156B46B3 /* Pods-HabitizerTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF3F3321125062C65BC2BF42 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44E169D3F9CD8B80D53998B3 /* Pods-Spring-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		17DC9A1D7F17964AF2A8D050 /* Pods-HabitizerTests-KYCircularProgress */ = {
+		1CA25409862AD848AC09490F /* Pods-HabitizerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 680571AA079F1DA13A6DA5D0 /* Build configuration list for PBXNativeTarget "Pods-HabitizerTests-KYCircularProgress" */;
+			buildConfigurationList = 8AD761FB866FDCFE41A7B814 /* Build configuration list for PBXNativeTarget "Pods-HabitizerTests" */;
 			buildPhases = (
-				3542EACC7AFB30E2977BA073 /* Sources */,
-				B92637CAEB2943141DE78BF9 /* Frameworks */,
-				1C0AABE57DE5E827EE1C0D70 /* Headers */,
+				82A36AF68981194070342AF2 /* Sources */,
+				E06B23278206EF492DB04610 /* Frameworks */,
+				950F8A79845C8EBF410471FE /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-			);
-			name = "Pods-HabitizerTests-KYCircularProgress";
-			productName = "Pods-HabitizerTests-KYCircularProgress";
-			productReference = 9E27CE16F92C5D09AC492C9F /* KYCircularProgress.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		441D2ABE74F8048AAD9C3A07 /* Pods-HabitizerTests-TextFieldEffects */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CDC4D7735E9E12FCCB4B6700 /* Build configuration list for PBXNativeTarget "Pods-HabitizerTests-TextFieldEffects" */;
-			buildPhases = (
-				AE8D5C1A77905573D2FFE1D3 /* Sources */,
-				84EFA27302A73E9CF374A744 /* Frameworks */,
-				1148793032F2374ABBDDB9A8 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-HabitizerTests-TextFieldEffects";
-			productName = "Pods-HabitizerTests-TextFieldEffects";
-			productReference = 10910CD7353C86F1FFE1134A /* TextFieldEffects.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		4C5E89724CDBE822109DF5C5 /* Pods-HabitizerTests-BubbleTransition */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 630B1C7AC8D6B217A4CA35AF /* Build configuration list for PBXNativeTarget "Pods-HabitizerTests-BubbleTransition" */;
-			buildPhases = (
-				23E6F6C5C88D358B8E091C2D /* Sources */,
-				B56F22971C624CAE9CDA30EC /* Frameworks */,
-				9EE37F62E188D3A325EA8722 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-HabitizerTests-BubbleTransition";
-			productName = "Pods-HabitizerTests-BubbleTransition";
-			productReference = 3A92D912FB9C623CCC780307 /* BubbleTransition.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		58E3B7F4E0EB13F77D3A61D2 /* Pods */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EAA21278E758FD29C0D0CD96 /* Build configuration list for PBXNativeTarget "Pods" */;
-			buildPhases = (
-				7901F802C80CDFB0943FAFBA /* Sources */,
-				E5EE5EBD53C6DF01FAFC0CAF /* Frameworks */,
-				42F1BCAEF6FD214B88821A9D /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D5AE95EB500F1386BCA8B1B8 /* PBXTargetDependency */,
-				4A4F0C7DFAD11C42B7132F94 /* PBXTargetDependency */,
-				51C01B2A0CC72FD0F56976C0 /* PBXTargetDependency */,
-			);
-			name = Pods;
-			productName = Pods;
-			productReference = 344B838EF0FC5013A69CFC50 /* Pods.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		8CFA98675B86C018C72F5EF3 /* Pods-HabitizerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4FB322BA1C136C279AD46F2E /* Build configuration list for PBXNativeTarget "Pods-HabitizerTests" */;
-			buildPhases = (
-				EC6D619DE118856192AA1C4D /* Sources */,
-				AADB2D2786A3BD17DD20EC40 /* Frameworks */,
-				ADE99287498172A926CB9FAE /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6D0FD7A97148466B12A18AAC /* PBXTargetDependency */,
-				576123940EB77F46121F0F0F /* PBXTargetDependency */,
-				FD6A08BD7CD235128BBDD6BC /* PBXTargetDependency */,
+				2B3A19DBFF9C7A37C4243C81 /* PBXTargetDependency */,
+				9929954625599663821EDD68 /* PBXTargetDependency */,
+				EA269F21A94F517B7FB4CD68 /* PBXTargetDependency */,
+				9542505C61C5056AC5061068 /* PBXTargetDependency */,
 			);
 			name = "Pods-HabitizerTests";
 			productName = "Pods-HabitizerTests";
-			productReference = 377BF4DF98CE93CDB8D1715C /* Pods_HabitizerTests.framework */;
+			productReference = 35084D77EC9DED9E6A0D5DC9 /* Pods_HabitizerTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		C81F66E219C0FD81CE03297C /* Pods-BubbleTransition */ = {
+		3813FD6317FA09569EE83E77 /* Pods */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B527DFAB6FB832BA590A0E7B /* Build configuration list for PBXNativeTarget "Pods-BubbleTransition" */;
+			buildConfigurationList = F6EABD848C8F39F1CDFDD776 /* Build configuration list for PBXNativeTarget "Pods" */;
 			buildPhases = (
-				4BCA41295BCE7207899D71C5 /* Sources */,
-				89367F153E5E56F2DA8699AD /* Frameworks */,
-				1A79C630E058994A52042A0F /* Headers */,
+				6B3830326544C7ED647E9644 /* Sources */,
+				C43A315D7CF932F291983A34 /* Frameworks */,
+				5A2BD1E225144DF7581DCAD6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7724DEDFD95B0D633C875B93 /* PBXTargetDependency */,
+				EC59AE7494B529C9350109A8 /* PBXTargetDependency */,
+				0561CFC5750893423251177D /* PBXTargetDependency */,
+				B352525FE637B78E779EF314 /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = C05A82A0EE735FC31C6C6114 /* Pods.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		454A3CE43487FB184BB30D7E /* Pods-HabitizerTests-Spring */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0CF23ED437835B70141195EF /* Build configuration list for PBXNativeTarget "Pods-HabitizerTests-Spring" */;
+			buildPhases = (
+				AB2A3EB1CD85526B4BE54DDF /* Sources */,
+				7B949209470352568109F000 /* Frameworks */,
+				421E494CC7D135D2F540B324 /* Resources */,
+				6FAE5BE5CA28078B284CB522 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-BubbleTransition";
-			productName = "Pods-BubbleTransition";
-			productReference = B012B3153D41DEA6785AE15B /* BubbleTransition.framework */;
+			name = "Pods-HabitizerTests-Spring";
+			productName = "Pods-HabitizerTests-Spring";
+			productReference = E2204FD0DF58884679478523 /* Spring.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		EEB25A8D8BB63B4163462A19 /* Pods-TextFieldEffects */ = {
+		A69F743BB0D37CDC7A03543C /* Pods-KYCircularProgress */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BAE6ACE37D409A4C702356AF /* Build configuration list for PBXNativeTarget "Pods-TextFieldEffects" */;
+			buildConfigurationList = 5115C1BA6D0BFB5511CCEA41 /* Build configuration list for PBXNativeTarget "Pods-KYCircularProgress" */;
 			buildPhases = (
-				95CD255C9DFF67D9A016F2FD /* Sources */,
-				672939D960B7E502E7F7E981 /* Frameworks */,
-				3B3079A3FDB4FD671399BF9F /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-TextFieldEffects";
-			productName = "Pods-TextFieldEffects";
-			productReference = 04F4E5EA221571E794917191 /* TextFieldEffects.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		FC39A5BDC9987D604C5D72C4 /* Pods-KYCircularProgress */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C2981E08037A6C3CC714FF91 /* Build configuration list for PBXNativeTarget "Pods-KYCircularProgress" */;
-			buildPhases = (
-				F206E3FC85ED34CD2C6AA3F0 /* Sources */,
-				BAF9F7EBD6CF4CBC7E24634C /* Frameworks */,
-				A99DF2F3DFC94249636D80FF /* Headers */,
+				2D0FC70B6DC7E8B44C747AC2 /* Sources */,
+				41903D34FC0306B243454180 /* Frameworks */,
+				05D5F05C97741F1DAA21D63E /* Headers */,
 			);
 			buildRules = (
 			);
@@ -665,171 +825,716 @@
 			);
 			name = "Pods-KYCircularProgress";
 			productName = "Pods-KYCircularProgress";
-			productReference = 853B76FBAEE84E1DA1EDB1AB /* KYCircularProgress.framework */;
+			productReference = 112FEE2835B8B4700679972B /* KYCircularProgress.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A94534CD57588466DBBE69FC /* Pods-HabitizerTests-KYCircularProgress */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BA108846266059CF13161F5 /* Build configuration list for PBXNativeTarget "Pods-HabitizerTests-KYCircularProgress" */;
+			buildPhases = (
+				4BF01593A0F3B0FC4866140C /* Sources */,
+				3E9B96C246917977A3AA232D /* Frameworks */,
+				5AB7B73F1A7FA2B92C9BD0E5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-HabitizerTests-KYCircularProgress";
+			productName = "Pods-HabitizerTests-KYCircularProgress";
+			productReference = 9D42827AE8C9CBC34D8B2046 /* KYCircularProgress.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B740788F43D04AA60D5B1C19 /* Pods-HabitizerTests-TextFieldEffects */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83C4C239B997C9B65ED70C5E /* Build configuration list for PBXNativeTarget "Pods-HabitizerTests-TextFieldEffects" */;
+			buildPhases = (
+				F24B94D8238A8A955858DBA2 /* Sources */,
+				D831B80730E450440CE4DACC /* Frameworks */,
+				8A4F04C98E88E1BE728E39F9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-HabitizerTests-TextFieldEffects";
+			productName = "Pods-HabitizerTests-TextFieldEffects";
+			productReference = 67CAF48A74844212D915FC01 /* TextFieldEffects.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D13F89C0E7E889A757304A07 /* Pods-TextFieldEffects */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F15486AE8E0195AE471EDFC /* Build configuration list for PBXNativeTarget "Pods-TextFieldEffects" */;
+			buildPhases = (
+				4554173732075B3ECAE3E14A /* Sources */,
+				1BA8EC6B729CBFCEAB838658 /* Frameworks */,
+				0E405DA2723DAE034D5C1160 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-TextFieldEffects";
+			productName = "Pods-TextFieldEffects";
+			productReference = 8960D435D2359DD16A27B143 /* TextFieldEffects.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D1E36FA84039500CB5A4D03B /* Pods-HabitizerTests-BubbleTransition */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD59E1E9FE022B804F91EE86 /* Build configuration list for PBXNativeTarget "Pods-HabitizerTests-BubbleTransition" */;
+			buildPhases = (
+				511126DB33E849FD4E94E5FD /* Sources */,
+				5157742A33B5143D79C0ADD6 /* Frameworks */,
+				1F452473210C5EAF588429D5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-HabitizerTests-BubbleTransition";
+			productName = "Pods-HabitizerTests-BubbleTransition";
+			productReference = 1C147349D60B7E1886DC7C8E /* BubbleTransition.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DB93096CE73424DFD9A283C9 /* Pods-BubbleTransition */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BEF619ECA74003843F27D41 /* Build configuration list for PBXNativeTarget "Pods-BubbleTransition" */;
+			buildPhases = (
+				4B3D6E8B28C93131219D9386 /* Sources */,
+				70D4B7CA9E5DB9965D67CA16 /* Frameworks */,
+				0AEB2230D5EE9DB1031D6A61 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-BubbleTransition";
+			productName = "Pods-BubbleTransition";
+			productReference = 815335F3307071BD9280A861 /* BubbleTransition.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DF2D5C31CF96ADF3E395AAA2 /* Pods-Spring */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6931BCFDD657EDE17C01D13 /* Build configuration list for PBXNativeTarget "Pods-Spring" */;
+			buildPhases = (
+				CA0E49E032D3396C2A620F09 /* Sources */,
+				7C42B6C02F710C3C93F9BBDF /* Frameworks */,
+				C92AB0D709B96DF549BD753A /* Resources */,
+				FF3F3321125062C65BC2BF42 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Spring";
+			productName = "Pods-Spring";
+			productReference = 5C65E89A3DAD848C02B34833 /* Spring.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		5784728FE73F2B9A5B737623 /* Project object */ = {
+		8DB8EA04480C3098471FA2F9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0640;
 			};
-			buildConfigurationList = 875705B798C7F25C6A7BF55F /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 390040C2537BDB15F3901793 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 4D5344D80DFF30199059792E;
-			productRefGroup = 4DC5DC3B74DDB8F964210A45 /* Products */;
+			mainGroup = 13B391B790D91490FC58E490;
+			productRefGroup = A82E97711575597F3D5735E5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				58E3B7F4E0EB13F77D3A61D2 /* Pods */,
-				C81F66E219C0FD81CE03297C /* Pods-BubbleTransition */,
-				8CFA98675B86C018C72F5EF3 /* Pods-HabitizerTests */,
-				4C5E89724CDBE822109DF5C5 /* Pods-HabitizerTests-BubbleTransition */,
-				17DC9A1D7F17964AF2A8D050 /* Pods-HabitizerTests-KYCircularProgress */,
-				441D2ABE74F8048AAD9C3A07 /* Pods-HabitizerTests-TextFieldEffects */,
-				FC39A5BDC9987D604C5D72C4 /* Pods-KYCircularProgress */,
-				EEB25A8D8BB63B4163462A19 /* Pods-TextFieldEffects */,
+				3813FD6317FA09569EE83E77 /* Pods */,
+				DB93096CE73424DFD9A283C9 /* Pods-BubbleTransition */,
+				1CA25409862AD848AC09490F /* Pods-HabitizerTests */,
+				D1E36FA84039500CB5A4D03B /* Pods-HabitizerTests-BubbleTransition */,
+				A94534CD57588466DBBE69FC /* Pods-HabitizerTests-KYCircularProgress */,
+				454A3CE43487FB184BB30D7E /* Pods-HabitizerTests-Spring */,
+				B740788F43D04AA60D5B1C19 /* Pods-HabitizerTests-TextFieldEffects */,
+				A69F743BB0D37CDC7A03543C /* Pods-KYCircularProgress */,
+				DF2D5C31CF96ADF3E395AAA2 /* Pods-Spring */,
+				D13F89C0E7E889A757304A07 /* Pods-TextFieldEffects */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		421E494CC7D135D2F540B324 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C15DE10343692FD36179D33 /* Images.xcassets in Resources */,
+				B18972FC486DF55F0AB847E3 /* LoadingView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C92AB0D709B96DF549BD753A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D193CF1939004E11EA15C3D /* Images.xcassets in Resources */,
+				646FDAFEDAA512D1953185A7 /* LoadingView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		23E6F6C5C88D358B8E091C2D /* Sources */ = {
+		2D0FC70B6DC7E8B44C747AC2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3BB7118798CAA6BC2008943 /* BubbleTransition.swift in Sources */,
-				D2E6E4961E62B414779A5F17 /* Pods-HabitizerTests-BubbleTransition-dummy.m in Sources */,
+				B3827D07D16ECC4270345762 /* KYCircularProgress.swift in Sources */,
+				0CEECACFB787CE24F57B4CDB /* Pods-KYCircularProgress-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3542EACC7AFB30E2977BA073 /* Sources */ = {
+		4554173732075B3ECAE3E14A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF6E4672E0A5C4AA79EE7703 /* KYCircularProgress.swift in Sources */,
-				D666E98C1DD5D0EDEB2B4587 /* Pods-HabitizerTests-KYCircularProgress-dummy.m in Sources */,
+				940E125C8D508A8CF10A489E /* AkiraTextField.swift in Sources */,
+				F1DD6E347C1880F4C4AFF21C /* HoshiTextField.swift in Sources */,
+				0789946DDB768F84B87131FA /* IsaoTextField.swift in Sources */,
+				7E0AF69543673091C06CA118 /* JiroTextField.swift in Sources */,
+				F4A553F13419A784526F4BBE /* KaedeTextField.swift in Sources */,
+				2949FE336F08E8678D3F191A /* MadokaTextField.swift in Sources */,
+				04782FDD320A7F478E4B80B9 /* MinoruTextField.swift in Sources */,
+				63C84099692A7EF9DDBCCAF5 /* Pods-TextFieldEffects-dummy.m in Sources */,
+				A151CDB8AED429C808699293 /* TextFieldsEffects.swift in Sources */,
+				76501E5857F7F8521C153173 /* YokoTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4BCA41295BCE7207899D71C5 /* Sources */ = {
+		4B3D6E8B28C93131219D9386 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36472D1C62A0C92FDDF89D9A /* BubbleTransition.swift in Sources */,
-				930D6BD7EB717C3AD97FE155 /* Pods-BubbleTransition-dummy.m in Sources */,
+				BFFCDFFB3A2D1D58D7DD7BD7 /* BubbleTransition.swift in Sources */,
+				CE0573BC58658A95F996EEE5 /* Pods-BubbleTransition-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7901F802C80CDFB0943FAFBA /* Sources */ = {
+		4BF01593A0F3B0FC4866140C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8ABF604BADD48B6680905C5C /* Pods-dummy.m in Sources */,
+				445A8962576153060D59F043 /* KYCircularProgress.swift in Sources */,
+				3F5672ADB7CF1061081172F0 /* Pods-HabitizerTests-KYCircularProgress-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		95CD255C9DFF67D9A016F2FD /* Sources */ = {
+		511126DB33E849FD4E94E5FD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7E638236FA869973CE079F8 /* AkiraTextField.swift in Sources */,
-				0CEFF23C3A777C40187846E5 /* HoshiTextField.swift in Sources */,
-				F6AEE7F4E268D55E5A5BE5B5 /* IsaoTextField.swift in Sources */,
-				D8534089097A672A5B536BCD /* JiroTextField.swift in Sources */,
-				C6156BFFA7DF01B148143C84 /* KaedeTextField.swift in Sources */,
-				95E4DE26560B7E003DD67A12 /* MadokaTextField.swift in Sources */,
-				BA865642107A84906B640DE8 /* MinoruTextField.swift in Sources */,
-				CA774345903FB59A2085CED9 /* Pods-TextFieldEffects-dummy.m in Sources */,
-				8AF90A49E7804331683B8E46 /* TextFieldsEffects.swift in Sources */,
-				B8EE3C832AEFB1F39A42E022 /* YokoTextField.swift in Sources */,
+				30B5778A1ADCA2813CDDEBDF /* BubbleTransition.swift in Sources */,
+				C892071D3F4400F8D1D28BAB /* Pods-HabitizerTests-BubbleTransition-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AE8D5C1A77905573D2FFE1D3 /* Sources */ = {
+		6B3830326544C7ED647E9644 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D227A261DC46BB6071040C01 /* AkiraTextField.swift in Sources */,
-				85061901CC0701E0B47D94AD /* HoshiTextField.swift in Sources */,
-				7BD815A7667BB3B993A2005D /* IsaoTextField.swift in Sources */,
-				FCC787F8328F5A02CDC7D5D5 /* JiroTextField.swift in Sources */,
-				8752483612A32F23FFF07D61 /* KaedeTextField.swift in Sources */,
-				A0158E6E6BC8FA619BA460CA /* MadokaTextField.swift in Sources */,
-				F4B1381B1184F593841F157E /* MinoruTextField.swift in Sources */,
-				40A155A5AA228A5BC9D0855F /* Pods-HabitizerTests-TextFieldEffects-dummy.m in Sources */,
-				6046B7782E94394FE8DC19A8 /* TextFieldsEffects.swift in Sources */,
-				F603DC1DD67876F1787383F6 /* YokoTextField.swift in Sources */,
+				83CC7020386BA91173331E30 /* Pods-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EC6D619DE118856192AA1C4D /* Sources */ = {
+		82A36AF68981194070342AF2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				299A0A8645AD711B72EDF7B7 /* Pods-HabitizerTests-dummy.m in Sources */,
+				4D6D14A1D8F9AF8D2105D65F /* Pods-HabitizerTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F206E3FC85ED34CD2C6AA3F0 /* Sources */ = {
+		AB2A3EB1CD85526B4BE54DDF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				691333682E5487D7F83A7CE6 /* KYCircularProgress.swift in Sources */,
-				628A915AB7CF524766E33FDA /* Pods-KYCircularProgress-dummy.m in Sources */,
+				17F83ED93E3F8A2F15611283 /* AsyncButton.swift in Sources */,
+				005F582E66585C635DC2C9F7 /* AsyncImageView.swift in Sources */,
+				1A5AE9C316BDBBF8775E7F6F /* AutoTextView.swift in Sources */,
+				E687DFD48FD5F87D7E5ABAC4 /* BlurView.swift in Sources */,
+				44184F2B0C77E5A621E4B937 /* DesignableButton.swift in Sources */,
+				BA6780FD49B2BC08732D0290 /* DesignableImageView.swift in Sources */,
+				C114D8AC4C9B45781C2DA172 /* DesignableLabel.swift in Sources */,
+				F039F7E91F0BCDC452C06BF6 /* DesignableTabBarController.swift in Sources */,
+				2493F8BB01504A0C0DB04F74 /* DesignableTextField.swift in Sources */,
+				02B4C424CC9B4FAFB96937A4 /* DesignableTextView.swift in Sources */,
+				3DA2CE87AF2ACB8607DA157E /* DesignableView.swift in Sources */,
+				A6714E4E0014912A7251D371 /* ImageLoader.swift in Sources */,
+				6410A181B3E7622756D43926 /* KeyboardLayoutConstraint.swift in Sources */,
+				922D1C04341F7A164A405F13 /* LoadingView.swift in Sources */,
+				DDA736B7ED3DFD4EA25F4213 /* Misc.swift in Sources */,
+				8088A37BEB196CC2454A8E07 /* Pods-HabitizerTests-Spring-dummy.m in Sources */,
+				1D6BB9251E9516DAC2E715BD /* SoundPlayer.swift in Sources */,
+				C141FA463E026D7559920CB1 /* Spring.swift in Sources */,
+				9DF1DC020B978BC9016B7980 /* SpringAnimation.swift in Sources */,
+				F7E048608C7DEFB4CABF7850 /* SpringButton.swift in Sources */,
+				306F8BF1ECAE1F4D69244740 /* SpringImageView.swift in Sources */,
+				9624BDE811E17994B17EF2B4 /* SpringLabel.swift in Sources */,
+				49F3C185E6E99B698B4187E1 /* SpringTextField.swift in Sources */,
+				4333724695F15739BE0167EE /* SpringTextView.swift in Sources */,
+				64C9270B8343610E0E7D7F8F /* SpringView.swift in Sources */,
+				219562FE4449DA869A7BC76E /* TransitionManager.swift in Sources */,
+				38F750F2C87BD91D2672AC86 /* TransitionZoom.swift in Sources */,
+				147E34E97322757E02DD35DB /* UnwindSegue.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA0E49E032D3396C2A620F09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BBE3C7C9E7CAAD5DFE1791E /* AsyncButton.swift in Sources */,
+				64A07E2EA9B62AC453F43C0D /* AsyncImageView.swift in Sources */,
+				9D3BCDA8B6AC0E3191F783C2 /* AutoTextView.swift in Sources */,
+				B969CF0DC9AD85A3EAAE6519 /* BlurView.swift in Sources */,
+				7B80F0CA163A1A42152BAF95 /* DesignableButton.swift in Sources */,
+				78066B609A376AAED3F6CE9A /* DesignableImageView.swift in Sources */,
+				D0B6D56BDE3AFC97C015E81F /* DesignableLabel.swift in Sources */,
+				12663510DAA525C0BE0BF037 /* DesignableTabBarController.swift in Sources */,
+				E0EA8C4E667B2B00B05AD98F /* DesignableTextField.swift in Sources */,
+				6D6D47ECBFCA84D73F54E91D /* DesignableTextView.swift in Sources */,
+				C9A00B275A836CB9172A2E28 /* DesignableView.swift in Sources */,
+				897A47BAA45A1D188A24CC07 /* ImageLoader.swift in Sources */,
+				AEA5D8C274A0EDA60319D5A2 /* KeyboardLayoutConstraint.swift in Sources */,
+				846AD8EB5B113B20C6FE6731 /* LoadingView.swift in Sources */,
+				0FABC965875C13E4BCD1AA6B /* Misc.swift in Sources */,
+				6E24F9CED4BB958F35747791 /* Pods-Spring-dummy.m in Sources */,
+				8AB6CB0D1EE0573DD52AC6C6 /* SoundPlayer.swift in Sources */,
+				E38F7F07668A18BE97C1FD02 /* Spring.swift in Sources */,
+				95EA897D8599433162720D6F /* SpringAnimation.swift in Sources */,
+				FD28C8F90C17A602257C5A99 /* SpringButton.swift in Sources */,
+				DE750D1486DFB268D3AB89A9 /* SpringImageView.swift in Sources */,
+				8935043B0D20A49A7A2E3404 /* SpringLabel.swift in Sources */,
+				ADA1E2A53C395FE1C72C1BE7 /* SpringTextField.swift in Sources */,
+				0690000D1064ABAEBF69A447 /* SpringTextView.swift in Sources */,
+				994780902F70853B2D8C8203 /* SpringView.swift in Sources */,
+				CA6D21734FC497D0D56639E9 /* TransitionManager.swift in Sources */,
+				0830A0F5C404865CA95FCE25 /* TransitionZoom.swift in Sources */,
+				8F4394BE3CC6A2EFD2C71423 /* UnwindSegue.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F24B94D8238A8A955858DBA2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1449729BB8C361DC9276DCB1 /* AkiraTextField.swift in Sources */,
+				0A6EDD7B677B0E2E6D1B61F9 /* HoshiTextField.swift in Sources */,
+				EE7AC6B6CC02C17D4D64D9CC /* IsaoTextField.swift in Sources */,
+				A7E303C538ADA9677ECACB8C /* JiroTextField.swift in Sources */,
+				553B23625ABADC51E493FE71 /* KaedeTextField.swift in Sources */,
+				1A8262A060A8DD9A71F191E3 /* MadokaTextField.swift in Sources */,
+				945E7AA74147B066963ED74F /* MinoruTextField.swift in Sources */,
+				A435E8FD17F65DDB08C8CCE6 /* Pods-HabitizerTests-TextFieldEffects-dummy.m in Sources */,
+				BE8EEAC13A7016815F71539E /* TextFieldsEffects.swift in Sources */,
+				2BF46BE1FC963341BF464C76 /* YokoTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4A4F0C7DFAD11C42B7132F94 /* PBXTargetDependency */ = {
+		0561CFC5750893423251177D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "Pods-KYCircularProgress";
-			target = FC39A5BDC9987D604C5D72C4 /* Pods-KYCircularProgress */;
-			targetProxy = B4C8B2F34E0A5DED385FD894 /* PBXContainerItemProxy */;
+			name = "Pods-Spring";
+			target = DF2D5C31CF96ADF3E395AAA2 /* Pods-Spring */;
+			targetProxy = 0FDB2781213BFC208C132AD8 /* PBXContainerItemProxy */;
 		};
-		51C01B2A0CC72FD0F56976C0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-TextFieldEffects";
-			target = EEB25A8D8BB63B4163462A19 /* Pods-TextFieldEffects */;
-			targetProxy = 3D7521320D99270F10D9B481 /* PBXContainerItemProxy */;
-		};
-		576123940EB77F46121F0F0F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-HabitizerTests-KYCircularProgress";
-			target = 17DC9A1D7F17964AF2A8D050 /* Pods-HabitizerTests-KYCircularProgress */;
-			targetProxy = D833AD404D52D78C1F4CAE6A /* PBXContainerItemProxy */;
-		};
-		6D0FD7A97148466B12A18AAC /* PBXTargetDependency */ = {
+		2B3A19DBFF9C7A37C4243C81 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-HabitizerTests-BubbleTransition";
-			target = 4C5E89724CDBE822109DF5C5 /* Pods-HabitizerTests-BubbleTransition */;
-			targetProxy = A147633C6A07C48A5EAAE324 /* PBXContainerItemProxy */;
+			target = D1E36FA84039500CB5A4D03B /* Pods-HabitizerTests-BubbleTransition */;
+			targetProxy = A01A27E8A3998C68D44EC49E /* PBXContainerItemProxy */;
 		};
-		D5AE95EB500F1386BCA8B1B8 /* PBXTargetDependency */ = {
+		7724DEDFD95B0D633C875B93 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-BubbleTransition";
-			target = C81F66E219C0FD81CE03297C /* Pods-BubbleTransition */;
-			targetProxy = FD380D101316BFA24AB412AB /* PBXContainerItemProxy */;
+			target = DB93096CE73424DFD9A283C9 /* Pods-BubbleTransition */;
+			targetProxy = 3A640E6A313F89EFAF082A09 /* PBXContainerItemProxy */;
 		};
-		FD6A08BD7CD235128BBDD6BC /* PBXTargetDependency */ = {
+		9542505C61C5056AC5061068 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-HabitizerTests-TextFieldEffects";
-			target = 441D2ABE74F8048AAD9C3A07 /* Pods-HabitizerTests-TextFieldEffects */;
-			targetProxy = 97AE120A45661A2EA4E7454F /* PBXContainerItemProxy */;
+			target = B740788F43D04AA60D5B1C19 /* Pods-HabitizerTests-TextFieldEffects */;
+			targetProxy = 7DFBC6EAE12645B8EE56C12E /* PBXContainerItemProxy */;
+		};
+		9929954625599663821EDD68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-HabitizerTests-KYCircularProgress";
+			target = A94534CD57588466DBBE69FC /* Pods-HabitizerTests-KYCircularProgress */;
+			targetProxy = 8A33597D3CBFD398C0907E9C /* PBXContainerItemProxy */;
+		};
+		B352525FE637B78E779EF314 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TextFieldEffects";
+			target = D13F89C0E7E889A757304A07 /* Pods-TextFieldEffects */;
+			targetProxy = 9243CC7C96832F4CA87D9D3B /* PBXContainerItemProxy */;
+		};
+		EA269F21A94F517B7FB4CD68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-HabitizerTests-Spring";
+			target = 454A3CE43487FB184BB30D7E /* Pods-HabitizerTests-Spring */;
+			targetProxy = 89DFFABE606E19D914ADFA78 /* PBXContainerItemProxy */;
+		};
+		EC59AE7494B529C9350109A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-KYCircularProgress";
+			target = A69F743BB0D37CDC7A03543C /* Pods-KYCircularProgress */;
+			targetProxy = 23AC528C3D289DDDF2455884 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1AB6EF530347FE85A37FCB9F /* Debug */ = {
+		1A85BC82718AC759C06F55C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 591BB83460508108EF427C9A /* Pods.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1F39E555B14A519F4AF12BF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCD614AD53192976057F7309 /* Pods-Spring-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Spring/Pods-Spring-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-Spring/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-Spring/Pods-Spring.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Spring;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3D4E3E444939AA6367920A2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 422DB6095C7ED46CE45918CD /* Pods-TextFieldEffects-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TextFieldEffects/Pods-TextFieldEffects-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-TextFieldEffects/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-TextFieldEffects/Pods-TextFieldEffects.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = TextFieldEffects;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4A9E3568445D4EF577D30101 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 932754EE6D2832468DE0FCF9 /* Pods-BubbleTransition-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BubbleTransition/Pods-BubbleTransition-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-BubbleTransition/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BubbleTransition/Pods-BubbleTransition.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = BubbleTransition;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4DFB1BECA6804E5AFCA4D2C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18361C8DF0C4C86B7E577630 /* Pods.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		50EC39901AA872563B406860 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 422DB6095C7ED46CE45918CD /* Pods-TextFieldEffects-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TextFieldEffects/Pods-TextFieldEffects-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-TextFieldEffects/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-TextFieldEffects/Pods-TextFieldEffects.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = TextFieldEffects;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		569A1C7E024BADD7EF7ABDB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C1497F8269B210FB4DBC806 /* Pods-HabitizerTests-Spring-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-HabitizerTests-Spring/Pods-HabitizerTests-Spring-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-HabitizerTests-Spring/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-HabitizerTests-Spring/Pods-HabitizerTests-Spring.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Spring;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5C65BB18A97EDE4067EEA523 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2765049EB60159F2247884A /* Pods-HabitizerTests-TextFieldEffects-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-HabitizerTests-TextFieldEffects/Pods-HabitizerTests-TextFieldEffects-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-HabitizerTests-TextFieldEffects/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-HabitizerTests-TextFieldEffects/Pods-HabitizerTests-TextFieldEffects.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = TextFieldEffects;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5FED202E696D4A696175D46D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1EA6C0E43D8DB651ECD78BC /* Pods-HabitizerTests-KYCircularProgress-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-HabitizerTests-KYCircularProgress/Pods-HabitizerTests-KYCircularProgress-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-HabitizerTests-KYCircularProgress/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-HabitizerTests-KYCircularProgress/Pods-HabitizerTests-KYCircularProgress.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = KYCircularProgress;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9B8FDB888D89B2B326636480 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 676AC824633B16A7D3DDC269 /* Pods-HabitizerTests-BubbleTransition-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-HabitizerTests-BubbleTransition/Pods-HabitizerTests-BubbleTransition-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-HabitizerTests-BubbleTransition/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-HabitizerTests-BubbleTransition/Pods-HabitizerTests-BubbleTransition.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = BubbleTransition;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A258F61B4DDB3B6F4541D897 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1EA6C0E43D8DB651ECD78BC /* Pods-HabitizerTests-KYCircularProgress-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-HabitizerTests-KYCircularProgress/Pods-HabitizerTests-KYCircularProgress-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-HabitizerTests-KYCircularProgress/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-HabitizerTests-KYCircularProgress/Pods-HabitizerTests-KYCircularProgress.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = KYCircularProgress;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A37E0E1251A9B5D8F9794E56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2725A72730C60D3173701634 /* Pods-HabitizerTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-HabitizerTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-HabitizerTests/Pods-HabitizerTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_HabitizerTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A5D05859D56FEF49B39A8C50 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -868,9 +1573,9 @@
 			};
 			name = Debug;
 		};
-		1E219D80345EA503BE03C8C6 /* Debug */ = {
+		AA34B5CF4871646EA0E867DA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1E03AF2BB950311F5284DEA /* Pods-HabitizerTests.debug.xcconfig */;
+			baseConfigurationReference = 8C1497F8269B210FB4DBC806 /* Pods-HabitizerTests-Spring-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -879,16 +1584,14 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-HabitizerTests/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-HabitizerTests-Spring/Pods-HabitizerTests-Spring-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-HabitizerTests-Spring/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-HabitizerTests/Pods-HabitizerTests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-HabitizerTests-Spring/Pods-HabitizerTests-Spring.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_HabitizerTests;
+				PRODUCT_NAME = Spring;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -898,9 +1601,9 @@
 			};
 			name = Debug;
 		};
-		21ABC3BA5BE5042080D7BB4B /* Release */ = {
+		AAF4A89852D16DA5436038DA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3823DC4FDA7C1A2921852031 /* Pods.release.xcconfig */;
+			baseConfigurationReference = CCD614AD53192976057F7309 /* Pods-Spring-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -909,97 +1612,14 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Spring/Pods-Spring-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-Spring/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		2C7151FE0AC30D8E0751A923 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DEB9F1C157C37355CE126BFF /* Pods-KYCircularProgress-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-KYCircularProgress/Pods-KYCircularProgress-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-KYCircularProgress/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-KYCircularProgress/Pods-KYCircularProgress.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = KYCircularProgress;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		3D1A3013AC04D32CF3126110 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C7148073114E335FB8BD8EAC /* Pods-HabitizerTests-KYCircularProgress-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-HabitizerTests-KYCircularProgress/Pods-HabitizerTests-KYCircularProgress-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-HabitizerTests-KYCircularProgress/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-HabitizerTests-KYCircularProgress/Pods-HabitizerTests-KYCircularProgress.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = KYCircularProgress;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		469110D65344A8B262CB66EE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DEB9F1C157C37355CE126BFF /* Pods-KYCircularProgress-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-KYCircularProgress/Pods-KYCircularProgress-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-KYCircularProgress/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-KYCircularProgress/Pods-KYCircularProgress.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-Spring/Pods-Spring.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = KYCircularProgress;
+				PRODUCT_NAME = Spring;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1009,9 +1629,9 @@
 			};
 			name = Debug;
 		};
-		48FDC6CA089AFC60E0473E4A /* Release */ = {
+		AFB88F58C456D00F363C63E0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8ECD4A7183866BBB23EF8435 /* Pods-HabitizerTests-TextFieldEffects-Private.xcconfig */;
+			baseConfigurationReference = 676AC824633B16A7D3DDC269 /* Pods-HabitizerTests-BubbleTransition-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1020,14 +1640,14 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-HabitizerTests-TextFieldEffects/Pods-HabitizerTests-TextFieldEffects-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-HabitizerTests-TextFieldEffects/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-HabitizerTests-BubbleTransition/Pods-HabitizerTests-BubbleTransition-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-HabitizerTests-BubbleTransition/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-HabitizerTests-TextFieldEffects/Pods-HabitizerTests-TextFieldEffects.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-HabitizerTests-BubbleTransition/Pods-HabitizerTests-BubbleTransition.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = TextFieldEffects;
+				PRODUCT_NAME = BubbleTransition;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1036,9 +1656,9 @@
 			};
 			name = Release;
 		};
-		4F8F754A7BF279D5E6D8DBB9 /* Debug */ = {
+		B721BC07FF333D922833ABEA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B335B57001BCAD7E0DB7D821 /* Pods-TextFieldEffects-Private.xcconfig */;
+			baseConfigurationReference = 932754EE6D2832468DE0FCF9 /* Pods-BubbleTransition-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1047,24 +1667,23 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-TextFieldEffects/Pods-TextFieldEffects-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-TextFieldEffects/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BubbleTransition/Pods-BubbleTransition-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-BubbleTransition/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-TextFieldEffects/Pods-TextFieldEffects.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = TextFieldEffects;
+				MODULEMAP_FILE = "Target Support Files/Pods-BubbleTransition/Pods-BubbleTransition.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = BubbleTransition;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		593D4841452FE7ADFB878ADC /* Release */ = {
+		BEA7A02C215F034537D0A58A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1098,9 +1717,9 @@
 			};
 			name = Release;
 		};
-		64583E0855CE828CA87779EF /* Release */ = {
+		BEC9B800CD8345CDF2BD0B65 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3ECB225F52E7007C3FA0DCB7 /* Pods-BubbleTransition-Private.xcconfig */;
+			baseConfigurationReference = C987115680ED356740C52942 /* Pods-KYCircularProgress-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1109,14 +1728,14 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-BubbleTransition/Pods-BubbleTransition-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-BubbleTransition/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-KYCircularProgress/Pods-KYCircularProgress-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-KYCircularProgress/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-BubbleTransition/Pods-BubbleTransition.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-KYCircularProgress/Pods-KYCircularProgress.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = BubbleTransition;
+				PRODUCT_NAME = KYCircularProgress;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1125,65 +1744,9 @@
 			};
 			name = Release;
 		};
-		6B6495808E32AA9584F519FF /* Debug */ = {
+		C83927702958EE290173F31D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C7148073114E335FB8BD8EAC /* Pods-HabitizerTests-KYCircularProgress-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-HabitizerTests-KYCircularProgress/Pods-HabitizerTests-KYCircularProgress-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-HabitizerTests-KYCircularProgress/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-HabitizerTests-KYCircularProgress/Pods-HabitizerTests-KYCircularProgress.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = KYCircularProgress;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		8A3FB983F7D85FB62A2A8004 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EC5BE2B8443A201E4322DE8E /* Pods-HabitizerTests-BubbleTransition-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-HabitizerTests-BubbleTransition/Pods-HabitizerTests-BubbleTransition-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-HabitizerTests-BubbleTransition/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-HabitizerTests-BubbleTransition/Pods-HabitizerTests-BubbleTransition.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = BubbleTransition;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		969C5C7404DC7A832CB3AA7B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8ECD4A7183866BBB23EF8435 /* Pods-HabitizerTests-TextFieldEffects-Private.xcconfig */;
+			baseConfigurationReference = B2765049EB60159F2247884A /* Pods-HabitizerTests-TextFieldEffects-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1198,94 +1761,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Pods-HabitizerTests-TextFieldEffects/Pods-HabitizerTests-TextFieldEffects.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = TextFieldEffects;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		A2BC9A716FBB9E1BA86C9551 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3ECB225F52E7007C3FA0DCB7 /* Pods-BubbleTransition-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-BubbleTransition/Pods-BubbleTransition-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-BubbleTransition/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-BubbleTransition/Pods-BubbleTransition.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = BubbleTransition;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		B826208E9D19AFC7EBA69E91 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AEB7061A5C2C8C02D1F716F0 /* Pods.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		C1A5F67C6C0F954AEC8E0760 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EC5BE2B8443A201E4322DE8E /* Pods-HabitizerTests-BubbleTransition-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-HabitizerTests-BubbleTransition/Pods-HabitizerTests-BubbleTransition-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-HabitizerTests-BubbleTransition/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-HabitizerTests-BubbleTransition/Pods-HabitizerTests-BubbleTransition.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = BubbleTransition;
+				PRODUCT_NAME = TextFieldEffects;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1294,9 +1771,9 @@
 			};
 			name = Release;
 		};
-		F0662AF494B8FA50CB02C523 /* Release */ = {
+		E864D8D7BE011A8C468C18D5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 81E7B888DB572D6F8C828564 /* Pods-HabitizerTests.release.xcconfig */;
+			baseConfigurationReference = 8DF851F572C16D4413670411 /* Pods-HabitizerTests.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1323,9 +1800,9 @@
 			};
 			name = Release;
 		};
-		F8234732B25C60ACB9D00351 /* Release */ = {
+		FA1C2CDFEE0353E0488E20D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B335B57001BCAD7E0DB7D821 /* Pods-TextFieldEffects-Private.xcconfig */;
+			baseConfigurationReference = C987115680ED356740C52942 /* Pods-KYCircularProgress-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1334,107 +1811,126 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-TextFieldEffects/Pods-TextFieldEffects-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-TextFieldEffects/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-KYCircularProgress/Pods-KYCircularProgress-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-KYCircularProgress/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-TextFieldEffects/Pods-TextFieldEffects.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = TextFieldEffects;
+				MODULEMAP_FILE = "Target Support Files/Pods-KYCircularProgress/Pods-KYCircularProgress.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = KYCircularProgress;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4FB322BA1C136C279AD46F2E /* Build configuration list for PBXNativeTarget "Pods-HabitizerTests" */ = {
+		0CF23ED437835B70141195EF /* Build configuration list for PBXNativeTarget "Pods-HabitizerTests-Spring" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1E219D80345EA503BE03C8C6 /* Debug */,
-				F0662AF494B8FA50CB02C523 /* Release */,
+				AA34B5CF4871646EA0E867DA /* Debug */,
+				569A1C7E024BADD7EF7ABDB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		630B1C7AC8D6B217A4CA35AF /* Build configuration list for PBXNativeTarget "Pods-HabitizerTests-BubbleTransition" */ = {
+		390040C2537BDB15F3901793 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8A3FB983F7D85FB62A2A8004 /* Debug */,
-				C1A5F67C6C0F954AEC8E0760 /* Release */,
+				A5D05859D56FEF49B39A8C50 /* Debug */,
+				BEA7A02C215F034537D0A58A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		680571AA079F1DA13A6DA5D0 /* Build configuration list for PBXNativeTarget "Pods-HabitizerTests-KYCircularProgress" */ = {
+		5115C1BA6D0BFB5511CCEA41 /* Build configuration list for PBXNativeTarget "Pods-KYCircularProgress" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6B6495808E32AA9584F519FF /* Debug */,
-				3D1A3013AC04D32CF3126110 /* Release */,
+				FA1C2CDFEE0353E0488E20D6 /* Debug */,
+				BEC9B800CD8345CDF2BD0B65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		875705B798C7F25C6A7BF55F /* Build configuration list for PBXProject "Pods" */ = {
+		7BEF619ECA74003843F27D41 /* Build configuration list for PBXNativeTarget "Pods-BubbleTransition" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1AB6EF530347FE85A37FCB9F /* Debug */,
-				593D4841452FE7ADFB878ADC /* Release */,
+				4A9E3568445D4EF577D30101 /* Debug */,
+				B721BC07FF333D922833ABEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B527DFAB6FB832BA590A0E7B /* Build configuration list for PBXNativeTarget "Pods-BubbleTransition" */ = {
+		83C4C239B997C9B65ED70C5E /* Build configuration list for PBXNativeTarget "Pods-HabitizerTests-TextFieldEffects" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A2BC9A716FBB9E1BA86C9551 /* Debug */,
-				64583E0855CE828CA87779EF /* Release */,
+				5C65BB18A97EDE4067EEA523 /* Debug */,
+				C83927702958EE290173F31D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BAE6ACE37D409A4C702356AF /* Build configuration list for PBXNativeTarget "Pods-TextFieldEffects" */ = {
+		8AD761FB866FDCFE41A7B814 /* Build configuration list for PBXNativeTarget "Pods-HabitizerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4F8F754A7BF279D5E6D8DBB9 /* Debug */,
-				F8234732B25C60ACB9D00351 /* Release */,
+				A37E0E1251A9B5D8F9794E56 /* Debug */,
+				E864D8D7BE011A8C468C18D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C2981E08037A6C3CC714FF91 /* Build configuration list for PBXNativeTarget "Pods-KYCircularProgress" */ = {
+		8F15486AE8E0195AE471EDFC /* Build configuration list for PBXNativeTarget "Pods-TextFieldEffects" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				469110D65344A8B262CB66EE /* Debug */,
-				2C7151FE0AC30D8E0751A923 /* Release */,
+				50EC39901AA872563B406860 /* Debug */,
+				3D4E3E444939AA6367920A2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CDC4D7735E9E12FCCB4B6700 /* Build configuration list for PBXNativeTarget "Pods-HabitizerTests-TextFieldEffects" */ = {
+		9BA108846266059CF13161F5 /* Build configuration list for PBXNativeTarget "Pods-HabitizerTests-KYCircularProgress" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				969C5C7404DC7A832CB3AA7B /* Debug */,
-				48FDC6CA089AFC60E0473E4A /* Release */,
+				A258F61B4DDB3B6F4541D897 /* Debug */,
+				5FED202E696D4A696175D46D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EAA21278E758FD29C0D0CD96 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+		BD59E1E9FE022B804F91EE86 /* Build configuration list for PBXNativeTarget "Pods-HabitizerTests-BubbleTransition" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B826208E9D19AFC7EBA69E91 /* Debug */,
-				21ABC3BA5BE5042080D7BB4B /* Release */,
+				9B8FDB888D89B2B326636480 /* Debug */,
+				AFB88F58C456D00F363C63E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6931BCFDD657EDE17C01D13 /* Build configuration list for PBXNativeTarget "Pods-Spring" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAF4A89852D16DA5436038DA /* Debug */,
+				1F39E555B14A519F4AF12BF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6EABD848C8F39F1CDFDD776 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A85BC82718AC759C06F55C8 /* Debug */,
+				4DFB1BECA6804E5AFCA4D2C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 5784728FE73F2B9A5B737623 /* Project object */;
+	rootObject = 8DB8EA04480C3098471FA2F9 /* Project object */;
 }

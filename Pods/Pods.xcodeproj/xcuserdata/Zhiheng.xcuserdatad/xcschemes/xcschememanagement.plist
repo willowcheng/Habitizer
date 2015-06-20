@@ -8,109 +8,101 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>Pods-HabitizerTests-BubbleTransition.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-HabitizerTests-KYCircularProgress.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>5</integer>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-HabitizerTests-Spring.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-HabitizerTests-TextFieldEffects.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>8</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-HabitizerTests.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-KYCircularProgress.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>6</integer>
+		</dict>
+		<key>Pods-Spring.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-TextFieldEffects.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>7</integer>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0A4EA8C56D772C95C76F30B1</key>
+		<key>1CA25409862AD848AC09490F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>17DC9A1D7F17964AF2A8D050</key>
+		<key>3813FD6317FA09569EE83E77</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1AC5A4D694EB6A37609CFDE2</key>
+		<key>454A3CE43487FB184BB30D7E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>441D2ABE74F8048AAD9C3A07</key>
+		<key>A69F743BB0D37CDC7A03543C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4C5E89724CDBE822109DF5C5</key>
+		<key>A94534CD57588466DBBE69FC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>58E3B7F4E0EB13F77D3A61D2</key>
+		<key>B740788F43D04AA60D5B1C19</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8CFA98675B86C018C72F5EF3</key>
+		<key>D13F89C0E7E889A757304A07</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C81F66E219C0FD81CE03297C</key>
+		<key>D1E36FA84039500CB5A4D03B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C91B564AED702681746391ED</key>
+		<key>DB93096CE73424DFD9A283C9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EC03AAD144D003CCE5F0C4C5</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EEB25A8D8BB63B4163462A19</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FC39A5BDC9987D604C5D72C4</key>
+		<key>DF2D5C31CF96ADF3E395AAA2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,16 +1,19 @@
 PODS:
   - BubbleTransition (0.2)
   - KYCircularProgress (0.1.1)
+  - Spring (1.0.3)
   - TextFieldEffects (0.4.0)
 
 DEPENDENCIES:
   - BubbleTransition (~> 0.1)
   - KYCircularProgress
+  - Spring (~> 1.0.3)
   - TextFieldEffects
 
 SPEC CHECKSUMS:
   BubbleTransition: 6ee83cedb8b9eb2a9489e11b0e0c666f3916bb2c
   KYCircularProgress: 9ed89ab9c404ba98f77625d6266f15e0a55e05e4
+  Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
   TextFieldEffects: 757bb7871bb742d95e0782e85da923bbaf97660f
 
 COCOAPODS: 0.37.2

@@ -18,6 +18,12 @@
 #define COCOAPODS_VERSION_MINOR_KYCircularProgress 1
 #define COCOAPODS_VERSION_PATCH_KYCircularProgress 1
 
+// Spring
+#define COCOAPODS_POD_AVAILABLE_Spring
+#define COCOAPODS_VERSION_MAJOR_Spring 1
+#define COCOAPODS_VERSION_MINOR_Spring 0
+#define COCOAPODS_VERSION_PATCH_Spring 3
+
 // TextFieldEffects
 #define COCOAPODS_POD_AVAILABLE_TextFieldEffects
 #define COCOAPODS_VERSION_MAJOR_TextFieldEffects 0
