@@ -31,10 +31,10 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        println("ViewDidLoad")
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.translucent = true
         self.navigationController?.view.backgroundColor = UIColor.clearColor()
         self.navigationController?.navigationBar.backgroundColor = UIColor.clearColor()
 
@@ -61,11 +61,6 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         loadDatabase()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         transition.transitionMode = .Present
         transition.startingPoint = transitionButton.center
@@ -77,6 +72,7 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         transition.transitionMode = .Dismiss
         transition.startingPoint = transitionButton.center
         transition.bubbleColor = transitionButton.backgroundColor!
+        loadDatabase()
         return transition
     }
     
@@ -112,7 +108,6 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         } else {
             return
         }
-        
         circularProgress.progress = Double(progress) / 255.0
 
     }

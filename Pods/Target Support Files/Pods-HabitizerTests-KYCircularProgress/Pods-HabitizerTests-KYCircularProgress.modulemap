@@ -1,0 +1,6 @@
+framework module KYCircularProgress {
+  umbrella header "Pods-HabitizerTests-KYCircularProgress-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -44,10 +44,6 @@ class NewHabitViewController: UIViewController {
         UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: true)
     }
     
-    override func viewWillDisappear(animated: Bool) {
-        UIApplication.sharedApplication().setStatusBarStyle(.Default, animated: true)
-    }
-    
     @IBAction func closeAction(sender: UIButton) {
         if(habitTextField.text.isEmpty) {
             self.dismissViewControllerAnimated(true, completion: nil)

@@ -1,0 +1,6 @@
+framework module TextFieldEffects {
+  umbrella header "Pods-HabitizerTests-TextFieldEffects-umbrella.h"
+
+  export *
+  module * { export * }
+}

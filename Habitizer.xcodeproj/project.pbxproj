@@ -416,7 +416,6 @@
 		};
 		774CE16C1B13D96F00EB08B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A6459E6D87727CD826CC8428 /* Pods-Habitizer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Habitizer/Info.plist;
@@ -427,7 +426,6 @@
 		};
 		774CE16D1B13D96F00EB08B9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 04514D43DE48203DF431388B /* Pods-Habitizer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Habitizer/Info.plist;
