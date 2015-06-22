@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Spring
 
 
 class MainViewController: UIViewController, UIViewControllerTransitioningDelegate {
@@ -50,12 +51,15 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         circularProgress.lineWidth = 5.0
         circularProgress.showProgressGuide = true
         circularProgress.progressGuideColor = UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 0.2)
-        
+        view.addSubview(circularProgress)
         circularProgress.progressChangedClosure({ (progress: Double, circularView: KYCircularProgress) in
             self.remainDaysLabel.text = "\(20 - Int(progress * 21.0))"
         })
+
+        //这两行代码不知道加在哪合适.........
+        circularProgress.animation = "fadeInUp"
+        circularProgress.animate()
         
-        view.addSubview(circularProgress)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -96,8 +100,9 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
             habitTargetLabel.text = habit.content
 //            remainDays = Int(habit.remainDays)
             remainDays = 5
-                circularDaysAnimation()
+            circularDaysAnimation()
         }
+
         if error != nil {
             println("An error occurred loading the data")
         }
@@ -107,10 +112,10 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         if(progress < progressLimit) {
                 progress = progress + 1
         } else {
+
             return
         }
         circularProgress.progress = Double(progress) / 255.0
-
     }
     
     func circularDaysAnimation() {

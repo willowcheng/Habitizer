@@ -22,9 +22,10 @@
 
 import Foundation
 import UIKit
+import Spring
 
 // MARK: - KYCircularProgress
-public class KYCircularProgress: UIView {
+public class KYCircularProgress: SpringView {
     public typealias progressChangedHandler = (progress: Double, circularView: KYCircularProgress) -> ()
     private var progressChangedClosure: progressChangedHandler?
     private var progressView: KYCircularShapeView!

@@ -14,16 +14,19 @@ class NewHabitViewController: UIViewController, UITextFieldDelegate {
     let managedObjectContext =
     (UIApplication.sharedApplication().delegate
         as! AppDelegate).managedObjectContext
+    
     @IBOutlet weak var habitTextField: UITextField!
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var currentDateLabel: UILabel!
     @IBOutlet weak var currentTimeLabel: UILabel!
     
+    var currentTime: NSDate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         habitTextField.delegate = self
         
+        currentTime = NSDate()
         var todaysDate: NSDate = NSDate()
         var dateFormatter: NSDateFormatter = NSDateFormatter()
         dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
@@ -75,21 +78,27 @@ class NewHabitViewController: UIViewController, UITextFieldDelegate {
         habit.remainDays = 20
         
         var error: NSError?
-        
+
         managedObjectContext?.save(&error)
         
         if let err = error {
+            
             var alert = UIAlertController(title: nil, message: err.localizedFailureReason, preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "OK"), style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
+            
         } else {
-            var newHabitNotification: UILocalNotification = UILocalNotification()
+            
+            var newHabitNotification = UILocalNotification()
             newHabitNotification.category = "NEW_HABIT_CATEGORY"
             var notificationHead: String = NSLocalizedString("NEW_HABIT_ADD", comment: "New habit add") as String
             newHabitNotification.alertBody = "\(notificationHead)\(habitTextField.text.lowercaseString)"
             newHabitNotification.fireDate = NSDate(timeIntervalSinceNow: 5)
-            
+            newHabitNotification.timeZone = NSTimeZone.defaultTimeZone()
+            newHabitNotification.repeatInterval = .CalendarUnitDay  //设置重复提醒的周期为一天
             UIApplication.sharedApplication().scheduleLocalNotification(newHabitNotification)
+            
+            //BubbleTransition退回到主界面
             dismissViewControllerAnimated(true, completion: nil)
         }
     }
