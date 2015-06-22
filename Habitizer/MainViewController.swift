@@ -20,8 +20,9 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
     (UIApplication.sharedApplication().delegate
         as! AppDelegate).managedObjectContext
     
-    
 
+    @IBOutlet weak var startLabel: UILabel!
+    @IBOutlet weak var remainLabel: UILabel!
     @IBOutlet weak var transitionButton: UIButton!
     @IBOutlet weak var habitTargetLabel: UILabel!
     @IBOutlet weak var remainDaysLabel: UILabel!
@@ -31,16 +32,28 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
     var circularProgress: KYCircularProgress!
     var progress = 0
     
+    //用来记录是否有进行中的习惯
+    var ongoingHabit: Bool = false {
+        didSet {
+            if !ongoingHabit {
+                startLabel.layer.zPosition = 100
+                startLabel.hidden = false
+                remainLabel.text = "In next"
+            } else {
+                startLabel.hidden = true
+                remainLabel.text = "Remain"
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        println("ViewDidLoad")
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.view.backgroundColor = UIColor.clearColor()
         self.navigationController?.navigationBar.backgroundColor = UIColor.clearColor()
 
-        
         let circularProgressFrame = CGRectMake(0, 0, CGRectGetWidth(view.frame), CGRectGetHeight(view.frame)/2)
         circularProgress = KYCircularProgress(frame: circularProgressFrame)
         
@@ -89,19 +102,25 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         }
     }
 
-    
     func loadDatabase() {
         let fetchRequest : NSFetchRequest = NSFetchRequest(entityName: "Habits")
         
         var error: NSError? = nil
         habits = managedObjectContext?.executeFetchRequest(fetchRequest, error: &error) as! [Habits]
-        for habit in habits {
-            println("Content: \(habit.content), createdAt: \(habit.createdAt), achieved: \(habit.achieved), remain days: \(habit.remainDays)")
-            habitTargetLabel.text = habit.content
-//            remainDays = Int(habit.remainDays)
-            remainDays = 5
-            circularDaysAnimation()
+        
+        if habits.count == 0 {
+            ongoingHabit = false
+        } else {
+            ongoingHabit = true
+            for habit in habits {
+                println("Content: \(habit.content), createdAt: \(habit.createdAt), achieved: \(habit.achieved), remain days: \(habit.remainDays)")
+                habitTargetLabel.text = habit.content
+                remainDays = Int(habit.remainDays)
+                //remainDays = 5
+                circularDaysAnimation()
+            }
         }
+
 
         if error != nil {
             println("An error occurred loading the data")

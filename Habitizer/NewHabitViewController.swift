@@ -39,10 +39,6 @@ class NewHabitViewController: UIViewController, UITextFieldDelegate {
         var timeInFormat: String = timeFormatter.stringFromDate(todaysDate)
         currentTimeLabel.text = timeInFormat
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
     override func viewWillAppear(animated: Bool) {
         UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: true)
