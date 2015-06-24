@@ -20,26 +20,23 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
     (UIApplication.sharedApplication().delegate
         as! AppDelegate).managedObjectContext
     
-    @IBOutlet weak var startLabel: UILabel!
-    @IBOutlet weak var remainLabel: UILabel!
+    @IBOutlet weak var remainLabel: SpringLabel!
     @IBOutlet weak var transitionButton: UIButton!
-    @IBOutlet weak var habitTargetLabel: UILabel!
-    @IBOutlet weak var remainDaysLabel: UILabel!
+    @IBOutlet weak var habitTargetLabel: SpringLabel!
+    @IBOutlet weak var remainDaysLabel: SpringLabel!
     var remainDays = 0
     var progressLimit = 255
     
     var circularProgress: KYCircularProgress!
     var progress = 0
     
+    //TODO: 使用UserDefaults存储当前习惯是否正在进行
     //用来记录是否有进行中的习惯
     var ongoingHabit: Bool = false {
         didSet {
             if !ongoingHabit {
-                startLabel.layer.zPosition = 100
-                startLabel.hidden = false
                 remainLabel.text = "In next"
             } else {
-                startLabel.hidden = true
                 remainLabel.text = "Remain"
             }
         }
@@ -70,11 +67,13 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
 
         //这两行代码不知道加在哪合适.........
         circularProgress.animation = "fadeInUp"
+        circularProgress.curve = "spring"
         circularProgress.animate()
         
     }
     
     override func viewWillAppear(animated: Bool) {
+        // 载入数据库
         loadDatabase()
     }
     
@@ -89,7 +88,16 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         transition.transitionMode = .Dismiss
         transition.startingPoint = transitionButton.center
         transition.bubbleColor = transitionButton.backgroundColor!
+        // Transition Button Dismiss时重载数据库及部分动画效果
+        progress = 0
         loadDatabase()
+        println("Transition button dismiss")
+        if (ongoingHabit) {
+            //FIXME: 动画默认结束时会reset导致无法多次调用, 注释Spring Class的477行 self?.resetAll()
+            println("Label animation")
+            remainLabel.animate()
+            habitTargetLabel.animate()
+        }
         return transition
     }
     
@@ -115,7 +123,7 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
                 println("Content: \(habit.content), createdAt: \(habit.createdAt), achieved: \(habit.achieved), remain days: \(habit.remainDays)")
                 habitTargetLabel.text = habit.content
                 remainDays = Int(habit.remainDays)
-                //remainDays = 5
+//                remainDays = 5
                 circularDaysAnimation()
             }
         }
@@ -127,6 +135,7 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
     }
     
     func updateProgress() {
+        // Timer调用的累加计数器
         if(progress < progressLimit) {
                 progress = progress + 1
         } else {
