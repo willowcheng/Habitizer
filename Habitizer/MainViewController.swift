@@ -19,8 +19,6 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
     (UIApplication.sharedApplication().delegate
         as! AppDelegate).managedObjectContext
     
-    
-
     @IBOutlet weak var transitionButton: UIButton!
     @IBOutlet weak var habitTargetLabel: UILabel!
     @IBOutlet weak var remainDaysLabel: UILabel!
