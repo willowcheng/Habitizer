@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Spring
 
 
 class MainViewController: UIViewController, UIViewControllerTransitioningDelegate {
@@ -19,6 +20,8 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
     (UIApplication.sharedApplication().delegate
         as! AppDelegate).managedObjectContext
     
+    @IBOutlet weak var startLabel: UILabel!
+    @IBOutlet weak var remainLabel: UILabel!
     @IBOutlet weak var transitionButton: UIButton!
     @IBOutlet weak var habitTargetLabel: UILabel!
     @IBOutlet weak var remainDaysLabel: UILabel!
@@ -28,16 +31,28 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
     var circularProgress: KYCircularProgress!
     var progress = 0
     
+    //用来记录是否有进行中的习惯
+    var ongoingHabit: Bool = false {
+        didSet {
+            if !ongoingHabit {
+                startLabel.layer.zPosition = 100
+                startLabel.hidden = false
+                remainLabel.text = "In next"
+            } else {
+                startLabel.hidden = true
+                remainLabel.text = "Remain"
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        println("ViewDidLoad")
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.view.backgroundColor = UIColor.clearColor()
         self.navigationController?.navigationBar.backgroundColor = UIColor.clearColor()
 
-        
         let circularProgressFrame = CGRectMake(0, 0, CGRectGetWidth(view.frame), CGRectGetHeight(view.frame)/2)
         circularProgress = KYCircularProgress(frame: circularProgressFrame)
         
@@ -48,12 +63,15 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         circularProgress.lineWidth = 5.0
         circularProgress.showProgressGuide = true
         circularProgress.progressGuideColor = UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 0.2)
-        
+        view.addSubview(circularProgress)
         circularProgress.progressChangedClosure({ (progress: Double, circularView: KYCircularProgress) in
             self.remainDaysLabel.text = "\(20 - Int(progress * 21.0))"
         })
+
+        //这两行代码不知道加在哪合适.........
+        circularProgress.animation = "fadeInUp"
+        circularProgress.animate()
         
-        view.addSubview(circularProgress)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -83,19 +101,26 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         }
     }
 
-    
     func loadDatabase() {
         let fetchRequest : NSFetchRequest = NSFetchRequest(entityName: "Habits")
         
         var error: NSError? = nil
         habits = managedObjectContext?.executeFetchRequest(fetchRequest, error: &error) as! [Habits]
-        for habit in habits {
-            println("Content: \(habit.content), createdAt: \(habit.createdAt), achieved: \(habit.achieved), remain days: \(habit.remainDays)")
-            habitTargetLabel.text = habit.content
-//            remainDays = Int(habit.remainDays)
-            remainDays = 5
+        
+        if habits.count == 0 {
+            ongoingHabit = false
+        } else {
+            ongoingHabit = true
+            for habit in habits {
+                println("Content: \(habit.content), createdAt: \(habit.createdAt), achieved: \(habit.achieved), remain days: \(habit.remainDays)")
+                habitTargetLabel.text = habit.content
+                remainDays = Int(habit.remainDays)
+                //remainDays = 5
                 circularDaysAnimation()
+            }
         }
+
+
         if error != nil {
             println("An error occurred loading the data")
         }
@@ -105,10 +130,10 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         if(progress < progressLimit) {
                 progress = progress + 1
         } else {
+
             return
         }
         circularProgress.progress = Double(progress) / 255.0
-
     }
     
     func circularDaysAnimation() {
