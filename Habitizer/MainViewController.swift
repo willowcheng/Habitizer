@@ -45,6 +45,10 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        remainDaysLabel.animation = "slideDown"
+        remainDaysLabel.curve = "spring"
+        remainDaysLabel.animate()
+        
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.view.backgroundColor = UIColor.clearColor()
@@ -93,9 +97,14 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         loadDatabase()
         println("Transition button dismiss")
         if (ongoingHabit) {
-            //FIXME: 动画默认结束时会reset导致无法多次调用, 注释Spring Class的477行 self?.resetAll()
             println("Label animation")
-            remainLabel.animate()
+            remainDaysLabel.animation = "pop"
+            remainDaysLabel.delay = 0.5
+            remainDaysLabel.curve = "spring"
+            remainDaysLabel.animate()
+            habitTargetLabel.animation = "pop"
+            habitTargetLabel.delay = 0.5
+            habitTargetLabel.curve = "spring"
             habitTargetLabel.animate()
         }
         return transition
