@@ -17,12 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remain" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="67l-yw-xuT">
-                                <rect key="frame" x="16" y="304" width="241" height="46"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="40"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="days" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="wwO-i8-AeV">
                                 <rect key="frame" x="377" y="304" width="207" height="46"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="40"/>
@@ -39,15 +33,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideDown"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="curve" value="spring"/>
                                 </userDefinedRuntimeAttributes>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start raising a good habit today!" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Sy-C7-812">
-                                <rect key="frame" x="16" y="407" width="568" height="20.5"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzm-Hr-yQY">
                                 <rect key="frame" x="270" y="520" width="60" height="60"/>
@@ -70,19 +57,27 @@
                                     <segue destination="W23-d3-KNG" kind="presentation" id="fbx-EL-I2K"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start with nothing, end up with a good habit..." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="1Jr-EX-gnV">
-                                <rect key="frame" x="16" y="144.5" width="568" height="20.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="193" id="tDA-zm-59j"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remain" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="67l-yw-xuT" customClass="SpringLabel" customModule="Spring">
+                                <rect key="frame" x="16" y="304" width="241" height="46"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="tDA-zm-59j"/>
-                                    </mask>
-                                </variation>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="pop"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="curve" value="spring"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start raising a good habit today!" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Sy-C7-812" customClass="SpringLabel" customModule="Spring">
+                                <rect key="frame" x="16" y="407" width="568" height="20.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="curve" value="spring"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.21568629149999999" green="0.83921575550000005" blue="0.92549026010000002" alpha="1" colorSpace="deviceRGB"/>
@@ -102,12 +97,9 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7Sy-C7-812" secondAttribute="bottom" constant="138" id="S8q-ht-RY9"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xzm-Hr-yQY" secondAttribute="bottom" constant="20" id="TUK-OS-Fyk"/>
                             <constraint firstItem="3e5-G5-ArR" firstAttribute="bottom" secondItem="wwO-i8-AeV" secondAttribute="bottom" id="VWT-RK-PNx"/>
-                            <constraint firstAttribute="centerY" secondItem="1Jr-EX-gnV" secondAttribute="centerY" constant="180" id="WDc-JO-FDu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7Sy-C7-812" secondAttribute="trailing" constant="20" id="XV7-cd-FC8"/>
-                            <constraint firstAttribute="centerX" secondItem="1Jr-EX-gnV" secondAttribute="centerX" id="aSw-2E-9yd"/>
                             <constraint firstItem="3e5-G5-ArR" firstAttribute="leading" secondItem="67l-yw-xuT" secondAttribute="trailing" constant="8" id="h0a-jH-wgD"/>
                             <constraint firstAttribute="centerX" secondItem="wwO-i8-AeV" secondAttribute="centerX" constant="-131.5" id="j8B-Uy-hfc"/>
-                            <constraint firstItem="3e5-G5-ArR" firstAttribute="top" secondItem="1Jr-EX-gnV" secondAttribute="bottom" constant="85" id="jGL-Io-Iw2"/>
                             <constraint firstItem="wwO-i8-AeV" firstAttribute="trailing" secondItem="7Sy-C7-812" secondAttribute="trailing" id="kfm-QO-qgC"/>
                             <constraint firstItem="7Sy-C7-812" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="kjF-ze-Hsm"/>
                             <constraint firstItem="67l-yw-xuT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="msM-FU-6J1"/>
@@ -120,13 +112,10 @@
                             <constraint firstItem="7Sy-C7-812" firstAttribute="top" secondItem="3e5-G5-ArR" secondAttribute="bottom" constant="57" id="tWn-Mc-V03"/>
                             <constraint firstItem="7Sy-C7-812" firstAttribute="top" secondItem="wwO-i8-AeV" secondAttribute="bottom" constant="65" id="uWc-nL-QXF"/>
                             <constraint firstItem="7Sy-C7-812" firstAttribute="bottom" secondItem="3e5-G5-ArR" secondAttribute="bottom" constant="-90" id="vhe-AR-g5p"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="1Jr-EX-gnV" secondAttribute="trailing" id="w6p-n6-KYh"/>
                             <constraint firstItem="3e5-G5-ArR" firstAttribute="leading" secondItem="67l-yw-xuT" secondAttribute="trailing" constant="5" id="x6X-GA-buU"/>
-                            <constraint firstItem="1Jr-EX-gnV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="zfR-b7-Wpq"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="WDc-JO-FDu"/>
                                 <exclude reference="9DE-Wr-LJg"/>
                                 <exclude reference="HeP-j8-ccI"/>
                                 <exclude reference="EDh-hM-M9P"/>
@@ -160,7 +149,6 @@
                         <outlet property="habitTargetLabel" destination="7Sy-C7-812" id="Qyj-Xh-A0Y"/>
                         <outlet property="remainDaysLabel" destination="3e5-G5-ArR" id="Fbz-pp-Xph"/>
                         <outlet property="remainLabel" destination="67l-yw-xuT" id="bwc-kL-66D"/>
-                        <outlet property="startLabel" destination="1Jr-EX-gnV" id="6Zb-ey-jh2"/>
                         <outlet property="transitionButton" destination="xzm-Hr-yQY" id="wNk-Qu-5Uo"/>
                     </connections>
                 </viewController>
@@ -230,16 +218,16 @@
                                     <constraint firstAttribute="height" constant="60" id="f2J-1s-aac"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.2156862745" green="0.83921568629999999" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
                                         <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
-                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.2156862745" green="0.83921568629999999" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
