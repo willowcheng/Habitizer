@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "17DC9A1D7F17964AF2A8D050"
+               BlueprintIdentifier = "1118C9E06B61C8EF5FF3CBB6"
                BuildableName = "KYCircularProgress.framework"
                BlueprintName = "Pods-HabitizerTests-KYCircularProgress"
                ReferencedContainer = "container:Pods.xcodeproj">

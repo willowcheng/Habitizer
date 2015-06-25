@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import Spring
+import SwiftyUserDefaults
 
 
 class MainViewController: UIViewController, UIViewControllerTransitioningDelegate {
@@ -21,7 +22,8 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         as! AppDelegate).managedObjectContext
     
     @IBOutlet weak var remainLabel: SpringLabel!
-    @IBOutlet weak var transitionButton: UIButton!
+    @IBOutlet weak var transitionButton:SpringButton!
+    @IBOutlet weak var achievedHabitButton: UIButton!
     @IBOutlet weak var habitTargetLabel: SpringLabel!
     @IBOutlet weak var remainDaysLabel: SpringLabel!
     var remainDays = 0
@@ -36,8 +38,12 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         didSet {
             if !ongoingHabit {
                 remainLabel.text = "In next"
+                habitTargetLabel.text = "Start raising a good habit today!"
+                remainDaysLabel.text = "21"
+                achievedHabitButton.hidden = true
             } else {
                 remainLabel.text = "Remain"
+                transitionButton.hidden = true
             }
         }
     }
@@ -74,6 +80,7 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         circularProgress.curve = "spring"
         circularProgress.animate()
         
+        self.view.bringSubviewToFront(achievedHabitButton)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -82,59 +89,81 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
     }
     
     func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        transition.transitionMode = .Present
-        transition.startingPoint = transitionButton.center
-        transition.bubbleColor = transitionButton.backgroundColor!
+        if(presented.isKindOfClass(NewHabitViewController)) {
+            println("NewHabitViewController")
+            transition.transitionMode = .Present
+            transition.startingPoint = transitionButton.center
+            transition.bubbleColor = transitionButton.backgroundColor!
+        } else if(presented.isKindOfClass(HabitCollectionViewController)) {
+            println("HabitCollectionViewController")
+            transition.transitionMode = .Present
+            transition.startingPoint = achievedHabitButton.center
+            transition.bubbleColor = UIColor.whiteColor()
+        }
+
         return transition
     }
     
     func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        transition.transitionMode = .Dismiss
-        transition.startingPoint = transitionButton.center
-        transition.bubbleColor = transitionButton.backgroundColor!
-        // Transition Button Dismiss时重载数据库及部分动画效果
-        progress = 0
-        loadDatabase()
-        println("Transition button dismiss")
-        if (ongoingHabit) {
-            println("Label animation")
-            remainDaysLabel.animation = "pop"
-            remainDaysLabel.delay = 0.5
-            remainDaysLabel.curve = "spring"
-            remainDaysLabel.animate()
-            habitTargetLabel.animation = "pop"
-            habitTargetLabel.delay = 0.5
-            habitTargetLabel.curve = "spring"
-            habitTargetLabel.animate()
+        if(dismissed.isKindOfClass(NewHabitViewController)) {
+            println("NewHabitViewController")
+            transition.transitionMode = .Dismiss
+            transition.startingPoint = transitionButton.center
+            transition.bubbleColor = transitionButton.backgroundColor!
+            
+            if(Defaults["habit_ongoing"].bool == true) {
+                // Transition Button Dismiss时重载数据库及部分动画效果
+                progress = 0
+                transitionButton.animation = "fadeOut"
+                transitionButton.curve = "spring"
+                transitionButton.delay = 0.2
+                transitionButton.animate()
+                loadDatabase()
+                remainDaysLabel.animation = "pop"
+                remainDaysLabel.delay = 0.5
+                remainDaysLabel.curve = "spring"
+                remainDaysLabel.animate()
+                habitTargetLabel.animation = "pop"
+                habitTargetLabel.delay = 0.5
+                habitTargetLabel.curve = "spring"
+                habitTargetLabel.animate()
+            }
+        } else if (dismissed.isKindOfClass(HabitCollectionViewController)) {
+            println("HabitCollectionViewController")
+            transition.transitionMode = .Dismiss
+            transition.startingPoint = achievedHabitButton.center
+            transition.bubbleColor = UIColor.whiteColor()
         }
         return transition
     }
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let controller = segue.destinationViewController as? UIViewController {
-            controller.transitioningDelegate = self
-            controller.modalPresentationStyle = .Custom
-        }
+            if let controller = segue.destinationViewController as? UIViewController {
+                controller.transitioningDelegate = self
+                controller.modalPresentationStyle = .Custom
+            }
     }
-
+    
     func loadDatabase() {
+        
+        if (Defaults["habit_ongoing"].bool == true) {
+            ongoingHabit = true
+        } else {
+            ongoingHabit = false
+        }
+        
         let fetchRequest : NSFetchRequest = NSFetchRequest(entityName: "Habits")
         
         var error: NSError? = nil
         habits = managedObjectContext?.executeFetchRequest(fetchRequest, error: &error) as! [Habits]
         
-        if habits.count == 0 {
-            ongoingHabit = false
-        } else {
-            ongoingHabit = true
-            for habit in habits {
-                println("Content: \(habit.content), createdAt: \(habit.createdAt), achieved: \(habit.achieved), remain days: \(habit.remainDays)")
-                habitTargetLabel.text = habit.content
-                remainDays = Int(habit.remainDays)
-//                remainDays = 5
-                circularDaysAnimation()
-            }
+        for habit in habits {
+            println("Content: \(habit.content), createdAt: \(habit.createdAt), achieved: \(habit.achieved), remain days: \(habit.remainDays)")
+            habitTargetLabel.text = habit.content
+            remainDays = Int(habit.remainDays)
+            //                remainDays = 5
+            circularDaysAnimation()
         }
 
 
@@ -158,7 +187,6 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         progressLimit = (21 - remainDays) * 255 / 21
         NSTimer.scheduledTimerWithTimeInterval(0.005, target: self, selector: Selector("updateProgress"), userInfo: nil, repeats: true)
     }
-
 }
 
 func UIColorFromRGB(rgbValue: UInt) -> UIColor {

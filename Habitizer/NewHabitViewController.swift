@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import SwiftyUserDefaults
 
 class NewHabitViewController: UIViewController, UITextFieldDelegate {
 
@@ -84,6 +85,8 @@ class NewHabitViewController: UIViewController, UITextFieldDelegate {
             self.presentViewController(alert, animated: true, completion: nil)
             
         } else {
+            
+            Defaults["habit_ongoing"] = true
             
             var newHabitNotification = UILocalNotification()
             newHabitNotification.category = "NEW_HABIT_CATEGORY"

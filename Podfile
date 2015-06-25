@@ -7,6 +7,8 @@ pod 'KYCircularProgress'
 pod "TextFieldEffects"
 pod "BubbleTransition", "~> 0.1"
 pod 'Spring', '~> 1.0.3'
+pod 'SwiftyUserDefaults'
+
 target 'HabitizerTests' do
     
 end

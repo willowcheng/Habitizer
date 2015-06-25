@@ -24,6 +24,12 @@
 #define COCOAPODS_VERSION_MINOR_Spring 0
 #define COCOAPODS_VERSION_PATCH_Spring 3
 
+// SwiftyUserDefaults
+#define COCOAPODS_POD_AVAILABLE_SwiftyUserDefaults
+#define COCOAPODS_VERSION_MAJOR_SwiftyUserDefaults 1
+#define COCOAPODS_VERSION_MINOR_SwiftyUserDefaults 2
+#define COCOAPODS_VERSION_PATCH_SwiftyUserDefaults 0
+
 // TextFieldEffects
 #define COCOAPODS_POD_AVAILABLE_TextFieldEffects
 #define COCOAPODS_VERSION_MAJOR_TextFieldEffects 0

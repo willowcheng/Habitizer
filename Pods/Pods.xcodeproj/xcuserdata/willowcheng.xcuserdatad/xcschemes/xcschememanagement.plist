@@ -8,157 +8,121 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
 		<key>Pods-HabitizerTests-BubbleTransition.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>5</integer>
 		</dict>
 		<key>Pods-HabitizerTests-KYCircularProgress.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>6</integer>
 		</dict>
 		<key>Pods-HabitizerTests-Spring.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>10</integer>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-HabitizerTests-SwiftyUserDefaults.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-HabitizerTests-TextFieldEffects.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>7</integer>
 		</dict>
 		<key>Pods-HabitizerTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
 		</dict>
 		<key>Pods-KYCircularProgress.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>8</integer>
 		</dict>
 		<key>Pods-Spring.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>11</integer>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-SwiftyUserDefaults.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-TextFieldEffects.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>9</integer>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>17DC9A1D7F17964AF2A8D050</key>
+		<key>1118C9E06B61C8EF5FF3CBB6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1CA25409862AD848AC09490F</key>
+		<key>1C88B19F04EA60A0B3F73121</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3813FD6317FA09569EE83E77</key>
+		<key>21D066F7AA8E5BEE6BC5106B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>441D2ABE74F8048AAD9C3A07</key>
+		<key>31B1C4FDC143E10750041F65</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>454A3CE43487FB184BB30D7E</key>
+		<key>350AF0DABBF835FEE89DB0EA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4C5E89724CDBE822109DF5C5</key>
+		<key>3FD8B0AAD44E87FB5F37E65B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>58E3B7F4E0EB13F77D3A61D2</key>
+		<key>706F8FA345005050B00BCC2C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8CFA98675B86C018C72F5EF3</key>
+		<key>775FA5F83851D3126EFE469B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A69F743BB0D37CDC7A03543C</key>
+		<key>8708C4E1F036FEEAE7396206</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A94534CD57588466DBBE69FC</key>
+		<key>A1DD6B9A7F482039AC0A932F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B740788F43D04AA60D5B1C19</key>
+		<key>A9A78E98FD9D48A72D64F1E8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C81F66E219C0FD81CE03297C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D13F89C0E7E889A757304A07</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D1E36FA84039500CB5A4D03B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DB93096CE73424DFD9A283C9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DF2D5C31CF96ADF3E395AAA2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EEB25A8D8BB63B4163462A19</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FC39A5BDC9987D604C5D72C4</key>
+		<key>B37D6EB5126168BACA8E4FC6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
