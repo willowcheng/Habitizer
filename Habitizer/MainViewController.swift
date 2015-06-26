@@ -26,6 +26,10 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
     @IBOutlet weak var achievedHabitButton: UIButton!
     @IBOutlet weak var habitTargetLabel: SpringLabel!
     @IBOutlet weak var remainDaysLabel: SpringLabel!
+    @IBOutlet weak var failButton: UIButton!
+    @IBOutlet weak var succeedButton: UIButton!
+    
+    
     var remainDays = 0
     var progressLimit = 255
     
@@ -40,10 +44,18 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
                 remainLabel.text = "In next"
                 habitTargetLabel.text = "Start raising a good habit today!"
                 remainDaysLabel.text = "21"
+                
+                //第一次运行程序,只显示添加习惯按钮,隐藏fail,succeed和achieved按钮
+                transitionButton.hidden = false
+                failButton.hidden = true
+                succeedButton.hidden = true
                 achievedHabitButton.hidden = true
             } else {
                 remainLabel.text = "Remain"
                 transitionButton.hidden = true
+                failButton.hidden = false
+                succeedButton.hidden = false
+                achievedHabitButton.hidden = false
             }
         }
     }
