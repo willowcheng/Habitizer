@@ -101,6 +101,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="failButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AMe-AL-v43"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wax-T8-YHi">
                                 <rect key="frame" x="534" y="525" width="50" height="50"/>
@@ -112,6 +115,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="succeedButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ufk-Hj-YxA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.21568627450980393" green="0.83921568627450982" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -222,7 +228,7 @@
                                     <constraint firstAttribute="height" constant="60" id="f2J-1s-aac"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                         <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -374,7 +380,7 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4u4-Dn-PQg" customClass="JGTransitionCollectionView" customModule="Habitizer" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="76" width="600" height="524"/>
+                                <rect key="frame" x="0.0" y="84" width="600" height="516"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="504" id="lLI-kp-ruv"/>
@@ -439,7 +445,7 @@
                             <constraint firstItem="qvK-ol-qyM" firstAttribute="top" secondItem="Z9n-oM-qP6" secondAttribute="bottom" constant="8" symbolic="YES" id="bKI-dY-4UL"/>
                             <constraint firstAttribute="trailing" secondItem="4u4-Dn-PQg" secondAttribute="trailing" id="k5l-cb-4RA"/>
                             <constraint firstAttribute="trailing" secondItem="4u4-Dn-PQg" secondAttribute="trailing" id="oc3-9P-NEr"/>
-                            <constraint firstItem="4u4-Dn-PQg" firstAttribute="top" secondItem="qvK-ol-qyM" secondAttribute="bottom" constant="8" symbolic="YES" id="ymC-28-bCM"/>
+                            <constraint firstItem="4u4-Dn-PQg" firstAttribute="top" secondItem="qvK-ol-qyM" secondAttribute="bottom" constant="16" id="ymC-28-bCM"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">

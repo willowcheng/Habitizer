@@ -14,12 +14,7 @@ import SwiftyUserDefaults
 
 class MainViewController: UIViewController, UIViewControllerTransitioningDelegate {
     
-    let transition = BubbleTransition()
-    
-    var habits : [Habits] = [Habits]()
-    let managedObjectContext =
-    (UIApplication.sharedApplication().delegate
-        as! AppDelegate).managedObjectContext
+    // MARK: -IBOutlet
     
     @IBOutlet weak var remainLabel: SpringLabel!
     @IBOutlet weak var transitionButton:SpringButton!
@@ -29,40 +24,44 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
     @IBOutlet weak var failButton: UIButton!
     @IBOutlet weak var succeedButton: UIButton!
     
+    // MARK: - 变量
     
+    let transition = BubbleTransition()
+    var habits : [Habits] = [Habits]()
+    let managedObjectContext =
+    (UIApplication.sharedApplication().delegate
+        as! AppDelegate).managedObjectContext
     var remainDays = 0
     var progressLimit = 255
-    
     var circularProgress: KYCircularProgress!
     var progress = 0
-    
-    //TODO: 使用UserDefaults存储当前习惯是否正在进行
-    //用来记录是否有进行中的习惯
     var ongoingHabit: Bool = false {
         didSet {
             if !ongoingHabit {
                 remainLabel.text = "In next"
                 habitTargetLabel.text = "Start raising a good habit today!"
                 remainDaysLabel.text = "21"
+                remainDays = 21
                 
-                //第一次运行程序,只显示添加习惯按钮,隐藏fail,succeed和achieved按钮
+                //第一次运行程序,只显示添加习惯按钮, 隐藏fail, succeed和achieved按钮
                 transitionButton.hidden = false
                 failButton.hidden = true
                 succeedButton.hidden = true
-                achievedHabitButton.hidden = true
             } else {
                 remainLabel.text = "Remain"
                 transitionButton.hidden = true
                 failButton.hidden = false
                 succeedButton.hidden = false
-                achievedHabitButton.hidden = false
             }
         }
     }
     
+    // MARK: - VC 生命周期
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // 天数数字向上动画效果
         remainDaysLabel.animation = "slideDown"
         remainDaysLabel.curve = "spring"
         remainDaysLabel.animate()
@@ -71,7 +70,7 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.view.backgroundColor = UIColor.clearColor()
         self.navigationController?.navigationBar.backgroundColor = UIColor.clearColor()
-
+        
         let circularProgressFrame = CGRectMake(0, 0, CGRectGetWidth(view.frame), CGRectGetHeight(view.frame)/2)
         circularProgress = KYCircularProgress(frame: circularProgressFrame)
         
@@ -86,8 +85,8 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         circularProgress.progressChangedClosure({ (progress: Double, circularView: KYCircularProgress) in
             self.remainDaysLabel.text = "\(20 - Int(progress * 21.0))"
         })
-
-        //这两行代码不知道加在哪合适.........
+        
+        // 进度圈向下动画效果
         circularProgress.animation = "fadeInUp"
         circularProgress.curve = "spring"
         circularProgress.animate()
@@ -96,8 +95,102 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
     }
     
     override func viewWillAppear(animated: Bool) {
-        // 载入数据库
         loadDatabase()
+    }
+    
+    // MARK: - 加载数据库
+    
+    func loadDatabase() {
+        
+        if (Defaults["habit_ongoing"].bool == true) {
+            ongoingHabit = true
+            
+            let fetchRequest : NSFetchRequest = NSFetchRequest(entityName: "Habits")
+            var error: NSError? = nil
+            habits = managedObjectContext?.executeFetchRequest(fetchRequest, error: &error) as! [Habits]
+            
+            for habit in habits {
+                println("Content: \(habit.content), createdAt: \(habit.createdAt), achieved: \(habit.achieved), remain days: \(habit.remainDays)")
+                habitTargetLabel.text = habit.content
+                progress = 0
+                remainDays = Int(habit.remainDays)
+                //                remainDays = 5
+                circularDaysAnimation()
+            }
+            
+            if error != nil {
+                println("An error occurred loading the data")
+            }
+            
+        } else {
+            ongoingHabit = false
+        }
+
+        if(habits.count > 0) {
+            achievedHabitButton.hidden = false
+        } else {
+            achievedHabitButton.hidden = true
+        }
+        
+
+    }
+    
+    @IBAction func succeedButtonPressed(sender: AnyObject) {
+        let fetchRequest : NSFetchRequest = NSFetchRequest(entityName: "Habits")
+        var error: NSError? = nil
+        habits = managedObjectContext?.executeFetchRequest(fetchRequest, error: &error) as! [Habits]
+        
+        if (habits.last!.remainDays > 1) {
+            habits.last!.remainDays -= 1
+        } else {
+            habits.last!.achieved = true
+            Defaults["habit_ongoing"] = false
+             
+            transitionButton.animation = "fadeIn"
+            transitionButton.curve = "spring"
+            transitionButton.animate()
+        }
+        
+        self.managedObjectContext?.save(nil)
+        loadDatabase()
+        
+    }
+    
+    @IBAction func failButtonPressed(sender: AnyObject) {
+        Defaults["habit_ongoing"] = false
+        ongoingHabit = false
+        
+        //FIXME: Cannot reset progress to 0
+        
+        transitionButton.animation = "fadeIn"
+        transitionButton.curve = "spring"
+        transitionButton.animate()
+    }
+    
+    // MARK: - 显示进度圈加载进度效果
+    
+    func updateProgress() {
+        // Timer调用的累加计数器
+        if(progress < progressLimit) {
+            progress = progress + 1
+        } else {
+            return
+        }
+        circularProgress.progress = Double(progress) / 255.0
+    }
+    
+    func circularDaysAnimation() {
+        progressLimit = (21 - remainDays) * 255 / 21
+        NSTimer.scheduledTimerWithTimeInterval(0.005, target: self, selector: Selector("updateProgress"), userInfo: nil, repeats: true)
+    }
+    
+    // MARK: - 自定义Segue动画效果
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let controller = segue.destinationViewController as? UIViewController {
+            controller.transitioningDelegate = self
+            controller.modalPresentationStyle = .Custom
+        }
     }
     
     func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
@@ -112,7 +205,7 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
             transition.startingPoint = achievedHabitButton.center
             transition.bubbleColor = UIColor.whiteColor()
         }
-
+        
         return transition
     }
     
@@ -148,65 +241,4 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         }
         return transition
     }
-    
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-            if let controller = segue.destinationViewController as? UIViewController {
-                controller.transitioningDelegate = self
-                controller.modalPresentationStyle = .Custom
-            }
-    }
-    
-    func loadDatabase() {
-        
-        if (Defaults["habit_ongoing"].bool == true) {
-            ongoingHabit = true
-        } else {
-            ongoingHabit = false
-        }
-        
-        let fetchRequest : NSFetchRequest = NSFetchRequest(entityName: "Habits")
-        
-        var error: NSError? = nil
-        habits = managedObjectContext?.executeFetchRequest(fetchRequest, error: &error) as! [Habits]
-        
-        for habit in habits {
-            println("Content: \(habit.content), createdAt: \(habit.createdAt), achieved: \(habit.achieved), remain days: \(habit.remainDays)")
-            habitTargetLabel.text = habit.content
-            remainDays = Int(habit.remainDays)
-            //                remainDays = 5
-            circularDaysAnimation()
-        }
-
-
-        if error != nil {
-            println("An error occurred loading the data")
-        }
-    }
-    
-    func updateProgress() {
-        // Timer调用的累加计数器
-        if(progress < progressLimit) {
-                progress = progress + 1
-        } else {
-
-            return
-        }
-        circularProgress.progress = Double(progress) / 255.0
-    }
-    
-    func circularDaysAnimation() {
-        progressLimit = (21 - remainDays) * 255 / 21
-        NSTimer.scheduledTimerWithTimeInterval(0.005, target: self, selector: Selector("updateProgress"), userInfo: nil, repeats: true)
-    }
 }
-
-func UIColorFromRGB(rgbValue: UInt) -> UIColor {
-    return UIColor(
-        red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
-        green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
-        blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
-        alpha: CGFloat(1.0)
-    )
-}
-
