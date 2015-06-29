@@ -28,6 +28,7 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
     @IBOutlet weak var remainDaysLabel: SpringLabel!
     @IBOutlet weak var failButton: UIButton!
     @IBOutlet weak var succeedButton: UIButton!
+
     
     
     var remainDays = 0
@@ -199,6 +200,28 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         progressLimit = (21 - remainDays) * 255 / 21
         NSTimer.scheduledTimerWithTimeInterval(0.005, target: self, selector: Selector("updateProgress"), userInfo: nil, repeats: true)
     }
+    
+    @IBAction func statusButtonTapped(sender: UIButton) {
+        switch sender {
+        case succeedButton:
+            UIView.transitionWithView(succeedButton, duration: 0.5, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
+                self.succeedButton.setImage(UIImage(named: "succeedChecked"), forState: .Normal)
+                }, completion: nil)
+            UIView.transitionWithView(failButton, duration: 0.5, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
+                self.failButton.setImage(UIImage(named: "fail"), forState: .Normal)
+                }, completion: nil)
+            
+        case failButton:
+            UIView.transitionWithView(failButton, duration: 0.5, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
+                self.failButton.setImage(UIImage(named: "failChecked"), forState: .Normal)
+                }, completion: nil)
+            UIView.transitionWithView(succeedButton, duration: 0.5, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
+                self.succeedButton.setImage(UIImage(named: "succeed"), forState: .Normal)
+                }, completion: nil)
+        default: ()
+        }
+    }
+    
 }
 
 func UIColorFromRGB(rgbValue: UInt) -> UIColor {
