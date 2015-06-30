@@ -100,8 +100,8 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         
         loadDatabase()
         
-        
         NSTimer.scheduledTimerWithTimeInterval(0.005, target: self, selector: Selector("updateProgress"), userInfo: nil, repeats: true)
+        NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("checkDate"), userInfo: nil, repeats: true)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -260,5 +260,31 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
             transition.bubbleColor = UIColor.whiteColor()
         }
         return transition
+    }
+    
+    func checkDate() -> Bool {
+        if(ongoingHabit) {
+            let fetchRequest : NSFetchRequest = NSFetchRequest(entityName: "Habits")
+            var error: NSError? = nil
+            habits = managedObjectContext?.executeFetchRequest(fetchRequest, error: &error) as! [Habits]
+            var passedDays = 20 - habits.last!.remainDays as Int
+            let checkDate = NSCalendar.currentCalendar().dateByAddingUnit(
+                .CalendarUnitDay,
+                value: passedDays + 1,
+                toDate: habits.last!.createdAt,
+                options: NSCalendarOptions(0))
+            
+            println(checkDate)
+            
+            var dateComparisionResult:NSComparisonResult = NSDate().compare(checkDate!)
+            if (dateComparisionResult == NSComparisonResult.OrderedDescending) {
+                // Current date is later than check date
+                Defaults.remove("habit_ongoing")
+                ongoingHabit = false
+            } else {
+                // Current date is early than check date
+            }
+        }
+        return true
     }
 }
