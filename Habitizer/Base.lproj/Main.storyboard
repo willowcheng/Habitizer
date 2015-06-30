@@ -40,13 +40,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzm-Hr-yQY" customClass="SpringButton" customModule="Spring">
-                                <rect key="frame" x="270" y="520" width="60" height="60"/>
+                                <rect key="frame" x="269.5" y="520" width="60" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="AJn-K4-GJI"/>
                                     <constraint firstAttribute="width" constant="60" id="g06-Em-oyc"/>
                                 </constraints>
-                                <state key="normal" title="+">
+                                <state key="normal" image="add">
                                     <color key="titleColor" red="0.21568629149999999" green="0.83921575550000005" blue="0.92549026010000002" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -465,6 +465,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="add" width="60" height="60"/>
         <image name="alarm" width="24" height="24"/>
         <image name="cal" width="24" height="24"/>
         <image name="fail" width="50" height="50"/>
