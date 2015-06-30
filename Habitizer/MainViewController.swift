@@ -26,8 +26,8 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
     @IBOutlet weak var achievedHabitButton: UIButton!
     @IBOutlet weak var habitTargetLabel: SpringLabel!
     @IBOutlet weak var remainDaysLabel: SpringLabel!
-    @IBOutlet weak var failButton: UIButton!
-    @IBOutlet weak var succeedButton: UIButton!
+    @IBOutlet weak var failButton: SpringButton!
+    @IBOutlet weak var succeedButton: SpringButton!
 
     
     
@@ -67,6 +67,9 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         remainDaysLabel.animation = "slideDown"
         remainDaysLabel.curve = "spring"
         remainDaysLabel.animate()
+        
+        addShadow(succeedButton, failButton, transitionButton, achievedHabitButton)
+        
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -201,26 +204,34 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         NSTimer.scheduledTimerWithTimeInterval(0.005, target: self, selector: Selector("updateProgress"), userInfo: nil, repeats: true)
     }
     
-    @IBAction func statusButtonTapped(sender: UIButton) {
+    @IBAction func statusButtonTapped(sender: SpringButton) {
+        
+        sender.animation = "swing"
+        sender.curve = "spring"
+        sender.force = 2.5
+        sender.duration = 0.6
+        sender.animate()
+        
         switch sender {
         case succeedButton:
-            UIView.transitionWithView(succeedButton, duration: 0.5, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
+            UIView.transitionWithView(succeedButton, duration: 0.3, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
                 self.succeedButton.setImage(UIImage(named: "succeedChecked"), forState: .Normal)
                 }, completion: nil)
-            UIView.transitionWithView(failButton, duration: 0.5, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
+            UIView.transitionWithView(failButton, duration: 0.3, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
                 self.failButton.setImage(UIImage(named: "fail"), forState: .Normal)
                 }, completion: nil)
-            
         case failButton:
-            UIView.transitionWithView(failButton, duration: 0.5, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
+            UIView.transitionWithView(failButton, duration: 0.3, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
                 self.failButton.setImage(UIImage(named: "failChecked"), forState: .Normal)
                 }, completion: nil)
-            UIView.transitionWithView(succeedButton, duration: 0.5, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
+            UIView.transitionWithView(succeedButton, duration: 0.3, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
                 self.succeedButton.setImage(UIImage(named: "succeed"), forState: .Normal)
                 }, completion: nil)
         default: ()
         }
     }
+    
+    
     
 }
 
@@ -232,4 +243,7 @@ func UIColorFromRGB(rgbValue: UInt) -> UIColor {
         alpha: CGFloat(1.0)
     )
 }
+
+
+
 
