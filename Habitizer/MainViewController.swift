@@ -271,7 +271,7 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
             transition.startingPoint = transitionButton.center
             transition.bubbleColor = transitionButton.backgroundColor!
             
-            if(Defaults["habit_ongoing"].bool == true) {
+            if(Defaults.hasKey("habit_ongoing")) {
                 // Transition Button Dismiss时重载数据库及部分动画效果
                 progress = 0
                 transitionButton.animation = "fadeOut"
@@ -284,6 +284,8 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
                 habitTargetLabel.curve = "spring"
                 habitTargetLabel.animate()
                 animateRemainDaysLabel()
+                self.failButton.setImage(UIImage(named: "fail"), forState: .Normal)
+                self.succeedButton.setImage(UIImage(named: "succeed"), forState: .Normal)
 
             }
         } else if (dismissed.isKindOfClass(HabitCollectionViewController)) {
@@ -293,6 +295,13 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
             transition.bubbleColor = UIColor.whiteColor()
         }
         return transition
+    }
+    
+    func animateRemainDaysLabel () {
+        remainDaysLabel.animation = "pop"
+        remainDaysLabel.delay = 0.5
+        remainDaysLabel.curve = "spring"
+        remainDaysLabel.animate()
     }
     
     func checkDate() -> Bool {
@@ -320,4 +329,14 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         }
         return true
     }
+    
+    func UIColorFromRGB(rgbValue: UInt) -> UIColor {
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
+    }
+
 }
