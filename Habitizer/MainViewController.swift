@@ -148,7 +148,23 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         
     }
     
-    @IBAction func succeedButtonPressed(sender: AnyObject) {
+    @IBAction func succeedButtonPressed(sender: SpringButton) {
+        
+        //---Animations
+        animateRemainDaysLabel()
+        sender.animation = "swing"
+        sender.curve = "spring"
+        sender.force = 2.5
+        sender.duration = 0.6
+        sender.animate()
+        UIView.transitionWithView(succeedButton, duration: 0.3, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
+            self.succeedButton.setImage(UIImage(named: "succeedChecked"), forState: .Normal)
+            }, completion: nil)
+        UIView.transitionWithView(failButton, duration: 0.3, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
+            self.failButton.setImage(UIImage(named: "fail"), forState: .Normal)
+            }, completion: nil)
+        
+        
         let fetchRequest : NSFetchRequest = NSFetchRequest(entityName: "Habits")
         var error: NSError? = nil
         habits = managedObjectContext?.executeFetchRequest(fetchRequest, error: &error) as! [Habits]
@@ -169,7 +185,22 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         
     }
     
-    @IBAction func failButtonPressed(sender: AnyObject) {
+    @IBAction func failButtonPressed(sender: SpringButton) {
+        
+        //---Animation
+        animateRemainDaysLabel()
+        sender.animation = "swing"
+        sender.curve = "spring"
+        sender.force = 2.5
+        sender.duration = 0.6
+        sender.animate()
+        UIView.transitionWithView(failButton, duration: 0.3, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
+            self.failButton.setImage(UIImage(named: "failChecked"), forState: .Normal)
+            }, completion: nil)
+        UIView.transitionWithView(succeedButton, duration: 0.3, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
+            self.succeedButton.setImage(UIImage(named: "succeed"), forState: .Normal)
+            }, completion: nil)
+        
         Defaults.remove("habit_ongoing")
         ongoingHabit = false
         
@@ -248,14 +279,12 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
                 transitionButton.delay = 0.2
                 transitionButton.animate()
                 loadDatabase()
-                remainDaysLabel.animation = "pop"
-                remainDaysLabel.delay = 0.5
-                remainDaysLabel.curve = "spring"
-                remainDaysLabel.animate()
                 habitTargetLabel.animation = "pop"
                 habitTargetLabel.delay = 0.5
                 habitTargetLabel.curve = "spring"
                 habitTargetLabel.animate()
+                animateRemainDaysLabel()
+
             }
         } else if (dismissed.isKindOfClass(HabitCollectionViewController)) {
             println("HabitCollectionViewController")
@@ -265,4 +294,21 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         }
         return transition
     }
+    
+    func animateRemainDaysLabel () {
+        remainDaysLabel.animation = "pop"
+        remainDaysLabel.delay = 0.5
+        remainDaysLabel.curve = "spring"
+        remainDaysLabel.animate()
+    }
+    
+    func UIColorFromRGB(rgbValue: UInt) -> UIColor {
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
+    }
+
 }
