@@ -28,6 +28,7 @@
 		8153B8DC1B35F8E400405F63 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8153B8DE1B35F8E400405F63 /* InfoPlist.strings */; };
 		8153B8E11B35F8E400405F63 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8153B8E31B35F8E400405F63 /* InfoPlist.strings */; };
 		81B766EF1B34D202009DA4A3 /* BubbleTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B766EE1B34D202009DA4A3 /* BubbleTransition.swift */; };
+		81BB3CE61B433F9C00CB44C5 /* tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BB3CE51B433F9C00CB44C5 /* tools.swift */; };
 		EEB28A6F7183FD04FD5C53AC /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1167AFAE9F085D91CE96238 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,7 @@
 		8153B8DD1B35F8E400405F63 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		8153B8E21B35F8E400405F63 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		81B766EE1B34D202009DA4A3 /* BubbleTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleTransition.swift; sourceTree = "<group>"; };
+		81BB3CE51B433F9C00CB44C5 /* tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tools.swift; sourceTree = "<group>"; };
 		A6459E6D87727CD826CC8428 /* Pods-Habitizer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Habitizer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Habitizer/Pods-Habitizer.debug.xcconfig"; sourceTree = "<group>"; };
 		E1167AFAE9F085D91CE96238 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -135,6 +137,7 @@
 				774CE1531B13D96F00EB08B9 /* MainViewController.swift */,
 				774CE1711B13EB0800EB08B9 /* NewHabitViewController.swift */,
 				77CB469A1B3B11F7005A34FB /* HabitCollectionViewController.swift */,
+				81BB3CE51B433F9C00CB44C5 /* tools.swift */,
 				774CE1551B13D96F00EB08B9 /* Main.storyboard */,
 				774CE15A1B13D96F00EB08B9 /* LaunchScreen.xib */,
 				774CE1581B13D96F00EB08B9 /* Images.xcassets */,
@@ -365,6 +368,7 @@
 				77CB469B1B3B11F7005A34FB /* HabitCollectionViewController.swift in Sources */,
 				77CB469D1B3B122E005A34FB /* JGCustomCell.swift in Sources */,
 				77CB469F1B3B1243005A34FB /* UIColorExtension.swift in Sources */,
+				81BB3CE61B433F9C00CB44C5 /* tools.swift in Sources */,
 				81114E1F1B35198F003FD05E /* HoshiTextField.swift in Sources */,
 				811D96831B34E04D001BDE18 /* KYCircularProgress.swift in Sources */,
 				774CE1721B13EB0800EB08B9 /* NewHabitViewController.swift in Sources */,

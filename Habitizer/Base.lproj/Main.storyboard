@@ -91,13 +91,13 @@
                                     <segue destination="ylQ-AB-5Mv" kind="presentation" id="Ybj-MI-cA8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQG-0f-Wl6">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQG-0f-Wl6" customClass="SpringButton" customModule="Spring">
                                 <rect key="frame" x="16" y="525" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="dvo-K1-o2y"/>
                                     <constraint firstAttribute="width" constant="50" id="nQb-jB-Sst"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="fail">
+                                <state key="normal" image="fail">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -105,13 +105,15 @@
                                     <action selector="failButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AMe-AL-v43"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wax-T8-YHi">
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="succeed" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wax-T8-YHi" customClass="SpringButton" customModule="Spring">
                                 <rect key="frame" x="534" y="525" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="6RC-QV-W4y"/>
                                     <constraint firstAttribute="width" constant="50" id="lTr-gk-T1r"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="succeed">
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="titleShadowOffset" width="5" height="5"/>
+                                <state key="normal" image="succeed">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>

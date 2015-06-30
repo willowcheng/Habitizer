@@ -21,8 +21,9 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
     @IBOutlet weak var achievedHabitButton: UIButton!
     @IBOutlet weak var habitTargetLabel: SpringLabel!
     @IBOutlet weak var remainDaysLabel: SpringLabel!
-    @IBOutlet weak var failButton: UIButton!
-    @IBOutlet weak var succeedButton: UIButton!
+    @IBOutlet weak var failButton: SpringButton!
+    @IBOutlet weak var succeedButton: SpringButton!
+
     
     // MARK: - 变量
     
@@ -65,6 +66,9 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         remainDaysLabel.animation = "slideDown"
         remainDaysLabel.curve = "spring"
         remainDaysLabel.animate()
+        
+        addShadow(succeedButton, failButton, transitionButton, achievedHabitButton)
+        
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
