@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -40,13 +40,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzm-Hr-yQY" customClass="SpringButton" customModule="Spring">
-                                <rect key="frame" x="270" y="520" width="60" height="60"/>
+                                <rect key="frame" x="269.5" y="520" width="60" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="AJn-K4-GJI"/>
                                     <constraint firstAttribute="width" constant="60" id="g06-Em-oyc"/>
                                 </constraints>
-                                <state key="normal" title="+">
+                                <state key="normal" image="add">
                                     <color key="titleColor" red="0.21568629149999999" green="0.83921575550000005" blue="0.92549026010000002" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -91,32 +91,34 @@
                                     <segue destination="ylQ-AB-5Mv" kind="presentation" id="Ybj-MI-cA8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQG-0f-Wl6">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQG-0f-Wl6" customClass="SpringButton" customModule="Spring">
                                 <rect key="frame" x="16" y="525" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="dvo-K1-o2y"/>
                                     <constraint firstAttribute="width" constant="50" id="nQb-jB-Sst"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="fail">
+                                <state key="normal" image="fail">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="failButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AMe-AL-v43"/>
+                                    <action selector="failButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6AF-Fr-8Lw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wax-T8-YHi">
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="succeed" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wax-T8-YHi" customClass="SpringButton" customModule="Spring">
                                 <rect key="frame" x="534" y="525" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="6RC-QV-W4y"/>
                                     <constraint firstAttribute="width" constant="50" id="lTr-gk-T1r"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="succeed">
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="titleShadowOffset" width="5" height="5"/>
+                                <state key="normal" image="succeed">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="succeedButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ufk-Hj-YxA"/>
+                                    <action selector="succeedButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yXa-Dl-RXI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -463,6 +465,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="add" width="60" height="60"/>
         <image name="alarm" width="24" height="24"/>
         <image name="cal" width="24" height="24"/>
         <image name="fail" width="50" height="50"/>
