@@ -34,7 +34,7 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
     var remainDays = 0
     var progressLimit = 255
     var circularProgress: KYCircularProgress!
-    var progress = 0
+    var progress = 3
     var ongoingHabit: Bool = false {
         didSet {
             if !ongoingHabit {
@@ -83,7 +83,12 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         circularProgress.progressGuideColor = UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 0.2)
         view.addSubview(circularProgress)
         circularProgress.progressChangedClosure({ (progress: Double, circularView: KYCircularProgress) in
-            self.remainDaysLabel.text = "\(20 - Int(progress * 21.0))"
+            if(progress == 0 || progress == 1) {
+                self.remainDaysLabel.text = "21"
+            } else {
+                self.remainDaysLabel.text = "\(20 - Int(progress * 21.0))"
+            }
+            
         })
         
         // 进度圈向下动画效果
@@ -92,6 +97,11 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         circularProgress.animate()
         
         self.view.bringSubviewToFront(achievedHabitButton)
+        
+        loadDatabase()
+        
+        
+        NSTimer.scheduledTimerWithTimeInterval(0.005, target: self, selector: Selector("updateProgress"), userInfo: nil, repeats: true)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -102,7 +112,7 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
     
     func loadDatabase() {
         
-        if (Defaults["habit_ongoing"].bool == true) {
+        if (Defaults.hasKey("habit_ongoing")) {
             ongoingHabit = true
             
             let fetchRequest : NSFetchRequest = NSFetchRequest(entityName: "Habits")
@@ -112,9 +122,7 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
             for habit in habits {
                 println("Content: \(habit.content), createdAt: \(habit.createdAt), achieved: \(habit.achieved), remain days: \(habit.remainDays)")
                 habitTargetLabel.text = habit.content
-                progress = 0
                 remainDays = Int(habit.remainDays)
-                //                remainDays = 5
                 circularDaysAnimation()
             }
             
@@ -124,15 +132,16 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
             
         } else {
             ongoingHabit = false
+            circularDaysAnimation()
         }
-
+        
         if(habits.count > 0) {
             achievedHabitButton.hidden = false
         } else {
             achievedHabitButton.hidden = true
         }
         
-
+        
     }
     
     @IBAction func succeedButtonPressed(sender: AnyObject) {
@@ -144,8 +153,8 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
             habits.last!.remainDays -= 1
         } else {
             habits.last!.achieved = true
-            Defaults["habit_ongoing"] = false
-             
+            Defaults.remove("habit_ongoing")
+            
             transitionButton.animation = "fadeIn"
             transitionButton.curve = "spring"
             transitionButton.animate()
@@ -157,10 +166,8 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
     }
     
     @IBAction func failButtonPressed(sender: AnyObject) {
-        Defaults["habit_ongoing"] = false
+        Defaults.remove("habit_ongoing")
         ongoingHabit = false
-        
-        //FIXME: Cannot reset progress to 0
         
         transitionButton.animation = "fadeIn"
         transitionButton.curve = "spring"
@@ -171,17 +178,30 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
     
     func updateProgress() {
         // Timer调用的累加计数器
-        if(progress < progressLimit) {
-            progress = progress + 1
+        
+        if (ongoingHabit) {
+            if(progress < progressLimit) {
+                progress = progress + 1
+                println(progress)
+                circularProgress.progress = Double(progress) / 255.0
+            }
         } else {
-            return
+            if(progress > 0) {
+                progress = progress - 1
+                println(progress)
+                circularProgress.progress = Double(progress) / 255.0
+            }
         }
-        circularProgress.progress = Double(progress) / 255.0
+        
+        if (progress == 0) {
+            remainDaysLabel.text = "21"
+        }
+
+
     }
     
     func circularDaysAnimation() {
         progressLimit = (21 - remainDays) * 255 / 21
-        NSTimer.scheduledTimerWithTimeInterval(0.005, target: self, selector: Selector("updateProgress"), userInfo: nil, repeats: true)
     }
     
     // MARK: - 自定义Segue动画效果
