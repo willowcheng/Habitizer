@@ -186,27 +186,39 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
     }
     
     @IBAction func failButtonPressed(sender: SpringButton) {
+        SweetAlert().showAlert("Are you sure?", subTitle: "Once you do this, you have to start raising your habit again...", style: AlertStyle.Warning, buttonTitle:"Cancel", buttonColor:UIColorFromRGB(0xD0D0D0) , otherButtonTitle:  "I failed today", otherButtonColor: UIColorFromRGB(0xDD6B55)) { (isOtherButton) -> Void in
+            if isOtherButton == true {
+                
+                println("Cancel Button Pressed")
+            }
+            else {
+                SweetAlert().showAlert("Deleted!", subTitle: "Raise a good habit again!", style: AlertStyle.Success, buttonTitle: "OK") {
+                    (isOtherButton)-> Void in
+
+                    self.animateRemainDaysLabel()
+                    sender.animation = "swing"
+                    sender.curve = "spring"
+                    sender.force = 2.5
+                    sender.duration = 0.6
+                    sender.animate()
+                    UIView.transitionWithView(self.failButton, duration: 0.3, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
+                        self.failButton.setImage(UIImage(named: "failChecked"), forState: .Normal)
+                        }, completion: nil)
+                    UIView.transitionWithView(self.succeedButton, duration: 0.3, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
+                        self.succeedButton.setImage(UIImage(named: "succeed"), forState: .Normal)
+                        }, completion: nil)
+                    
+                    Defaults.remove("habit_ongoing")
+                    self.ongoingHabit = false
+                    
+                    self.transitionButton.animation = "fadeIn"
+                    self.transitionButton.curve = "spring"
+                    self.transitionButton.animate()
+                }
+            }
+        }
         
-        //---Animation
-        animateRemainDaysLabel()
-        sender.animation = "swing"
-        sender.curve = "spring"
-        sender.force = 2.5
-        sender.duration = 0.6
-        sender.animate()
-        UIView.transitionWithView(failButton, duration: 0.3, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
-            self.failButton.setImage(UIImage(named: "failChecked"), forState: .Normal)
-            }, completion: nil)
-        UIView.transitionWithView(succeedButton, duration: 0.3, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
-            self.succeedButton.setImage(UIImage(named: "succeed"), forState: .Normal)
-            }, completion: nil)
-        
-        Defaults.remove("habit_ongoing")
-        ongoingHabit = false
-        
-        transitionButton.animation = "fadeIn"
-        transitionButton.curve = "spring"
-        transitionButton.animate()
+
     }
     
     // MARK: - 显示进度圈加载进度效果

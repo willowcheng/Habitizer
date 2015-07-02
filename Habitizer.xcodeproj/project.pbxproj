@@ -29,6 +29,7 @@
 		8153B8E11B35F8E400405F63 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8153B8E31B35F8E400405F63 /* InfoPlist.strings */; };
 		81B766EF1B34D202009DA4A3 /* BubbleTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B766EE1B34D202009DA4A3 /* BubbleTransition.swift */; };
 		81BB3CE61B433F9C00CB44C5 /* tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BB3CE51B433F9C00CB44C5 /* tools.swift */; };
+		81DF782D1B45DB120055B0DB /* SweetAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DF782C1B45DB120055B0DB /* SweetAlert.swift */; };
 		EEB28A6F7183FD04FD5C53AC /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1167AFAE9F085D91CE96238 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,7 @@
 		8153B8E21B35F8E400405F63 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		81B766EE1B34D202009DA4A3 /* BubbleTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleTransition.swift; sourceTree = "<group>"; };
 		81BB3CE51B433F9C00CB44C5 /* tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tools.swift; sourceTree = "<group>"; };
+		81DF782C1B45DB120055B0DB /* SweetAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweetAlert.swift; sourceTree = "<group>"; };
 		A6459E6D87727CD826CC8428 /* Pods-Habitizer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Habitizer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Habitizer/Pods-Habitizer.debug.xcconfig"; sourceTree = "<group>"; };
 		E1167AFAE9F085D91CE96238 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -188,6 +190,7 @@
 		81114E211B351A03003FD05E /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				81DF782C1B45DB120055B0DB /* SweetAlert.swift */,
 				77CB469C1B3B122E005A34FB /* JGCustomCell.swift */,
 				77CB46961B3B1161005A34FB /* JGTransitionCollectionView.swift */,
 				77CB46971B3B1161005A34FB /* JGTransitionLayout.swift */,
@@ -376,6 +379,7 @@
 				779089C81B27E75900C5ED19 /* Habitizer.xcdatamodeld in Sources */,
 				77CB46981B3B1161005A34FB /* JGTransitionCollectionView.swift in Sources */,
 				779089CC1B27EC4700C5ED19 /* Habits.swift in Sources */,
+				81DF782D1B45DB120055B0DB /* SweetAlert.swift in Sources */,
 				81B766EF1B34D202009DA4A3 /* BubbleTransition.swift in Sources */,
 				77CB46991B3B1161005A34FB /* JGTransitionLayout.swift in Sources */,
 				774CE1541B13D96F00EB08B9 /* MainViewController.swift in Sources */,
