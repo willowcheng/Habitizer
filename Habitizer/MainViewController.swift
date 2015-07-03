@@ -21,8 +21,9 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
     @IBOutlet weak var achievedHabitButton: UIButton!
     @IBOutlet weak var habitTargetLabel: SpringLabel!
     @IBOutlet weak var remainDaysLabel: SpringLabel!
-    @IBOutlet weak var failButton: UIButton!
-    @IBOutlet weak var succeedButton: UIButton!
+    @IBOutlet weak var failButton: SpringButton!
+    @IBOutlet weak var succeedButton: SpringButton!
+
     
     // MARK: - 变量
     
@@ -34,7 +35,7 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
     var remainDays = 0
     var progressLimit = 255
     var circularProgress: KYCircularProgress!
-    var progress = 0
+    var progress = 3
     var ongoingHabit: Bool = false {
         didSet {
             if !ongoingHabit {
@@ -66,6 +67,9 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         remainDaysLabel.curve = "spring"
         remainDaysLabel.animate()
         
+        addShadow(succeedButton, failButton, transitionButton, achievedHabitButton)
+        
+        
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.view.backgroundColor = UIColor.clearColor()
@@ -83,7 +87,12 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         circularProgress.progressGuideColor = UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 0.2)
         view.addSubview(circularProgress)
         circularProgress.progressChangedClosure({ (progress: Double, circularView: KYCircularProgress) in
-            self.remainDaysLabel.text = "\(20 - Int(progress * 21.0))"
+            if(progress == 0 || progress == 1) {
+                self.remainDaysLabel.text = "21"
+            } else {
+                self.remainDaysLabel.text = "\(20 - Int(progress * 21.0))"
+            }
+            
         })
         
         // 进度圈向下动画效果
@@ -92,6 +101,11 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         circularProgress.animate()
         
         self.view.bringSubviewToFront(achievedHabitButton)
+        
+        loadDatabase()
+        
+        NSTimer.scheduledTimerWithTimeInterval(0.005, target: self, selector: Selector("updateProgress"), userInfo: nil, repeats: true)
+        NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("checkDate"), userInfo: nil, repeats: true)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -102,7 +116,7 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
     
     func loadDatabase() {
         
-        if (Defaults["habit_ongoing"].bool == true) {
+        if (Defaults.hasKey("habit_ongoing")) {
             ongoingHabit = true
             
             let fetchRequest : NSFetchRequest = NSFetchRequest(entityName: "Habits")
@@ -112,9 +126,7 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
             for habit in habits {
                 println("Content: \(habit.content), createdAt: \(habit.createdAt), achieved: \(habit.achieved), remain days: \(habit.remainDays)")
                 habitTargetLabel.text = habit.content
-                progress = 0
                 remainDays = Int(habit.remainDays)
-                //                remainDays = 5
                 circularDaysAnimation()
             }
             
@@ -124,18 +136,35 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
             
         } else {
             ongoingHabit = false
+            circularDaysAnimation()
         }
-
+        
         if(habits.count > 0) {
             achievedHabitButton.hidden = false
         } else {
             achievedHabitButton.hidden = true
         }
         
-
+        
     }
     
-    @IBAction func succeedButtonPressed(sender: AnyObject) {
+    @IBAction func succeedButtonPressed(sender: SpringButton) {
+        
+        //---Animations
+        animateRemainDaysLabel()
+        sender.animation = "swing"
+        sender.curve = "spring"
+        sender.force = 2.5
+        sender.duration = 0.6
+        sender.animate()
+        UIView.transitionWithView(succeedButton, duration: 0.3, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
+            self.succeedButton.setImage(UIImage(named: "succeedChecked"), forState: .Normal)
+            }, completion: nil)
+        UIView.transitionWithView(failButton, duration: 0.3, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
+            self.failButton.setImage(UIImage(named: "fail"), forState: .Normal)
+            }, completion: nil)
+        
+        
         let fetchRequest : NSFetchRequest = NSFetchRequest(entityName: "Habits")
         var error: NSError? = nil
         habits = managedObjectContext?.executeFetchRequest(fetchRequest, error: &error) as! [Habits]
@@ -144,8 +173,8 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
             habits.last!.remainDays -= 1
         } else {
             habits.last!.achieved = true
-            Defaults["habit_ongoing"] = false
-             
+            Defaults.remove("habit_ongoing")
+            
             transitionButton.animation = "fadeIn"
             transitionButton.curve = "spring"
             transitionButton.animate()
@@ -156,32 +185,70 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         
     }
     
-    @IBAction func failButtonPressed(sender: AnyObject) {
-        Defaults["habit_ongoing"] = false
-        ongoingHabit = false
+    @IBAction func failButtonPressed(sender: SpringButton) {
+        SweetAlert().showAlert("Are you sure?", subTitle: "Once you do this, you have to start raising your habit again...", style: AlertStyle.Warning, buttonTitle:"Cancel", buttonColor:UIColorFromRGB(0xD0D0D0) , otherButtonTitle:  "I failed today", otherButtonColor: UIColorFromRGB(0xDD6B55)) { (isOtherButton) -> Void in
+            if isOtherButton == true {
+                
+                println("Cancel Button Pressed")
+            }
+            else {
+                SweetAlert().showAlert("Deleted!", subTitle: "Raise a good habit again!", style: AlertStyle.Success, buttonTitle: "OK") {
+                    (isOtherButton)-> Void in
+
+                    self.animateRemainDaysLabel()
+                    sender.animation = "swing"
+                    sender.curve = "spring"
+                    sender.force = 2.5
+                    sender.duration = 0.6
+                    sender.animate()
+                    UIView.transitionWithView(self.failButton, duration: 0.3, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
+                        self.failButton.setImage(UIImage(named: "failChecked"), forState: .Normal)
+                        }, completion: nil)
+                    UIView.transitionWithView(self.succeedButton, duration: 0.3, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
+                        self.succeedButton.setImage(UIImage(named: "succeed"), forState: .Normal)
+                        }, completion: nil)
+                    
+                    Defaults.remove("habit_ongoing")
+                    self.ongoingHabit = false
+                    
+                    self.transitionButton.animation = "fadeIn"
+                    self.transitionButton.curve = "spring"
+                    self.transitionButton.animate()
+                }
+            }
+        }
         
-        //FIXME: Cannot reset progress to 0
-        
-        transitionButton.animation = "fadeIn"
-        transitionButton.curve = "spring"
-        transitionButton.animate()
+
     }
     
     // MARK: - 显示进度圈加载进度效果
     
     func updateProgress() {
         // Timer调用的累加计数器
-        if(progress < progressLimit) {
-            progress = progress + 1
+        
+        if (ongoingHabit) {
+            if(progress < progressLimit) {
+                progress = progress + 1
+                println(progress)
+                circularProgress.progress = Double(progress) / 255.0
+            }
         } else {
-            return
+            if(progress > 0) {
+                progress = progress - 1
+                println(progress)
+                circularProgress.progress = Double(progress) / 255.0
+            }
         }
-        circularProgress.progress = Double(progress) / 255.0
+        
+        if (progress == 0) {
+            remainDaysLabel.text = "21"
+        }
+
+
     }
     
     func circularDaysAnimation() {
         progressLimit = (21 - remainDays) * 255 / 21
-        NSTimer.scheduledTimerWithTimeInterval(0.005, target: self, selector: Selector("updateProgress"), userInfo: nil, repeats: true)
     }
     
     // MARK: - 自定义Segue动画效果
@@ -216,7 +283,7 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
             transition.startingPoint = transitionButton.center
             transition.bubbleColor = transitionButton.backgroundColor!
             
-            if(Defaults["habit_ongoing"].bool == true) {
+            if(Defaults.hasKey("habit_ongoing")) {
                 // Transition Button Dismiss时重载数据库及部分动画效果
                 progress = 0
                 transitionButton.animation = "fadeOut"
@@ -224,14 +291,14 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
                 transitionButton.delay = 0.2
                 transitionButton.animate()
                 loadDatabase()
-                remainDaysLabel.animation = "pop"
-                remainDaysLabel.delay = 0.5
-                remainDaysLabel.curve = "spring"
-                remainDaysLabel.animate()
                 habitTargetLabel.animation = "pop"
                 habitTargetLabel.delay = 0.5
                 habitTargetLabel.curve = "spring"
                 habitTargetLabel.animate()
+                animateRemainDaysLabel()
+                self.failButton.setImage(UIImage(named: "fail"), forState: .Normal)
+                self.succeedButton.setImage(UIImage(named: "succeed"), forState: .Normal)
+
             }
         } else if (dismissed.isKindOfClass(HabitCollectionViewController)) {
             println("HabitCollectionViewController")
@@ -241,4 +308,47 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         }
         return transition
     }
+    
+    func animateRemainDaysLabel () {
+        remainDaysLabel.animation = "pop"
+        remainDaysLabel.delay = 0.5
+        remainDaysLabel.curve = "spring"
+        remainDaysLabel.animate()
+    }
+    
+    func checkDate() -> Bool {
+        if(ongoingHabit) {
+            let fetchRequest : NSFetchRequest = NSFetchRequest(entityName: "Habits")
+            var error: NSError? = nil
+            habits = managedObjectContext?.executeFetchRequest(fetchRequest, error: &error) as! [Habits]
+            var passedDays = 20 - habits.last!.remainDays as Int
+            let checkDate = NSCalendar.currentCalendar().dateByAddingUnit(
+                .CalendarUnitDay,
+                value: passedDays + 1,
+                toDate: habits.last!.createdAt,
+                options: NSCalendarOptions(0))
+            
+            println(checkDate)
+            
+            var dateComparisionResult:NSComparisonResult = NSDate().compare(checkDate!)
+            if (dateComparisionResult == NSComparisonResult.OrderedDescending) {
+                // Current date is later than check date
+                Defaults.remove("habit_ongoing")
+                ongoingHabit = false
+            } else {
+                // Current date is early than check date
+            }
+        }
+        return true
+    }
+    
+    func UIColorFromRGB(rgbValue: UInt) -> UIColor {
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
+    }
+
 }

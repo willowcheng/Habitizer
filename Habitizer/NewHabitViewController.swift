@@ -26,6 +26,7 @@ class NewHabitViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         habitTextField.delegate = self
+        addShadow(closeButton)
         
         currentTime = NSDate()
         var todaysDate: NSDate = NSDate()
