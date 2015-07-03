@@ -62,6 +62,9 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        checkSucceedDate()
+        NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("checkDate"), userInfo: nil, repeats: true)
+        
         // 天数数字向上动画效果
         remainDaysLabel.animation = "slideDown"
         remainDaysLabel.curve = "spring"
@@ -105,7 +108,6 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         loadDatabase()
         
         NSTimer.scheduledTimerWithTimeInterval(0.005, target: self, selector: Selector("updateProgress"), userInfo: nil, repeats: true)
-        NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("checkDate"), userInfo: nil, repeats: true)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -171,6 +173,11 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         
         if (habits.last!.remainDays > 1) {
             habits.last!.remainDays -= 1
+            succeedButton.animation = "fadeOut"
+            succeedButton.delay = 0.2
+            succeedButton.curve = "spring"
+            succeedButton.animate()
+
         } else {
             habits.last!.achieved = true
             Defaults.remove("habit_ongoing")
@@ -298,6 +305,10 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
                 animateRemainDaysLabel()
                 self.failButton.setImage(UIImage(named: "fail"), forState: .Normal)
                 self.succeedButton.setImage(UIImage(named: "succeed"), forState: .Normal)
+                succeedButton.enabled = true
+                succeedButton.animation = "fadeIn"
+                succeedButton.curve = "spring"
+                succeedButton.animate()
 
             }
         } else if (dismissed.isKindOfClass(HabitCollectionViewController)) {
@@ -316,7 +327,36 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         remainDaysLabel.animate()
     }
     
-    func checkDate() -> Bool {
+    func checkSucceedDate() {
+        let fetchRequest : NSFetchRequest = NSFetchRequest(entityName: "Habits")
+        var error: NSError? = nil
+        habits = managedObjectContext?.executeFetchRequest(fetchRequest, error: &error) as! [Habits]
+        var passedDays = 20 - habits.last!.remainDays as Int
+        let checkDateAfterSucceed = NSCalendar.currentCalendar().dateByAddingUnit(
+            .CalendarUnitDay,
+            value: passedDays,
+            toDate: habits.last!.createdAt,
+            options: NSCalendarOptions(0))
+        println(checkDateAfterSucceed)
+        var dateComparisionResultForSucceedDisplay:NSComparisonResult = NSDate().compare(checkDateAfterSucceed!)
+        if (dateComparisionResultForSucceedDisplay == NSComparisonResult.OrderedAscending) {
+            // Current date is early than succeed check date
+            succeedButton.enabled = false
+            succeedButton.animation = "fadeOut"
+            succeedButton.delay = 0.2
+            succeedButton.curve = "spring"
+            succeedButton.animate()
+        } else {
+            // Current date is later than succeed check date
+            succeedButton.enabled = true
+            succeedButton.animation = "fadeIn"
+            succeedButton.curve = "spring"
+            succeedButton.animate()
+        }
+
+    }
+    
+    func checkDate() {
         if(ongoingHabit) {
             let fetchRequest : NSFetchRequest = NSFetchRequest(entityName: "Habits")
             var error: NSError? = nil
@@ -327,6 +367,8 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
                 value: passedDays + 1,
                 toDate: habits.last!.createdAt,
                 options: NSCalendarOptions(0))
+            
+
             
             println(checkDate)
             
@@ -339,7 +381,6 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
                 // Current date is early than check date
             }
         }
-        return true
     }
     
     func UIColorFromRGB(rgbValue: UInt) -> UIColor {
