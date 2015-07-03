@@ -142,11 +142,15 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         }
         
         if(habits.count > 0) {
-            achievedHabitButton.hidden = false
-        } else {
-            achievedHabitButton.hidden = true
+            for habit in habits {
+                if(habit.achieved == 1 as NSNumber) {
+                    achievedHabitButton.hidden = false
+                    return
+                }
+            }
+            
         }
-        
+        achievedHabitButton.hidden = true
         
     }
     

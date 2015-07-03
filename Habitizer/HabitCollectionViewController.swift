@@ -38,7 +38,7 @@ class HabitCollectionViewController: UIViewController , JGTransitionCollectionVi
         var cell: JGCustomCell  = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! JGCustomCell;
         var dataDict = self.dataSource.objectAtIndex(indexPath.row) as! NSDictionary
         cell.contentView.backgroundColor = dataDict["color"] as? UIColor
-//        cell.backgroundImage.image = UIImage(named: NSString(format: "car%d", indexPath.row+1) as String)
+        //        cell.backgroundImage.image = UIImage(named: NSString(format: "car%d", indexPath.row+1) as String)
         cell.habitTextLabel.text = dataDict["text"] as? String
         return cell;
     }
@@ -54,12 +54,18 @@ class HabitCollectionViewController: UIViewController , JGTransitionCollectionVi
         var color: String
         
         for habit in habits {
-            color = cellColorStringArray[Int(arc4random_uniform(8))]
-            println(color)
-            self.dataSource.addObject(NSDictionary(objectsAndKeys: UIColor().colorWithHex(color), "color", "\(habit.content)", "text"))
-            println("Content: \(habit.content), createdAt: \(habit.createdAt), achieved: \(habit.achieved), remain days: \(habit.remainDays)")
+            println(habit.achieved)
+            if(habit.achieved == 1 as NSNumber) {
+                color = cellColorStringArray[Int(arc4random_uniform(8))]
+                println(color)
+                
+                self.dataSource.addObject(NSDictionary(objectsAndKeys: UIColor().colorWithHex(color), "color", "\(habit.content)", "text"))
+                println("Content: \(habit.content), createdAt: \(habit.createdAt), achieved: \(habit.achieved), remain days: \(habit.remainDays)")
+            }
+            
         }
     }
+    
     @IBAction func closeAction(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
