@@ -23,7 +23,7 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
     @IBOutlet weak var remainDaysLabel: SpringLabel!
     @IBOutlet weak var failButton: SpringButton!
     @IBOutlet weak var succeedButton: SpringButton!
-
+    
     
     // MARK: - 变量
     
@@ -177,7 +177,7 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
             succeedButton.delay = 0.2
             succeedButton.curve = "spring"
             succeedButton.animate()
-
+            
         } else {
             habits.last!.achieved = true
             Defaults.remove("habit_ongoing")
@@ -201,7 +201,7 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
             else {
                 SweetAlert().showAlert("Deleted!", subTitle: "Raise a good habit again!", style: AlertStyle.Success, buttonTitle: "OK") {
                     (isOtherButton)-> Void in
-
+                    
                     self.animateRemainDaysLabel()
                     sender.animation = "swing"
                     sender.curve = "spring"
@@ -225,7 +225,7 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
             }
         }
         
-
+        
     }
     
     // MARK: - 显示进度圈加载进度效果
@@ -250,8 +250,8 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         if (progress == 0) {
             remainDaysLabel.text = "21"
         }
-
-
+        
+        
     }
     
     func circularDaysAnimation() {
@@ -309,7 +309,7 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
                 succeedButton.animation = "fadeIn"
                 succeedButton.curve = "spring"
                 succeedButton.animate()
-
+                
             }
         } else if (dismissed.isKindOfClass(HabitCollectionViewController)) {
             println("HabitCollectionViewController")
@@ -328,32 +328,33 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
     }
     
     func checkSucceedDate() {
-        let fetchRequest : NSFetchRequest = NSFetchRequest(entityName: "Habits")
-        var error: NSError? = nil
-        habits = managedObjectContext?.executeFetchRequest(fetchRequest, error: &error) as! [Habits]
-        var passedDays = 20 - habits.last!.remainDays as Int
-        let checkDateAfterSucceed = NSCalendar.currentCalendar().dateByAddingUnit(
-            .CalendarUnitDay,
-            value: passedDays,
-            toDate: habits.last!.createdAt,
-            options: NSCalendarOptions(0))
-        println(checkDateAfterSucceed)
-        var dateComparisionResultForSucceedDisplay:NSComparisonResult = NSDate().compare(checkDateAfterSucceed!)
-        if (dateComparisionResultForSucceedDisplay == NSComparisonResult.OrderedAscending) {
-            // Current date is early than succeed check date
-            succeedButton.enabled = false
-            succeedButton.animation = "fadeOut"
-            succeedButton.delay = 0.2
-            succeedButton.curve = "spring"
-            succeedButton.animate()
-        } else {
-            // Current date is later than succeed check date
-            succeedButton.enabled = true
-            succeedButton.animation = "fadeIn"
-            succeedButton.curve = "spring"
-            succeedButton.animate()
+        if(ongoingHabit) {
+            let fetchRequest : NSFetchRequest = NSFetchRequest(entityName: "Habits")
+            var error: NSError? = nil
+            habits = managedObjectContext?.executeFetchRequest(fetchRequest, error: &error) as! [Habits]
+            var passedDays = 20 - habits.last!.remainDays as Int
+            let checkDateAfterSucceed = NSCalendar.currentCalendar().dateByAddingUnit(
+                .CalendarUnitDay,
+                value: passedDays,
+                toDate: habits.last!.createdAt,
+                options: NSCalendarOptions(0))
+            println(checkDateAfterSucceed)
+            var dateComparisionResultForSucceedDisplay:NSComparisonResult = NSDate().compare(checkDateAfterSucceed!)
+            if (dateComparisionResultForSucceedDisplay == NSComparisonResult.OrderedAscending) {
+                // Current date is early than succeed check date
+                succeedButton.enabled = false
+                succeedButton.animation = "fadeOut"
+                succeedButton.delay = 0.2
+                succeedButton.curve = "spring"
+                succeedButton.animate()
+            } else {
+                // Current date is later than succeed check date
+                succeedButton.enabled = true
+                succeedButton.animation = "fadeIn"
+                succeedButton.curve = "spring"
+                succeedButton.animate()
+            }
         }
-
     }
     
     func checkDate() {
@@ -368,7 +369,7 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
                 toDate: habits.last!.createdAt,
                 options: NSCalendarOptions(0))
             
-
+            
             
             println(checkDate)
             
@@ -391,5 +392,5 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
             alpha: CGFloat(1.0)
         )
     }
-
+    
 }
