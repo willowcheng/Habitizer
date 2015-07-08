@@ -203,9 +203,6 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
                 println("Cancel Button Pressed")
             }
             else {
-                SweetAlert().showAlert("Deleted!", subTitle: "Raise a good habit again!", style: AlertStyle.Success, buttonTitle: "OK") {
-                    (isOtherButton)-> Void in
-                    
                     self.animateRemainDaysLabel()
                     sender.animation = "swing"
                     sender.curve = "spring"
@@ -225,7 +222,7 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
                     self.transitionButton.animation = "fadeIn"
                     self.transitionButton.curve = "spring"
                     self.transitionButton.animate()
-                }
+                
             }
         }
         
