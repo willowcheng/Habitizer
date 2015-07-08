@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1C88B19F04EA60A0B3F73121"
+               BlueprintIdentifier = "A6053FAEFEDCD9488DD99B75"
                BuildableName = "TextFieldEffects.framework"
                BlueprintName = "Pods-HabitizerTests-TextFieldEffects"
                ReferencedContainer = "container:Pods.xcodeproj">

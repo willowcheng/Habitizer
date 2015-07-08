@@ -1,6 +1,0 @@
-framework module KYCircularProgress {
-  umbrella header "Pods-KYCircularProgress-umbrella.h"
-
-  export *
-  module * { export * }
-}

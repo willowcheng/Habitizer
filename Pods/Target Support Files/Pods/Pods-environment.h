@@ -12,12 +12,6 @@
 #define COCOAPODS_VERSION_MINOR_BubbleTransition 2
 #define COCOAPODS_VERSION_PATCH_BubbleTransition 0
 
-// KYCircularProgress
-#define COCOAPODS_POD_AVAILABLE_KYCircularProgress
-#define COCOAPODS_VERSION_MAJOR_KYCircularProgress 0
-#define COCOAPODS_VERSION_MINOR_KYCircularProgress 1
-#define COCOAPODS_VERSION_PATCH_KYCircularProgress 1
-
 // Spring
 #define COCOAPODS_POD_AVAILABLE_Spring
 #define COCOAPODS_VERSION_MAJOR_Spring 1
@@ -27,7 +21,7 @@
 // SwiftyUserDefaults
 #define COCOAPODS_POD_AVAILABLE_SwiftyUserDefaults
 #define COCOAPODS_VERSION_MAJOR_SwiftyUserDefaults 1
-#define COCOAPODS_VERSION_MINOR_SwiftyUserDefaults 2
+#define COCOAPODS_VERSION_MINOR_SwiftyUserDefaults 3
 #define COCOAPODS_VERSION_PATCH_SwiftyUserDefaults 0
 
 // TextFieldEffects

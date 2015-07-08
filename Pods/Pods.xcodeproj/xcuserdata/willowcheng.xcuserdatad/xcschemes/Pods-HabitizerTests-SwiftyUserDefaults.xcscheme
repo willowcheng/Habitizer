@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "21D066F7AA8E5BEE6BC5106B"
+               BlueprintIdentifier = "B227025C34A7FFBB99E9370D"
                BuildableName = "SwiftyUserDefaults.framework"
                BlueprintName = "Pods-HabitizerTests-SwiftyUserDefaults"
                ReferencedContainer = "container:Pods.xcodeproj">

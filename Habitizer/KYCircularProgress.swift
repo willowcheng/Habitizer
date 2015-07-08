@@ -76,7 +76,7 @@ public class KYCircularProgress: SpringView {
         }
     }
     
-    public var colors: [UIColor]? {
+    @IBInspectable public var colors: [UIColor]? {
         willSet {
             updateColors(newValue)
         }
@@ -110,6 +110,12 @@ public class KYCircularProgress: SpringView {
         super.init(frame: frame)
         configureProgressLayer()
         self.showProgressGuide = showProgressGuide
+        configureProgressGuideLayer(self.showProgressGuide)
+    }
+    
+    public override func awakeFromNib() {
+        super.awakeFromNib()
+        configureProgressLayer()
         configureProgressGuideLayer(self.showProgressGuide)
     }
     
