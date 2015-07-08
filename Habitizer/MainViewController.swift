@@ -306,7 +306,7 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
                 animateRemainDaysLabel()
                 self.failButton.setImage(UIImage(named: "fail"), forState: .Normal)
                 self.succeedButton.setImage(UIImage(named: "succeed"), forState: .Normal)
-                succeedButton.enabled = true
+                succeedButton.enabled = false
                 succeedButton.animation = "fadeIn"
                 succeedButton.curve = "spring"
                 succeedButton.animate()
@@ -329,7 +329,8 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
     }
     
     func checkSucceedDate() {
-        if(ongoingHabit) {
+        if(Defaults.hasKey("habit_ongoing")) {
+            println("Check succeed date")
             let fetchRequest : NSFetchRequest = NSFetchRequest(entityName: "Habits")
             var error: NSError? = nil
             habits = managedObjectContext?.executeFetchRequest(fetchRequest, error: &error) as! [Habits]
@@ -343,6 +344,7 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
             var dateComparisionResultForSucceedDisplay:NSComparisonResult = NSDate().compare(checkDateAfterSucceed!)
             if (dateComparisionResultForSucceedDisplay == NSComparisonResult.OrderedAscending) {
                 // Current date is early than succeed check date
+                println("Current date is early than succeed check date")
                 succeedButton.enabled = false
                 succeedButton.animation = "fadeOut"
                 succeedButton.delay = 0.2
@@ -350,6 +352,7 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
                 succeedButton.animate()
             } else {
                 // Current date is later than succeed check date
+                println("Current date is later than succeed check date")
                 succeedButton.enabled = true
                 succeedButton.animation = "fadeIn"
                 succeedButton.curve = "spring"
@@ -359,7 +362,8 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
     }
     
     func checkDate() {
-        if(ongoingHabit) {
+        if(Defaults.hasKey("habit_ongoing")) {
+            println("Check date")
             let fetchRequest : NSFetchRequest = NSFetchRequest(entityName: "Habits")
             var error: NSError? = nil
             habits = managedObjectContext?.executeFetchRequest(fetchRequest, error: &error) as! [Habits]
