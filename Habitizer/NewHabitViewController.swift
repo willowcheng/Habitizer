@@ -95,7 +95,7 @@ class NewHabitViewController: UIViewController, UITextFieldDelegate {
             newHabitNotification.alertBody = "\(notificationHead)\(habitTextField.text.lowercaseString)"
             newHabitNotification.fireDate = NSDate(timeIntervalSinceNow: 5)
             newHabitNotification.timeZone = NSTimeZone.defaultTimeZone()
-            newHabitNotification.repeatInterval = .CalendarUnitDay  //设置重复提醒的周期为一天
+//            newHabitNotification.repeatInterval = .CalendarUnitDay  //设置重复提醒的周期为一天
             UIApplication.sharedApplication().scheduleLocalNotification(newHabitNotification)
             
             //BubbleTransition退回到主界面

@@ -39,8 +39,8 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
     var ongoingHabit: Bool = false {
         didSet {
             if !ongoingHabit {
-                remainLabel.text = "In next"
-                habitTargetLabel.text = "Start raising a good habit today!"
+                remainLabel.text = NSLocalizedString("IN_NEXT", comment: "In next")
+                habitTargetLabel.text = NSLocalizedString("START_HABIT", comment: "Start raising a good habit today!")
                 remainDaysLabel.text = "21"
                 remainDays = 21
                 
@@ -49,7 +49,7 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
                 failButton.hidden = true
                 succeedButton.hidden = true
             } else {
-                remainLabel.text = "Remain"
+                remainLabel.text = NSLocalizedString("REMAIN", comment: "Remain")
                 transitionButton.hidden = true
                 failButton.hidden = false
                 succeedButton.hidden = false
@@ -306,7 +306,7 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
                 animateRemainDaysLabel()
                 self.failButton.setImage(UIImage(named: "fail"), forState: .Normal)
                 self.succeedButton.setImage(UIImage(named: "succeed"), forState: .Normal)
-                succeedButton.enabled = false
+                succeedButton.enabled = true
                 succeedButton.animation = "fadeIn"
                 succeedButton.curve = "spring"
                 succeedButton.animate()
