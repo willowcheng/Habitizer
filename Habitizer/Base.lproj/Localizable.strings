@@ -9,6 +9,6 @@
 OK = "OK";
 TYPE_YOUR_NEW_HABIT = "Type your new habit";
 IN_NEXT = "In next";
-NEW_HABIT_ADD = "Go ahead for 21 days, remember to record every day.";
+NEW_HABIT_ADD = "Go ahead for 21 days, ";
 START_HABIT = "Start raising a good habit today!";
 REMAIN = "Remain";
