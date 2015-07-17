@@ -12,3 +12,7 @@ IN_NEXT = "In next";
 NEW_HABIT_ADD = "Go ahead for 21 days, ";
 START_HABIT = "Start raising a good habit today!";
 REMAIN = "Remain";
+FAILED_ALERT_TITLE = "Are you sure?";
+FAILED_ALERT_SUBTITLE = "Once you do this, you have to start raising your habit again...";
+FAILED_ALERT_CANCEL = "Cancel";
+FAILED_ALERT_CONFIRM = "I failed";

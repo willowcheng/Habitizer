@@ -197,10 +197,16 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
     }
     
     @IBAction func failButtonPressed(sender: SpringButton) {
-        SweetAlert().showAlert("Are you sure?", subTitle: "Once you do this, you have to start raising your habit again...", style: AlertStyle.Warning, buttonTitle:"Cancel", buttonColor:UIColorFromRGB(0xD0D0D0) , otherButtonTitle:  "I failed today", otherButtonColor: UIColorFromRGB(0xDD6B55)) { (isOtherButton) -> Void in
+        
+        let alertTitle = NSLocalizedString("FAILED_ALERT_TITLE", comment: "Failed alert title")
+        let alertSubtitle = NSLocalizedString("FAILED_ALERT_SUBTITLE", comment: "Failed alert subtitle")
+        let alertCancel = NSLocalizedString("FAILED_ALERT_CANCEL", comment: "Failed alert cancel")
+        let alertConfirm = NSLocalizedString("FAILED_ALERT_CONFIRM", comment: "Failed alert confirm")
+        
+        
+        SweetAlert().showAlert(alertTitle, subTitle: alertSubtitle, style: AlertStyle.Warning, buttonTitle: alertCancel, buttonColor:UIColorFromRGB(0xD0D0D0) , otherButtonTitle: alertConfirm, otherButtonColor: UIColorFromRGB(0xDD6B55)) { (isOtherButton) -> Void in
             if isOtherButton == true {
                 
-                println("Cancel Button Pressed")
             }
             else {
                     self.animateRemainDaysLabel()
