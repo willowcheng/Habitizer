@@ -13,6 +13,6 @@ NEW_HABIT_ADD = "你的21天已经开始，";
 START_HABIT = "今天开始，养成一个好习惯！";
 REMAIN = "还剩";
 FAILED_ALERT_TITLE = "你确定吗?";
-FAILED_ALERT_SUBTITLE = "没有坚持习惯, 你需要重头开始养成习惯...";
+FAILED_ALERT_SUBTITLE = "没有坚持习惯,你需要重新从头开始...";
 FAILED_ALERT_CANCEL = "取消";
 FAILED_ALERT_CONFIRM = "失败";
